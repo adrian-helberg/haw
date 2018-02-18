@@ -1,0 +1,21 @@
+<configuration>
+
+    <!-- console appender -->
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder class="ch.qos.logback.core.encoder.LayoutWrappingEncoder">
+            <layout class="de.utils.logging.ExtendedPatternLayout">
+                <pattern>
+                    %d{yyyy-MM-dd HH:mm:ss} %white([%thread]) %highlight([%level]) %cyan(%simpleLogger) - %white(%msg){}%n%simpleException
+                </pattern>
+            </layout>
+        </encoder>
+    </appender>
+
+    <!-- configure log visibility -->
+    <logger name="de.haw" level="info" />
+
+    <!-- enable both appender -->
+    <root level="error">
+        <appender-ref ref="STDOUT" />
+    </root>
+</configuration>
