@@ -2,19 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0a44feef-2470-4c04-850f-83b30b3921e4" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/de/haw/wpcgar/Config.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/de/haw/wpcgar/generator/WorldComponent.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/de/haw/wpcgar/generator/WorldGenerator.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/de/haw/wpcgar/math/Helper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/de/haw/wpcgar/math/PerlinNoise.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/de/haw/wpcgar/math/Random.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/de/haw/wpcgar/structure/Biome.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/de/haw/wpcgar/structure/Environment.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/de/haw/wpcgar/structure/Parameter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/de/haw/wpcgar/structure/biomes/Forest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/de/haw/wpcgar/structure/params/HeightMap.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/haw/wpcgar/App.java" afterPath="$PROJECT_DIR$/src/main/java/de/haw/wpcgar/App.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/haw/wpcgar/Config.java" afterPath="$PROJECT_DIR$/src/main/java/de/haw/wpcgar/Config.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -68,16 +56,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="85">
               <caret line="5" column="25" lean-forward="false" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Environment.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/de/haw/wpcgar/structure/Environment.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="40" lean-forward="false" selection-start-line="3" selection-start-column="40" selection-end-line="3" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -153,11 +131,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HeightMap.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="HeightMap.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/de/haw/wpcgar/structure/params/HeightMap.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="238">
               <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Config.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/de/haw/wpcgar/Config.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="425">
+              <caret line="25" column="44" lean-forward="true" selection-start-line="25" selection-start-column="44" selection-end-line="25" selection-end-column="44" />
               <folding />
             </state>
           </provider>
@@ -564,7 +552,6 @@
         <option value="$PROJECT_DIR$/src/main/java/de/haw/wpcgar/math/Random.java" />
         <option value="$PROJECT_DIR$/src/main/java/de/haw/wpcgar/structure/Biome.java" />
         <option value="$PROJECT_DIR$/src/main/java/de/haw/wpcgar/structure/params/HeightMap.java" />
-        <option value="$PROJECT_DIR$/src/main/java/de/haw/wpcgar/Config.java" />
         <option value="$PROJECT_DIR$/src/main/java/de/haw/wpcgar/App.java" />
         <option value="$PROJECT_DIR$/src/main/java/de/haw/wpcgar/structure/Parameter.java" />
         <option value="$PROJECT_DIR$/src/main/java/de/haw/wpcgar/structure/Environment.java" />
@@ -573,6 +560,7 @@
         <option value="$PROJECT_DIR$/src/main/java/de/haw/wpcgar/math/Helper.java" />
         <option value="$PROJECT_DIR$/src/main/java/de/haw/wpcgar/generator/WorldGenerator.java" />
         <option value="$PROJECT_DIR$/src/main/java/de/haw/wpcgar/generator/WorldComponent.java" />
+        <option value="$PROJECT_DIR$/src/main/java/de/haw/wpcgar/Config.java" />
       </list>
     </option>
   </component>
@@ -832,12 +820,12 @@
       <option name="presentableId" value="Default" />
       <updated>1519137269439</updated>
       <workItem from="1519137271209" duration="305000" />
-      <workItem from="1519137747039" duration="4881000" />
+      <workItem from="1519137747039" duration="6564000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5186000" />
+    <option name="totallyTimeSpent" value="6869000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -964,14 +952,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/de/haw/wpcgar/Config.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="44" lean-forward="false" selection-start-line="4" selection-start-column="44" selection-end-line="4" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/de/haw/wpcgar/App.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -1056,6 +1036,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/haw/wpcgar/Config.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="44" lean-forward="true" selection-start-line="25" selection-start-column="44" selection-end-line="25" selection-end-column="44" />
           <folding />
         </state>
       </provider>
