@@ -3,6 +3,7 @@ package de.haw.wpcgar.generator;
 import de.haw.wpcgar.structure.Biome;
 import de.haw.wpcgar.structure.Environment;
 
+import java.io.UncheckedIOException;
 import java.lang.reflect.Constructor;
 import java.util.ArrayList;
 import java.util.HashMap;

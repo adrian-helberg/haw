@@ -12,9 +12,10 @@ public abstract class Parameter {
     protected final PerlinNoise noise;
     protected double            value = -1.0;
 
-    public Parameter(String name, String seed) {
+    public Parameter(String name, String seed, int salt)
+    {
         this.name = name;
-        this.noise = new PerlinNoise(seed.hashCode());
+        this.noise = new PerlinNoise(seed.hashCode() + salt);
     }
 
     public String getName()

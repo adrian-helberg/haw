@@ -1,7 +1,5 @@
 package de.haw.wpcgar.generator;
 
-import de.haw.wpcgar.Config;
-
 import java.awt.*;
 import java.awt.image.BufferedImage;
 
@@ -23,8 +21,8 @@ public class WorldComponent extends Component {
                 image,
                 0,
                 0,
-                Config.WINDOW_WIDTH,
-                Config.WINDOW_HEIGHT,
+                MyTestWorld.windowWidth,
+                MyTestWorld.windowHeight,
                 0,
                 0,
                 image.getWidth(),

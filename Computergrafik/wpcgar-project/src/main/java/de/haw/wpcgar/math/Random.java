@@ -8,59 +8,115 @@ package de.haw.wpcgar.math;
  */
 public class Random {
 
-    private long seed = System.currentTimeMillis();
-
-    public Random(long seed) {
-        this.seed = seed;
-    }
-
-    public Random() {
-
-    }
+    private long _seed = System.currentTimeMillis();
 
     /**
-     * getRandomString uses current system time to generate a random string
+     * Initializes a new instance of the random number generator using
+     * a specified seed.
      *
-     * @param length length of the returning random string
-     * @return random string
+     * @param seed The seed to use
      */
-    public String getRandomString(int length) {
-        StringBuilder sb = new StringBuilder();
-
-        // Lets randomize a bit
-        for (int i = 0; i < length / 2; i++) {
-            sb.append((char) ('a' + Math.abs(randomDouble()) * 26d));
-            sb.append((char) ('A' + Math.abs(randomDouble()) * 26d));
-        }
-
-        return sb.toString();
+    public Random(long seed) {
+        this._seed = seed;
     }
 
     /**
-     * Returns a random value as double.
-     * @return Random value
+     * Initializes a new instance of the random number generator using
+     * System.currentTimeMillis() as seed.
      */
-    private double randomDouble() {
-        return randomLong() / ((double) Long.MAX_VALUE - 1d);
+    public Random() {
     }
 
     /**
      * Returns a random value as long.
+     *
      * @return Random value
      */
-    // Use bitwise exclusive OR to bit shift seed character string
-    private long randomLong() {
-        seed ^= (seed << 21); // Signed left shift
-        seed ^= (seed >>> 35); // Unsigned right shift
-        seed ^= (seed << 4); // Signed left shift
-        return seed;
+    long randomLong() {
+        _seed ^= (_seed << 21);
+        _seed ^= (_seed >>> 35);
+        _seed ^= (_seed << 4);
+        return _seed;
     }
 
     /**
      * Returns a random value as integer.
+     *
      * @return Random value
      */
     public int randomInt() {
         return (int) randomLong();
+    }
+
+    /**
+     * Returns a random value as double.
+     *
+     * @return Random value
+     */
+    public double randomDouble() {
+        return randomLong() / ((double) Long.MAX_VALUE - 1d);
+    }
+
+    /**
+     * Returns a random value as boolean.
+     *
+     * @return Random value
+     */
+    public boolean randomBoolean() {
+        return randomLong() > 0;
+    }
+
+    /**
+     * Returns a random character string with a specified length.
+     *
+     * @param length The length of the generated string
+     * @return Random character string
+     */
+    public String randomCharacterString(int length) {
+        StringBuilder s = new StringBuilder();
+
+        for (int i = 0; i < length / 2; i++) {
+            s.append((char) ('a' + Math.abs(randomDouble()) * 26d));
+            s.append((char) ('A' + Math.abs(randomDouble()) * 26d));
+        }
+
+        return s.toString();
+    }
+
+    /**
+     * Calculates a standardized normal distributed value (using the polar method).
+     *
+     * @return
+     */
+    public double standNormalDistrDouble() {
+
+        double q = Double.MAX_VALUE;
+        double u1 = 0;
+        double u2;
+
+        while (q >= 1d || q == 0) {
+            u1 = randomDouble();
+            u2 = randomDouble();
+
+            q = Math.pow(u1, 2) + Math.pow(u2, 2);
+        }
+
+        double p = Math.sqrt((-2d * (Math.log(q))) / q);
+        return u1 * p; // or u2 * p
+    }
+
+    /**
+     * Some random noise.
+     *
+     * @param x
+     * @param y
+     * @param z
+     * @param seed
+     * @return
+     */
+    public static double randomNoise(double x, double y, double z, int seed) {
+        int u = (int) x * 21342412 + (int) y * 423241324 + (int) z * 4123241 + seed * 41234234;
+        u = (u << 13) ^ u;
+        return (1.0 - ((u * (u * u * 15731 + 789221) + 1376312589) & 0x7fffffff) / 441441557.0);
     }
 }
