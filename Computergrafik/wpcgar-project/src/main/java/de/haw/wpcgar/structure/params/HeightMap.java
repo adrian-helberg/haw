@@ -14,6 +14,8 @@ public class HeightMap extends Parameter {
 
     @Override
     protected double value(double x, double y, double z) {
-        return 0.0;
+        double result = 0.0;
+
+        return result;
     }
 }
