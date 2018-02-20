@@ -8,7 +8,12 @@ import de.haw.wpcgar.structure.Parameter;
  */
 public class HeightMap extends Parameter {
 
-    public HeightMap() {
+    public HeightMap(String seed) {
+        super("heightmap", seed);
+    }
 
+    @Override
+    protected double value(double x, double y, double z) {
+        return 0.0;
     }
 }

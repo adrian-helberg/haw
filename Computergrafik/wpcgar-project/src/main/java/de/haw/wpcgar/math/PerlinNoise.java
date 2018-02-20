@@ -6,7 +6,7 @@ package de.haw.wpcgar.math;
  */
 public class PerlinNoise {
 
-    public PerlinNoise() {
+    public PerlinNoise(int i) {
 
     }
 }

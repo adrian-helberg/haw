@@ -7,11 +7,11 @@ package de.haw.wpcgar;
  */
 public class Config {
     // Distance of view
-    private static double ZOOM = 1.0;
-    private static int WIDTH = 800;
-    private static int HEIGHT = 800;
-    private static double X = 0.0;
-    private static double Y = 0.0;
+    public static double ZOOM = 1.0;
+    public static int WIDTH = 800;
+    public static int HEIGHT = 800;
+    public static double START_X = 0.0;
+    public static double START_Y = 0.0;
 
     // Window dimensions
     public final static int WINDOW_WIDTH = 800;
@@ -22,6 +22,6 @@ public class Config {
     private static String DENSITY_NAME = "heightmap";
 
     // Seed
-    private static boolean USE_DEFAULT_SEED = true;
-    private static String DEFAULT_SEED = "";
+    public static boolean USE_DEFAULT_SEED = true;
+    public static String DEFAULT_SEED = "";
 }
