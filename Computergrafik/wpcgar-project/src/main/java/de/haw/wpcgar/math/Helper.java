@@ -1,13 +1,15 @@
 package de.haw.wpcgar.math;
 
 /**
- * Math helpers.
- * Contains outsourced functions.
+ * Helper.
  * @author Adrian Helberg
  */
 public class Helper {
 
-    public Helper() {
+    public static int getAlignedValueFromHeight(double height, int minValue, int maxValue, double minHeight, double maxHeight) {
+        double percentage = (height - minHeight) / (maxHeight - minHeight);
+        double value = minValue + percentage * (maxValue - minValue);
 
+        return (int) value;
     }
 }

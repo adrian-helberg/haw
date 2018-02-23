@@ -10,8 +10,8 @@ import java.util.Map;
  */
 public class Environment {
     private final String                                  seed;
-    private final Map<String, Parameter>                  parameters = new HashMap<String, Parameter>();
-    private final Map<Class<? extends Parameter>, String> classes    = new HashMap<Class<? extends Parameter>, String>();
+    private final Map<String, Parameter>                  parameters = new HashMap<>();
+    private final Map<Class<? extends Parameter>, String> classes    = new HashMap<>();
 
     public Environment(String seed)
     {
@@ -29,9 +29,9 @@ public class Environment {
     }
 
     @SuppressWarnings("unchecked")
-    public <T extends Parameter> T getParameter(Class<T> clazz)
+    public <T extends Parameter> T getParameter(Class<T> c)
     {
-        return (T) getParameter(classes.get(clazz));
+        return (T) getParameter(classes.get(c));
     }
 
     public Parameter getParameter(String name)
@@ -39,11 +39,11 @@ public class Environment {
         return parameters.get(name);
     }
 
-    public <T extends Parameter> void registerParameter(Class<T> clazz)
+    public <T extends Parameter> void registerParameter(Class<T> c)
     {
         try
         {
-            Constructor<T> constructor = clazz.getConstructor(String.class);
+            Constructor<T> constructor = c.getConstructor(String.class);
             T parameter = constructor.newInstance(seed);
             registerParameter(parameter);
         }

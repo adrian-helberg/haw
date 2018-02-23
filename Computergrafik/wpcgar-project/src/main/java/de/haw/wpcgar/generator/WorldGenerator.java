@@ -17,12 +17,10 @@ import java.util.Map;
  */
 public class WorldGenerator {
     private final Environment environment;
-
     private final Map<Class<? extends Biome>, Biome> biomes = new HashMap<>();
     private final List<Class<? extends Biome>> priority = new ArrayList<>();
 
     public WorldGenerator(String seed) {
-        seed = seed;
         environment = new Environment(seed);
     }
 

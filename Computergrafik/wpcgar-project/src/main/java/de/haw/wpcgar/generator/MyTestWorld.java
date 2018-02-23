@@ -30,8 +30,8 @@ public class MyTestWorld {
     private static boolean        showDensity    = false;
     private static String         densityName    = "heightmap";
 
-    private static boolean        useDefaultSeed = true;
-    private static String         defaultSeed    = "kjdsnbdsk;bhjbjfdh";
+    private static boolean        useDefaultSeed = false;
+    private static String         defaultSeed    = "dYySxViSyJxB";
 
     private static BufferedImage  renderingImage;
     private static WorldComponent renderer;
@@ -39,12 +39,14 @@ public class MyTestWorld {
     public MyTestWorld()
     {
         String seed = defaultSeed;
-        if (useDefaultSeed)
+        if (!useDefaultSeed)
         {
+            System.out.print("Generate random seed string: ");
             seed = new Random().randomCharacterString(13);
+            System.out.print(seed + "\n");
         }
 
-        // On initialise le generateur
+        System.out.print("");
         generator = new WorldGenerator(seed);
 
         // On inscrit les biomes
@@ -80,18 +82,20 @@ public class MyTestWorld {
         int level = 10;
         int max = width * height;
 
+        // Iterate over all pixels
         for (int x = -(width / 2); x < (width / 2); x++)
         {
             for (int y = -(height / 2); y < (height / 2); y++)
             {
+                // Get the biom corresponding to current pixel coordinates
                 Biome biome = generator.getBiome(x * zoom + startX, y * zoom
                         + startY);
                 Color color = Color.black;
 
                 if (biome != null)
                 {
-                    color = biome
-                            .getColor(x * zoom + startX, y * zoom + startY);
+                    // Get biome color
+                    color = biome.getColor(x * zoom + startX, y * zoom + startY);
                 }
 
                 g.setColor(color);
@@ -142,19 +146,19 @@ public class MyTestWorld {
         frame.pack();
         frame.setVisible(true);
 
-        while (true)
-        {
-            frame.repaint();
-            renderer.repaint();
-            try
-            {
-                Thread.sleep(1000L);
-            }
-            catch (InterruptedException e1)
-            {
-                e1.printStackTrace();
-            }
-        }
+//        while (true)
+//        {
+//            frame.repaint();
+//            renderer.repaint();
+//            try
+//            {
+//                Thread.sleep(1000L);
+//            }
+//            catch (InterruptedException e1)
+//            {
+//                e1.printStackTrace();
+//            }
+//        }
     }
 
     public static void main(String[] args)

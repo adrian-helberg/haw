@@ -5,7 +5,6 @@ package de.haw.wpcgar.math;
  * @author Adrian Helberg
  */
 public class PerlinNoise {
-
     private final int[] _noisePermutations, _noiseTable;
 
     /**
