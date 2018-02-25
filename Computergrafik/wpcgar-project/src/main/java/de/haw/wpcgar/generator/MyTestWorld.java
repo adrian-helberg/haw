@@ -6,6 +6,7 @@ import de.haw.wpcgar.structure.Parameter;
 import de.haw.wpcgar.structure.biomes.*;
 import de.haw.wpcgar.structure.params.HeightMap;
 import de.haw.wpcgar.structure.params.Rivers;
+import de.haw.wpcgar.structure.params.Snowy;
 import de.haw.wpcgar.structure.params.Temperature;
 
 import javax.imageio.ImageIO;
@@ -20,14 +21,14 @@ public class MyTestWorld {
 
     private WorldGenerator        generator;
     // World generation properties ------------------- //
-    private static double         zoom           = 1.0;
+    private static double         zoom           = 5.0;
     private static int            width          = 800;
     private static int            height         = 800;
     private static double         startX         = 0.0;
     private static double         startY         = 0.0;
     public final static int       windowWidth    = 800;
     public final static int       windowHeight   = 800;
-    private static boolean        useDefaultSeed = false;
+    private static boolean        useDefaultSeed = true;
     private static String         defaultSeed    = "dYySxViSyJxB";
     // ---------------------------------------------- //
     private static BufferedImage  renderingImage;
@@ -45,15 +46,18 @@ public class MyTestWorld {
 
         // Register biomes
         generator.registerBiome(Ocean.class);
+        generator.registerBiome(Snow.class);
         //generator.registerBiome(River.class);
         //generator.registerBiome(Lake.class);
         generator.registerBiome(Forest.class);
+        generator.registerBiome(Plain.class);
         generator.registerBiome(Mountain.class);
 
         // Register parameter
         generator.getEnvironment().registerParameter(HeightMap.class);
         //generator.getEnvironment().registerParameter(Rivers.class);
         generator.getEnvironment().registerParameter(Temperature.class);
+        generator.getEnvironment().registerParameter(Snowy.class);
 
         BufferedImage image = createImage();
         try

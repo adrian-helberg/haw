@@ -57,7 +57,7 @@ public class Forest extends Biome {
 
             // Always an instance of color green
             //return new Color(0, green, 0);
-            return Color.green;
+            return Color.green.darker().darker();
         }
 
         return null;
