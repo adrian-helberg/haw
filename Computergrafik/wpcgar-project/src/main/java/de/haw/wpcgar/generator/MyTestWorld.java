@@ -28,7 +28,7 @@ public class MyTestWorld {
     private static double         startY         = 0.0;
     public final static int       windowWidth    = 800;
     public final static int       windowHeight   = 800;
-    private static boolean        useDefaultSeed = true;
+    private static boolean        useDefaultSeed = false;
     private static String         defaultSeed    = "dYySxViSyJxB";
     // ---------------------------------------------- //
     private static BufferedImage  renderingImage;
@@ -49,6 +49,7 @@ public class MyTestWorld {
         generator.registerBiome(Snow.class);
         //generator.registerBiome(River.class);
         //generator.registerBiome(Lake.class);
+        generator.registerBiome(Desert.class);
         generator.registerBiome(Forest.class);
         generator.registerBiome(Plain.class);
         generator.registerBiome(Mountain.class);

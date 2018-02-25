@@ -2,16 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0a44feef-2470-4c04-850f-83b30b3921e4" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/de/haw/wpcgar/structure/biomes/Plain.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/de/haw/wpcgar/structure/biomes/Snow.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/de/haw/wpcgar/structure/params/Snowy.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/de/haw/wpcgar/generator/MyTestWorld$1.class" afterPath="$PROJECT_DIR$/out/production/classes/de/haw/wpcgar/generator/MyTestWorld$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/de/haw/wpcgar/generator/MyTestWorld.class" afterPath="$PROJECT_DIR$/out/production/classes/de/haw/wpcgar/generator/MyTestWorld.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/de/haw/wpcgar/structure/biomes/Forest.class" afterPath="$PROJECT_DIR$/out/production/classes/de/haw/wpcgar/structure/biomes/Forest.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/de/haw/wpcgar/structure/biomes/Desert.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/render.png" afterPath="$PROJECT_DIR$/render.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/haw/wpcgar/generator/MyTestWorld.java" afterPath="$PROJECT_DIR$/src/main/java/de/haw/wpcgar/generator/MyTestWorld.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/haw/wpcgar/structure/biomes/Forest.java" afterPath="$PROJECT_DIR$/src/main/java/de/haw/wpcgar/structure/biomes/Forest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -88,8 +82,8 @@
       <file leaf-file-name="Lake.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/de/haw/wpcgar/structure/biomes/Lake.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="19" column="56" lean-forward="true" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="56" />
+            <state relative-caret-position="357">
+              <caret line="23" column="65" lean-forward="true" selection-start-line="23" selection-start-column="65" selection-end-line="23" selection-end-column="65" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -97,25 +91,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HeightMap.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/de/haw/wpcgar/structure/params/HeightMap.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="13" column="22" lean-forward="false" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MyTestWorld.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="MyTestWorld.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/de/haw/wpcgar/generator/MyTestWorld.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="37" column="5" lean-forward="true" selection-start-line="37" selection-start-column="5" selection-end-line="37" selection-end-column="5" />
+            <state relative-caret-position="160">
+              <caret line="24" column="55" lean-forward="true" selection-start-line="24" selection-start-column="55" selection-end-line="24" selection-end-column="55" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#4701#4901#0" expanded="true" />
-                <element signature="e#4900#4901#0" expanded="true" />
+                <element signature="e#4749#4949#0" expanded="true" />
+                <element signature="e#4948#4949#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -148,7 +132,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Snow.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Snow.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/de/haw/wpcgar/structure/biomes/Snow.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="432">
@@ -157,6 +141,20 @@
                 <element signature="imports" expanded="true" />
                 <element signature="e#369#370#0" expanded="true" />
                 <element signature="e#401#402#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Desert.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/de/haw/wpcgar/structure/biomes/Desert.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="493">
+              <caret line="29" column="13" lean-forward="true" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#328#329#0" expanded="true" />
+                <element signature="e#360#361#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -619,8 +617,9 @@
         <option value="$PROJECT_DIR$/src/main/java/de/haw/wpcgar/structure/biomes/Plain.java" />
         <option value="$PROJECT_DIR$/src/main/java/de/haw/wpcgar/structure/biomes/Forest.java" />
         <option value="$PROJECT_DIR$/src/main/java/de/haw/wpcgar/structure/params/Snowy.java" />
-        <option value="$PROJECT_DIR$/src/main/java/de/haw/wpcgar/generator/MyTestWorld.java" />
         <option value="$PROJECT_DIR$/src/main/java/de/haw/wpcgar/structure/biomes/Snow.java" />
+        <option value="$PROJECT_DIR$/src/main/java/de/haw/wpcgar/structure/biomes/Desert.java" />
+        <option value="$PROJECT_DIR$/src/main/java/de/haw/wpcgar/generator/MyTestWorld.java" />
       </list>
     </option>
   </component>
@@ -891,16 +890,15 @@
       <workItem from="1519515748239" duration="11000" />
       <workItem from="1519520558660" duration="240000" />
       <workItem from="1519565768243" duration="17069000" />
-      <workItem from="1519585557546" duration="869000" />
+      <workItem from="1519585557546" duration="1212000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="55005000" />
+    <option name="totallyTimeSpent" value="55348000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -910,7 +908,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32944915" sideWeight="0.50208336" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32944915" sideWeight="0.49791667" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32944915" sideWeight="0.49791667" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -945,14 +943,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/de/haw/wpcgar/structure/params/HeightMap.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="42" lean-forward="true" selection-start-line="8" selection-start-column="42" selection-end-line="8" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/de/haw/wpcgar/generator/WorldGenerator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1088">
@@ -999,8 +989,8 @@
           <caret line="117" column="0" lean-forward="false" selection-start-line="117" selection-start-column="0" selection-end-line="117" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#4701#4901#0" expanded="true" />
-            <element signature="e#4900#4901#0" expanded="true" />
+            <element signature="e#4749#4949#0" expanded="true" />
+            <element signature="e#4948#4949#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1296,16 +1286,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/de/haw/wpcgar/structure/biomes/Lake.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="19" column="56" lean-forward="true" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="56" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/de/haw/wpcgar/structure/biomes/Plain.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -1340,6 +1320,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/haw/wpcgar/structure/biomes/Snow.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="39" column="20" lean-forward="true" selection-start-line="39" selection-start-column="20" selection-end-line="39" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#369#370#0" expanded="true" />
+            <element signature="e#401#402#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/de/haw/wpcgar/structure/biomes/Mountain.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1350,26 +1342,36 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/de/haw/wpcgar/generator/MyTestWorld.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/haw/wpcgar/structure/biomes/Lake.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="37" column="5" lean-forward="true" selection-start-line="37" selection-start-column="5" selection-end-line="37" selection-end-column="5" />
+        <state relative-caret-position="357">
+          <caret line="23" column="65" lean-forward="true" selection-start-line="23" selection-start-column="65" selection-end-line="23" selection-end-column="65" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#4701#4901#0" expanded="true" />
-            <element signature="e#4900#4901#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/de/haw/wpcgar/structure/biomes/Snow.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/haw/wpcgar/structure/biomes/Desert.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="39" column="20" lean-forward="true" selection-start-line="39" selection-start-column="20" selection-end-line="39" selection-end-column="20" />
+        <state relative-caret-position="493">
+          <caret line="29" column="13" lean-forward="true" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#369#370#0" expanded="true" />
-            <element signature="e#401#402#0" expanded="true" />
+            <element signature="e#328#329#0" expanded="true" />
+            <element signature="e#360#361#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/haw/wpcgar/generator/MyTestWorld.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="24" column="55" lean-forward="true" selection-start-line="24" selection-start-column="55" selection-end-line="24" selection-end-column="55" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#4749#4949#0" expanded="true" />
+            <element signature="e#4948#4949#0" expanded="true" />
           </folding>
         </state>
       </provider>
