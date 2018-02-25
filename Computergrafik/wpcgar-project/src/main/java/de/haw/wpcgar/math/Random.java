@@ -24,15 +24,14 @@ public class Random {
      * Initializes a new instance of the random number generator using
      * System.currentTimeMillis() as seed.
      */
-    public Random() {
-    }
+    public Random() {}
 
     /**
      * Returns a random value as long.
-     *
+     * min: -9223372027538671720, max: 9223372026111068325
      * @return Random value
      */
-    long randomLong() {
+    public long randomLong() {
         _seed ^= (_seed << 21);
         _seed ^= (_seed >>> 35);
         _seed ^= (_seed << 4);
@@ -41,7 +40,7 @@ public class Random {
 
     /**
      * Returns a random value as integer.
-     *
+     * min: -2147483646, max: 2147483631
      * @return Random value
      */
     public int randomInt() {
@@ -50,7 +49,7 @@ public class Random {
 
     /**
      * Returns a random value as double.
-     *
+     * min: -0.99_ , max: 0.99_
      * @return Random value
      */
     public double randomDouble() {

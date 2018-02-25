@@ -5,6 +5,7 @@ import de.haw.wpcgar.structure.Biome;
 import de.haw.wpcgar.structure.Parameter;
 import de.haw.wpcgar.structure.biomes.Forest;
 import de.haw.wpcgar.structure.params.HeightMap;
+import de.haw.wpcgar.structure.params.Temperature;
 
 import javax.imageio.ImageIO;
 import java.awt.*;
@@ -15,24 +16,19 @@ import java.io.File;
 import java.io.IOException;
 
 public class MyTestWorld {
-    private WorldGenerator        generator;
 
+    private WorldGenerator        generator;
+    // World generation properties ------------------- //
     private static double         zoom           = 1.0;
     private static int            width          = 800;
     private static int            height         = 800;
-
     private static double         startX         = 0.0;
     private static double         startY         = 0.0;
-
     public final static int       windowWidth    = 800;
     public final static int       windowHeight   = 800;
-
-    private static boolean        showDensity    = false;
-    private static String         densityName    = "heightmap";
-
     private static boolean        useDefaultSeed = false;
     private static String         defaultSeed    = "dYySxViSyJxB";
-
+    // ---------------------------------------------- //
     private static BufferedImage  renderingImage;
     private static WorldComponent renderer;
 
@@ -41,21 +37,18 @@ public class MyTestWorld {
         String seed = defaultSeed;
         if (!useDefaultSeed)
         {
-            System.out.print("Generate random seed string: ");
             seed = new Random().randomCharacterString(13);
-            System.out.print(seed + "\n");
         }
 
-        System.out.print("");
         generator = new WorldGenerator(seed);
 
-        // On inscrit les biomes
+        // Register biomes
         generator.registerBiome(Forest.class);
 
-        // On inscrit les variables d'environnement
+        // Register parameter
         generator.getEnvironment().registerParameter(HeightMap.class);
+        generator.getEnvironment().registerParameter(Temperature.class);
 
-        // On cree l'image
         BufferedImage image = createImage();
         try
         {
@@ -145,20 +138,6 @@ public class MyTestWorld {
         });
         frame.pack();
         frame.setVisible(true);
-
-//        while (true)
-//        {
-//            frame.repaint();
-//            renderer.repaint();
-//            try
-//            {
-//                Thread.sleep(1000L);
-//            }
-//            catch (InterruptedException e1)
-//            {
-//                e1.printStackTrace();
-//            }
-//        }
     }
 
     public static void main(String[] args)

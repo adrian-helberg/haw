@@ -5,13 +5,18 @@ import de.haw.wpcgar.math.Helper;
 import de.haw.wpcgar.structure.Biome;
 import de.haw.wpcgar.structure.Parameter;
 import de.haw.wpcgar.structure.params.HeightMap;
+import de.haw.wpcgar.structure.params.Temperature;
 
 import java.awt.*;
-import java.util.Random;
 
 /**
  * Forest biome.
  * @author Adrian Helberg
+ *
+ * The forest growth is determined by the parameters height and temperature.
+ * The greater the value of the height, the more likely the mixing ratio
+ * of deciduous to coniferous forest is in the direction of coniferous forest.
+ * The greater the value of the temperature, the denser the forest
  */
 public class Forest extends Biome {
 
@@ -24,8 +29,9 @@ public class Forest extends Biome {
     public boolean check(double x, double y)
     {
         double height = getValue(HeightMap.class, x, y);
+        double temperature = getValue(Temperature.class, x, y);
 
-        if (height > 0.3 && height < 0.75)
+        if (height > 0.1 && height < 0.75 && temperature > 35 && temperature < 50)
         {
             return true;
         }
@@ -46,13 +52,16 @@ public class Forest extends Biome {
         if (check(x, y))
         {
             // Get height from heightmap to modify the color to corresponding height
-            Parameter p = generator.getEnvironment().getParameter("heightmap");
-            double height = p.getValue(x, y);
+            Parameter h = generator.getEnvironment().getParameter("heightmap");
+            Parameter t = generator.getEnvironment().getParameter("temperature");
+
+            double height = h.getValue(x, y);
 
             // Get the relative percentage of range hit by the height
-            int value = Helper.getAlignedValueFromHeight(height, 100, 200, 0.1, 0.75);
+            int green = Helper.getAlignedValueFromParameter(height, 100, 200, 0.1, 0.75);
 
-            return new Color(0, value, 0);
+            // Always an instance of color green
+            return new Color(0, green, 0);
         }
 
         return null;

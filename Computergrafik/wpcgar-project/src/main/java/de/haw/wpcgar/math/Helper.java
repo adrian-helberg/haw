@@ -6,9 +6,18 @@ package de.haw.wpcgar.math;
  */
 public class Helper {
 
-    public static int getAlignedValueFromHeight(double height, int minValue, int maxValue, double minHeight, double maxHeight) {
-        double percentage = (height - minHeight) / (maxHeight - minHeight);
-        double value = minValue + percentage * (maxValue - minValue);
+    public static int getAlignedValueFromParameter(double parameterValue, int minColorValue, int maxColorValue, double minParameterValue, double maxParameterValue) {
+
+        if (parameterValue < minParameterValue) {
+            parameterValue = minParameterValue;
+        }
+
+        if (parameterValue > maxParameterValue) {
+            parameterValue = maxParameterValue;
+        }
+
+        double percentage = (parameterValue - minParameterValue) / (maxParameterValue - minParameterValue);
+        double value = minColorValue + percentage * (maxColorValue - minColorValue);
 
         return (int) value;
     }
