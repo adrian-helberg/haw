@@ -31,12 +31,8 @@ public class Forest extends Biome {
         double height = getValue(HeightMap.class, x, y);
         double temperature = getValue(Temperature.class, x, y);
 
-        if (height > 0.1 && height < 0.75 && temperature > 35 && temperature < 50)
-        {
-            return true;
-        }
+        return height > 0.1 && height < 0.75 && temperature > 35 && temperature < 50;
 
-        return false;
     }
 
     /**
@@ -52,16 +48,16 @@ public class Forest extends Biome {
         if (check(x, y))
         {
             // Get height from heightmap to modify the color to corresponding height
-            Parameter h = generator.getEnvironment().getParameter("heightmap");
-            Parameter t = generator.getEnvironment().getParameter("temperature");
+            //Parameter h = generator.getEnvironment().getParameter("heightmap");
 
-            double height = h.getValue(x, y);
+            //double height = h.getValue(x, y);
 
             // Get the relative percentage of range hit by the height
-            int green = Helper.getAlignedValueFromParameter(height, 100, 200, 0.1, 0.75);
+            //int green = Helper.getAlignedValueFromParameter(height, 100, 200, 0.1, 0.75);
 
             // Always an instance of color green
-            return new Color(0, green, 0);
+            //return new Color(0, green, 0);
+            return Color.green;
         }
 
         return null;

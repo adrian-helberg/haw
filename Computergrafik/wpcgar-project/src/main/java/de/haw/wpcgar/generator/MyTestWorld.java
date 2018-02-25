@@ -3,8 +3,9 @@ package de.haw.wpcgar.generator;
 import de.haw.wpcgar.math.Random;
 import de.haw.wpcgar.structure.Biome;
 import de.haw.wpcgar.structure.Parameter;
-import de.haw.wpcgar.structure.biomes.Forest;
+import de.haw.wpcgar.structure.biomes.*;
 import de.haw.wpcgar.structure.params.HeightMap;
+import de.haw.wpcgar.structure.params.Rivers;
 import de.haw.wpcgar.structure.params.Temperature;
 
 import javax.imageio.ImageIO;
@@ -43,10 +44,15 @@ public class MyTestWorld {
         generator = new WorldGenerator(seed);
 
         // Register biomes
+        generator.registerBiome(Ocean.class);
+        //generator.registerBiome(River.class);
+        //generator.registerBiome(Lake.class);
         generator.registerBiome(Forest.class);
+        generator.registerBiome(Mountain.class);
 
         // Register parameter
         generator.getEnvironment().registerParameter(HeightMap.class);
+        //generator.getEnvironment().registerParameter(Rivers.class);
         generator.getEnvironment().registerParameter(Temperature.class);
 
         BufferedImage image = createImage();
