@@ -1,27 +1,232 @@
 \documentclass{beamer}
 \usepackage[utf8]{inputenc}
 \usepackage[english,german]{babel} 
+\usepackage{listings} 
+\usepackage{listings-golang}
 
+\usepackage[absolute,overlay]{textpos}
+  \setlength{\TPHorizModule}{1mm}
+  \setlength{\TPVertModule}{1mm}
+
+\titlegraphic{\includegraphics[scale=0.1]{golanglogo.png}}
 \title{
 	\Large{\textit{\\Die Programmiersprache Go - Eine Einf\"uhrung}} \\
-	\Large{\textbf{\\Pr\"asentation}}
+	\Large{\textbf{\\Konzeptskizze}}
 }
 \author{Student: Adrian Helberg \\Prüfer: Prof. Dr. Axel Schmolitzky}
 \date{\today}
 
+\definecolor{mygreen}{rgb}{0,0.6,0}
+
 \begin{document}
+\lstset{
+    frame=single,
+    basicstyle=\footnotesize,
+    keywordstyle=\color{blue},
+    showstringspaces=false, 
+    stringstyle=\color{mygreen},
+    tabsize=4,
+    language=Golang
+}
 
 \maketitle
 
-\frame{\tableofcontents[currentsection]}
+\frame{\tableofcontents}
 
-\section{Abschnitt 1}
+\section{Geschichte}
 \begin{frame}
-  \frametitle{Ein Demotitel}
+\frametitle{Geschichte}
 
-  \begin{Definition}
-    Eine Definition
-  \end{Definition}
+\begin{itemize}
+\setlength{\itemsep}{30pt}
+\item Entwickler
+\item Entwurfsphase
+\item Ver\"offentlichung
+\item Go-Community
+\end{itemize}
 
 \end{frame}
+
+\section{\"Uberblick}
+\begin{frame}
+\frametitle{\"Uberblick}
+
+\begin{itemize}
+\setlength{\itemsep}{20pt}
+\item Motivation
+\item Zielsetzung
+\item Skalierbarkeit
+\item Einsatzgebiete
+\item Erster Vergleich mit Java\texttrademark
+\end{itemize}
+
+\begin{textblock}{20}(66,64)
+\includegraphics[scale=0.1]{javalogo.png}
+\end{textblock}
+
+\end{frame}
+
+\section{Merkmale}
+\begin{frame}
+\frametitle{Merkmale}
+
+\begin{itemize}
+\setlength{\itemsep}{16pt}
+\item Closures
+\item Reflexion
+\item Typsicherheit
+\item Autmoatische Speicherbereinigung
+\item Interfaces, Mixins $\rightarrow$ Objektorientierung
+\item Keine Klassen $\rightarrow$ Java Vergleich
+\item Pakete
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}
+
+\frametitle{Projekte}
+
+\begin{textblock}{20}(10,30)
+\textit{Go}
+\includegraphics[scale=0.22]{docker.png}
+\end{textblock}
+
+\begin{textblock}{20}(60,32)
+\textit{Java}
+\includegraphics[scale=0.22]{elasticsearch.png}
+\end{textblock}
+
+\end{frame}
+
+\section{Syntax}
+\begin{frame}[fragile]
+\frametitle{Syntax}
+
+%%% GO
+Go
+\begin{lstlisting}
+package main
+
+import "fmt"
+
+func main() {
+    fmt.Println("Hello World!")
+}
+\end{lstlisting}
+
+%%% JAVA
+Java
+\lstset{language=Java}
+\begin{lstlisting}
+public class HelloWorld 
+{ 
+    public static void main (String[] args)
+    {
+        System.out.println("Hello World!");
+    }
+}
+\end{lstlisting}
+
+\end{frame}
+
+\section{Paradigmen}
+\begin{frame}
+\frametitle{Paradigmen}
+
+\begin{itemize}
+\setlength{\itemsep}{20pt}
+\item Nebenläufig
+\item Imperativ
+\item Strukturiert
+\item Modular
+\item Objektorientiert
+\end{itemize}
+
+\end{frame}
+
+\section{Zentrale Fragestellung}
+\begin{frame}
+\frametitle{Zentrale Fragestellung}
+
+\centering
+\glqq flexibel wie dynamisch getyped,\\ aber mit statischer Typsicherheit?\grqq{}
+
+\end{frame}
+
+\section{Pro \& Contra}
+\begin{frame}
+\frametitle{Pro \& Contra}
+
+\begin{tabular}{p{5cm} | p{5.5cm}}
+\textbf{Pro} & \textbf{Contra} \\ \hline
+\begin{itemize}
+\setlength{\itemsep}{20pt}
+\item Minimalismus
+\item Statisches Duck-Typing
+\item Parallelisierung
+\item Aufger\"aumte Syntax
+\item Schneller Compiler
+\end{itemize}
+&
+\begin{itemize}
+\setlength{\itemsep}{20pt}
+\item Keine generische Programmierung
+\item nil statt Option
+\item Wenig grundlegende Datenstrukturen
+\item Keine Methodenüberladung
+\end{itemize}
+\\
+\end{tabular}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Pro \& Contra}
+
+\begin{tabular}{p{5cm} | p{5.5cm}}
+\textbf{Pro} & \textbf{Contra} \\ \hline
+\begin{itemize}
+\setlength{\itemsep}{20pt}
+\item Statisch gelinkte Binärdateien
+\item Laufzeiteigenschaften
+\item Integriertes Unit-Test-Framework
+\item Paketmanager
+\end{itemize}
+&
+\begin{itemize}
+\setlength{\itemsep}{20pt}
+\item Unbefriedigende API-Dokumentation
+\item Teilweise umständliche APIs
+\item Umst\"andliches Mocking
+\item Kleines \"Okosystem
+\end{itemize}
+\\
+\end{tabular}
+
+\end{frame}
+
+\section{Compiler}
+\begin{frame}
+\frametitle{Compiler}
+
+\begin{itemize}
+\setlength{\itemsep}{20pt}
+\item Gc
+\item Gccgo
+\end{itemize}
+
+\end{frame}
+
+\section{Einzelnachweise}
+\begin{frame}
+\frametitle{Einzelnachweise}
+
+\begin{itemize}
+\setlength{\itemsep}{20pt}
+\item ...
+\end{itemize}
+
+\end{frame}
+
 \end{document}
