@@ -18,11 +18,6 @@ public class Environment {
         this.seed = seed;
     }
 
-    public String getSeed()
-    {
-        return seed;
-    }
-
     public Map<String, Parameter> getParameters()
     {
         return parameters;
@@ -53,7 +48,7 @@ public class Environment {
         }
     }
 
-    public <T extends Parameter> void registerParameter(T parameter)
+    private <T extends Parameter> void registerParameter(T parameter)
     {
         parameters.put(parameter.getName(), parameter);
         classes.put(parameter.getClass(), parameter.getName());

@@ -18,11 +18,8 @@ public class Mountain extends Biome {
         HeightMap h = generator.getEnvironment().getParameter(HeightMap.class);
         double height = h.getValue(x, y);
 
-        if (height > 0.7) {
-            return true;
-        }
+        return height > 0.7;
 
-        return false;
     }
 
     @Override

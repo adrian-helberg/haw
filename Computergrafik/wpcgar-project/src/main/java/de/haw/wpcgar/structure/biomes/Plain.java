@@ -17,12 +17,8 @@ public class Plain extends Biome {
 
         double height = getValue(HeightMap.class, x, y);
 
-        if(height <= 0.7)
-        {
-            return true;
-        }
+        return height <= 0.7;
 
-        return false;
     }
 
     @Override

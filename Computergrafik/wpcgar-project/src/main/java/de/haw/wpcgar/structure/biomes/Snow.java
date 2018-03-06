@@ -21,12 +21,8 @@ public class Snow extends Biome {
         double temperature = getValue(Temperature.class, x, y);
         double snow = getValue(Snowy.class, x, y);
 
-        if(height > 0.85 && temperature < 55 && snow > 0.5)
-        {
-            return true;
-        }
+        return height > 0.85 && temperature < 55 && snow > 0.5;
 
-        return false;
     }
 
     @Override

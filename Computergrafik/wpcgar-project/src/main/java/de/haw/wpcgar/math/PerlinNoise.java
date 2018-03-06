@@ -5,7 +5,7 @@ package de.haw.wpcgar.math;
  * @author Adrian Helberg
  */
 public class PerlinNoise {
-    private final int[] _noisePermutations, _noiseTable;
+    private final int[] _noisePermutations;
 
     /**
      * Creates an instance with random noise permutations between 0 and 255.
@@ -15,7 +15,7 @@ public class PerlinNoise {
         Random rand = new Random(seed);
         // Doubled permutation to avoid overflow
         _noisePermutations = new int[512];
-        _noiseTable = new int[256];
+        int[] _noiseTable = new int[256];
 
         for (int i = 0; i < 256; i++)
             _noiseTable[i] = i;
@@ -44,7 +44,7 @@ public class PerlinNoise {
      * @param z Pixel z coordinate
      * @return noise value
      */
-    public double noise(double x, double y, double z) {
+    private double noise(double x, double y, double z) {
         // Calculate the unit cube that the given point is located in
         // Bind the values to the range of 0 to 255
         int X = (int) Math.floor(x) & 255;
@@ -150,8 +150,8 @@ public class PerlinNoise {
      * @param z Pixel z coordinate
      * @param octaves Iterations of noise
      * @param lacunarity Gap how fractals fill the space
-     * @param h
-     * @return
+     * @param h TODO
+     * @return value
      */
     public double fBm(double x, double y, double z, int octaves, double lacunarity, double h) {
         double result = 0.0;

@@ -17,7 +17,7 @@ public abstract class Biome {
         this.generator = generator;
     }
 
-    protected <T extends Parameter> double getValue(Class<T> c, double x, double y)
+    public <T extends Parameter> double getValue(Class<T> c, double x, double y)
     {
         return getValue(c, x, y, 0.0);
     }
@@ -27,7 +27,7 @@ public abstract class Biome {
         return getParameter(c).getValue(x, y, z);
     }
 
-    protected <T extends Parameter> T getParameter(Class<T> c)
+    private <T extends Parameter> T getParameter(Class<T> c)
     {
         return generator.getEnvironment().getParameter(c);
     }

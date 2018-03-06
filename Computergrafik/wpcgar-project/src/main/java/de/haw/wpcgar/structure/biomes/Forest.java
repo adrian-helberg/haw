@@ -1,9 +1,7 @@
 package de.haw.wpcgar.structure.biomes;
 
 import de.haw.wpcgar.generator.WorldGenerator;
-import de.haw.wpcgar.math.Helper;
 import de.haw.wpcgar.structure.Biome;
-import de.haw.wpcgar.structure.Parameter;
 import de.haw.wpcgar.structure.params.HeightMap;
 import de.haw.wpcgar.structure.params.Temperature;
 
@@ -47,16 +45,6 @@ public class Forest extends Biome {
     {
         if (check(x, y))
         {
-            // Get height from heightmap to modify the color to corresponding height
-            //Parameter h = generator.getEnvironment().getParameter("heightmap");
-
-            //double height = h.getValue(x, y);
-
-            // Get the relative percentage of range hit by the height
-            //int green = Helper.getAlignedValueFromParameter(height, 100, 200, 0.1, 0.75);
-
-            // Always an instance of color green
-            //return new Color(0, green, 0);
             return Color.green.darker().darker();
         }
 

@@ -29,18 +29,9 @@ public abstract class Parameter {
      * Name getter.
      * @return name.
      */
-    public String getName()
+    String getName()
     {
         return name;
-    }
-
-    /**
-     * Noise getter.
-     * @return noise.
-     */
-    public PerlinNoise getNoise()
-    {
-        return noise;
     }
 
     /**

@@ -11,7 +11,7 @@ import java.awt.image.BufferedImage;
 public class WorldComponent extends Component {
     private BufferedImage image;
 
-    public WorldComponent(BufferedImage image) {
+    WorldComponent(BufferedImage image) {
         this.image = image;
     }
 
@@ -35,15 +35,5 @@ public class WorldComponent extends Component {
     public void update(Graphics g)
     {
         paint(g);
-    }
-
-    public BufferedImage getImage()
-    {
-        return image;
-    }
-
-    public void setImage(BufferedImage image)
-    {
-        this.image = image;
     }
 }

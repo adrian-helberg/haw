@@ -27,13 +27,7 @@ public class Lake extends Biome {
     @Override
     public Color getColor(double x, double y) {
 
-        //Parameter h = generator.getEnvironment().getParameter("heightmap");
-        //double height = h.getValue(x, y);
-
-        //int greenAndBlue = Helper.getAlignedValueFromParameter(height, 180, 255, 0.1, 0.75);
-
         if (check(x, y)) {
-            //return new Color(0, greenAndBlue, greenAndBlue);
             return Color.cyan;
         }
 
