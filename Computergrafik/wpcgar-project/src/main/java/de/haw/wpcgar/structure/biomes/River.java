@@ -5,13 +5,14 @@ import de.haw.wpcgar.structure.Biome;
 import de.haw.wpcgar.structure.params.HeightMap;
 import de.haw.wpcgar.structure.params.Rivers;
 import de.haw.wpcgar.structure.params.Temperature;
+import edu.hawhamburg.shared.math.Vector;
 
 import java.awt.*;
 
 public class River extends Biome {
 
     public River(WorldGenerator generator) {
-        super(generator);
+        super(generator, new Vector(0, 1, 1, "river"));
     }
 
     @Override
@@ -21,17 +22,12 @@ public class River extends Biome {
         double rivers = getValue(Rivers.class, x, y);
         double temperature = getValue(Temperature.class, x, y);
 
-        return rivers < 0.2 && temperature < 55 && !(height > 0.75 && temperature < 55);
+        return rivers < 0.2 && height > 0.13 && height < 0.6 && temperature < 55;
 
     }
 
     @Override
-    public Color getColor(double x, double y) {
-
-        if (check(x, y)) {
-            return Color.cyan;
-        }
-
-        return Color.black;
+    public Vector getColor() {
+        return color;
     }
 }

@@ -24,6 +24,8 @@ public class Vector implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
+    private String name = "";
+
     public static final Vector VECTOR_3_X = new Vector(1, 0, 0);
 
     public static final Vector VECTOR_3_Y = new Vector(0, 1, 0);
@@ -81,6 +83,22 @@ public class Vector implements Serializable {
         set(0, x);
         set(1, y);
         set(2, z);
+    }
+
+    /**
+     * Convenience constructor for 3-dimensional vectors and name.
+     *
+     * @param x x-coordinate.
+     * @param y y-coordinate.
+     * @param z z-coordinate.
+     * @param name name
+     */
+    public Vector(double x, double y, double z, String name) {
+        this(3);
+        set(0, x);
+        set(1, y);
+        set(2, z);
+        this.name = name;
     }
 
     /**
@@ -480,5 +498,9 @@ public class Vector implements Serializable {
             product += values[i] * other.values[i];
         }
         return product;
+    }
+
+    public String getName() {
+        return name;
     }
 }

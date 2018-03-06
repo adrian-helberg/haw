@@ -1,7 +1,5 @@
 package de.haw.wpcgar;
 
-import de.haw.wpcgar.generator.MyTestWorld;
-
 /**
  * Program entrance point.
  * @author Adrian Helberg

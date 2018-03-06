@@ -57,5 +57,4 @@ public class Triangle extends AbstractTriangle {
     public int getVertexIndex(int index) {
         return vertexIndices[index];
     }
-
 }

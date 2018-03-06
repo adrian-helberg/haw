@@ -1,11 +1,13 @@
 package de.haw.wpcgar.structure.biomes;
 
+import de.haw.wpcgar.generator.MeshGenerator;
 import de.haw.wpcgar.generator.WorldGenerator;
 import de.haw.wpcgar.structure.Biome;
 import de.haw.wpcgar.structure.params.HeightMap;
 import de.haw.wpcgar.structure.params.Temperature;
+import edu.hawhamburg.shared.math.Vector;
 
-import java.awt.*;
+import java.io.IOException;
 
 /**
  * Forest biome.
@@ -20,7 +22,7 @@ public class Forest extends Biome {
 
     public Forest(WorldGenerator generator)
     {
-        super(generator);
+        super(generator, new Vector(0, 0.5, 0, "forest"));
     }
 
     @Override
@@ -30,24 +32,11 @@ public class Forest extends Biome {
         double temperature = getValue(Temperature.class, x, y);
 
         return height > 0.1 && height < 0.75 && temperature > 35 && temperature < 50;
-
     }
 
-    /**
-     * Returns the color of the forest for corresponding coordinates
-     * Color is in between rgb(0,100,0) and rgb(0,200,0)
-     * @param x Pixel x coordinate
-     * @param y Pixel y coordinate
-     * @return Color of biome
-     */
     @Override
-    public Color getColor(double x, double y)
+    public Vector getColor()
     {
-        if (check(x, y))
-        {
-            return Color.green.darker().darker();
-        }
-
-        return null;
+        return color;
     }
 }

@@ -4,13 +4,14 @@ import de.haw.wpcgar.generator.WorldGenerator;
 import de.haw.wpcgar.structure.Biome;
 import de.haw.wpcgar.structure.params.HeightMap;
 import de.haw.wpcgar.structure.params.Temperature;
+import edu.hawhamburg.shared.math.Vector;
 
 import java.awt.*;
 
 public class Desert extends Biome {
 
     public Desert(WorldGenerator generator) {
-        super(generator);
+        super(generator, new Vector(1, 1, 0, "desert"));
     }
 
     @Override
@@ -19,7 +20,7 @@ public class Desert extends Biome {
         double height = getValue(HeightMap.class, x, y);
         double temperature = getValue(Temperature.class, x, y);
 
-        if(temperature > 60 && height < 0.6)
+        if(temperature > 70 && height < 0.7)
         {
             return true;
         }
@@ -28,13 +29,7 @@ public class Desert extends Biome {
     }
 
     @Override
-    public Color getColor(double x, double y) {
-
-        if(check(x, y))
-        {
-            return Color.yellow;
-        }
-
-        return null;
+    public Vector getColor() {
+        return color;
     }
 }

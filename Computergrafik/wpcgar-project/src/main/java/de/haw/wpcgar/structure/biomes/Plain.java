@@ -3,13 +3,14 @@ package de.haw.wpcgar.structure.biomes;
 import de.haw.wpcgar.generator.WorldGenerator;
 import de.haw.wpcgar.structure.Biome;
 import de.haw.wpcgar.structure.params.HeightMap;
+import edu.hawhamburg.shared.math.Vector;
 
 import java.awt.*;
 
 public class Plain extends Biome {
 
     public Plain(WorldGenerator generator) {
-        super(generator);
+        super(generator, new Vector(0, 1, 0, "plain"));
     }
 
     @Override
@@ -22,13 +23,7 @@ public class Plain extends Biome {
     }
 
     @Override
-    public Color getColor(double x, double y) {
-
-        if (check(x, y))
-        {
-            return Color.green;
-        }
-
-        return null;
+    public Vector getColor() {
+        return color;
     }
 }

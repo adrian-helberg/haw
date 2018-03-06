@@ -1,5 +1,7 @@
 package de.haw.wpcgar.generator;
 
+import de.haw.wpcgar.MyTestWorld;
+
 import java.awt.*;
 import java.awt.image.BufferedImage;
 
@@ -11,7 +13,7 @@ import java.awt.image.BufferedImage;
 public class WorldComponent extends Component {
     private BufferedImage image;
 
-    WorldComponent(BufferedImage image) {
+    public WorldComponent(BufferedImage image) {
         this.image = image;
     }
 

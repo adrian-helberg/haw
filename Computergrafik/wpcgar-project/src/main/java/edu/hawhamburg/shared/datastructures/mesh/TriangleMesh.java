@@ -77,6 +77,13 @@ public class TriangleMesh implements ITriangleMesh {
         return vertices.size() - 1;
     }
 
+    public int addVertex(Vector position, Vector color) {
+        Vertex v = new Vertex(position);
+        v.setColor(color);
+        vertices.add(v);
+        return vertices.size() - 1;
+    }
+
     @Override
     public Vertex getVertex(int index) {
         return vertices.get(index);

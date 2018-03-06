@@ -1,0 +1,45 @@
+newmtl default
+kd 0.0 0.0 0.0
+ks 0.0 0.0 0.0
+illum 0
+
+newmtl snow
+kd 1.0 1.0 1.0
+ks 0.0 0.0 0.0
+illum 0
+
+newmtl mountain
+kd 0.75 0.75 0.75
+ks 0.0 0.0 0.0
+illum 0
+
+newmtl forest
+kd 0.0 0.5 0.0
+ks 0.0 0.0 0.0
+illum 0
+
+newmtl valley
+kd 0.04 0.04 0.04
+ks 0.0 0.0 0.0
+illum 0
+
+newmtl plain
+kd 0.0 1.0 0.0
+ks 0.0 0.0 0.0
+illum 0
+
+newmtl desert
+kd 1.0 1.0 0.0
+ks 0.0 0.0 0.0
+illum 0
+
+newmtl river
+kd 0.0 1.0 1.0
+ks 0.0 0.0 0.0
+illum 0
+
+newmtl ocean
+kd 0.0 0.0 1.0
+ks 0.0 0.0 0.0
+illum 0
+

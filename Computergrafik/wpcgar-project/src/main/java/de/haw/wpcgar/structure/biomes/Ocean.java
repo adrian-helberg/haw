@@ -3,12 +3,13 @@ package de.haw.wpcgar.structure.biomes;
 import de.haw.wpcgar.generator.WorldGenerator;
 import de.haw.wpcgar.structure.Biome;
 import de.haw.wpcgar.structure.Parameter;
+import edu.hawhamburg.shared.math.Vector;
 
 import java.awt.*;
 
 public class Ocean extends Biome {
     public Ocean(WorldGenerator generator) {
-        super(generator);
+        super(generator, new Vector(0, 0, 1, "ocean"));
     }
 
     @Override
@@ -23,12 +24,7 @@ public class Ocean extends Biome {
     }
 
     @Override
-    public Color getColor(double x, double y) {
-
-        if (check(x, y)) {
-            return Color.blue;
-        }
-
-        return null;
+    public Vector getColor() {
+        return color;
     }
 }

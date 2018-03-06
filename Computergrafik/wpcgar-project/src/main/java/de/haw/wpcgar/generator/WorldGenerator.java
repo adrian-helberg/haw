@@ -24,7 +24,7 @@ public class WorldGenerator {
         environment = new Environment(seed);
     }
 
-    <T extends Biome> void registerBiome(Class<T> c) {
+    public <T extends Biome> void registerBiome(Class<T> c) {
         try {
             Constructor<T> constructor = c.getConstructor(WorldGenerator.class);
             T biome = constructor.newInstance(this);
@@ -41,7 +41,7 @@ public class WorldGenerator {
         priority.add(biome.getClass());
     }
 
-    Biome getBiome(double x, double y) {
+    public Biome getBiome(double x, double y) {
         Biome result = null;
 
         for (Class<? extends Biome> c : priority) {

@@ -1,14 +1,17 @@
-package de.haw.wpcgar.generator;
+package de.haw.wpcgar;
 
+import de.haw.wpcgar.generator.MeshGenerator;
+import de.haw.wpcgar.generator.WorldComponent;
+import de.haw.wpcgar.generator.WorldGenerator;
 import de.haw.wpcgar.math.Random;
 import de.haw.wpcgar.structure.Biome;
 import de.haw.wpcgar.structure.Parameter;
 import de.haw.wpcgar.structure.biomes.*;
 import de.haw.wpcgar.structure.params.HeightMap;
-import de.haw.wpcgar.structure.params.Snowy;
+import de.haw.wpcgar.structure.params.Population;
+import de.haw.wpcgar.structure.params.Rivers;
 import de.haw.wpcgar.structure.params.Temperature;
 import edu.hawhamburg.shared.datastructures.mesh.Vertex;
-import edu.hawhamburg.shared.math.MeshGenerator;
 import edu.hawhamburg.shared.math.Vector;
 import javax.imageio.ImageIO;
 import java.awt.*;
@@ -19,6 +22,8 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.Writer;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Create a new world instance.
@@ -27,22 +32,23 @@ import java.io.Writer;
  */
 public class MyTestWorld {
 
-    private WorldGenerator        generator;
+    private WorldGenerator generator;
 
     // World generation properties ------------------- //
     //private static double         zoom           = 5.0;
     private static int            resolutionX    = 800;
     private static int            resolutionY    = 800;
-    final static int              windowWidth    = 800;
-    final static int              windowHeight   = 800;
+    public final static int       windowWidth    = 800;
+    public final static int       windowHeight   = 800;
     private static boolean        useDefaultSeed = true;
-    private static String         defaultSeed    = "akjsndoisanjdoias";
+    private static String         defaultSeed    = "akjsndoisanj";
     // ---------------------------------------------- //
 
     private static BufferedImage  renderingImage;
     private Vertex[][] pointCloud = new Vertex[resolutionX][resolutionY];
+    private List<Vector> colors = new ArrayList<>();
 
-    public MyTestWorld()
+    MyTestWorld()
     {
         String seed = defaultSeed;
         if (!useDefaultSeed)
@@ -50,23 +56,26 @@ public class MyTestWorld {
             seed = new Random().randomCharacterString(13);
         }
 
+        // Set default color for material
+        colors.add(new Vector(0, 0, 0, "default"));
+
         generator = new WorldGenerator(seed);
 
         // Register biomes
         generator.registerBiome(Ocean.class);
         generator.registerBiome(Snow.class);
-        //generator.registerBiome(River.class);
-        //generator.registerBiome(Lake.class);
+        generator.registerBiome(River.class);
         generator.registerBiome(Desert.class);
         generator.registerBiome(Forest.class);
+        generator.registerBiome(Valley.class);
         generator.registerBiome(Plain.class);
         generator.registerBiome(Mountain.class);
 
         // Register parameter
         generator.getEnvironment().registerParameter(HeightMap.class);
-        //generator.getEnvironment().registerParameter(Rivers.class);
+        generator.getEnvironment().registerParameter(Rivers.class);
         generator.getEnvironment().registerParameter(Temperature.class);
-        generator.getEnvironment().registerParameter(Snowy.class);
+        generator.getEnvironment().registerParameter(Population.class);
 
         BufferedImage image = createImage();
         try
@@ -80,14 +89,25 @@ public class MyTestWorld {
 
         renderingImage = image;
         showWindow();
+
         exportOBJ();
     }
 
     private void exportOBJ() {
-        File file = new File("./world.obj").getAbsoluteFile();
-        System.out.println("Writing OBJ to: " + file);
-        try (Writer writer = new FileWriter(file)) {
-            new MeshGenerator(pointCloud, 10).writeOBJ(writer);
+        File objFile = new File("./world.obj").getAbsoluteFile();
+        File mltFile = new File("./world.mtl").getAbsoluteFile();
+        System.out.println("Writing OBJ to: " + objFile);
+        System.out.println("Writing MTL to: " + mltFile);
+        try {
+            Writer objWriter = new FileWriter(objFile);
+            Writer mtlWriter = new FileWriter(mltFile);
+
+            MeshGenerator mg = new MeshGenerator(pointCloud, colors, 6);
+            mg.writeOBJ(objWriter);
+            mg.writeMTL(mtlWriter);
+
+            objWriter.close();
+            mtlWriter.close();
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -105,7 +125,7 @@ public class MyTestWorld {
         int level = 10;
         double max = resolutionX * resolutionY;
 
-        Color color = Color.black;
+        Vector color = new Vector(0, 0, 0, "default");
 
         Parameter heightParam = generator.getEnvironment().getParameter(HeightMap.class);
 
@@ -123,10 +143,15 @@ public class MyTestWorld {
                 if (biome != null)
                 {
                     // Get biome color
-                    color = biome.getColor(x, y);
+                    color = biome.getColor();
+                    if (!colors.contains(color)) {
+                        colors.add(color);
+                    }
                 }
 
-                g.setColor(color);
+                // Translate color vector to Color for Graphics2D
+                g.setColor(new Color((int) (color.x() * 255), (int) (color.y() * 255), (int) (color.z() * 255)));
+
                 g.fillRect(x + (resolutionX / 2), y + (resolutionY / 2), 1, 1);
 
                 count++;
@@ -138,6 +163,7 @@ public class MyTestWorld {
                 );
 
                 point = new Vertex(pointPosition);
+                point.setColor(color);
                 pointCloud[x + (resolutionX / 2)][y + (resolutionY / 2)] = point;
 
                 if ((count * 100 / max) >= level)

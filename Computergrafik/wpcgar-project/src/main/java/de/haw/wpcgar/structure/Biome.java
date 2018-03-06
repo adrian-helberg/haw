@@ -1,8 +1,7 @@
 package de.haw.wpcgar.structure;
 
 import de.haw.wpcgar.generator.WorldGenerator;
-
-import java.awt.*;
+import edu.hawhamburg.shared.math.Vector;
 
 /**
  * Abstract biome class.
@@ -11,10 +10,12 @@ import java.awt.*;
  */
 public abstract class Biome {
     protected final WorldGenerator generator;
+    protected final Vector color;
 
-    public Biome(WorldGenerator generator)
+    public Biome(WorldGenerator generator, Vector color)
     {
         this.generator = generator;
+        this.color = color;
     }
 
     public <T extends Parameter> double getValue(Class<T> c, double x, double y)
@@ -40,5 +41,9 @@ public abstract class Biome {
 
     public abstract boolean check(double x, double y);
 
-    public abstract Color getColor(double x, double y);
+    /**
+     * Return the color of the biome
+     * @return Vector color
+     */
+    public abstract Vector getColor();
 }
