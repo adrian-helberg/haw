@@ -2,48 +2,30 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0a44feef-2470-4c04-850f-83b30b3921e4" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/edu/hawhamburg/shared/datastructures/mesh/AbstractTriangle.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/edu/hawhamburg/shared/datastructures/mesh/ITriangleMesh.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/edu/hawhamburg/shared/datastructures/mesh/Triangle.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/edu/hawhamburg/shared/datastructures/mesh/TriangleMesh.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/edu/hawhamburg/shared/datastructures/mesh/Vertex.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/edu/hawhamburg/shared/math/MathHelpers.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/edu/hawhamburg/shared/math/Matrix.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/edu/hawhamburg/shared/math/MeshGenerator.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/edu/hawhamburg/shared/math/Vector.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/log.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/de/haw/wpcgar/math/Helper.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/de/haw/wpcgar/math/Helper.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/de/haw/wpcgar/generator/MyTestWorld$1.class" afterPath="$PROJECT_DIR$/out/production/classes/de/haw/wpcgar/generator/MyTestWorld$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/de/haw/wpcgar/generator/MyTestWorld.class" afterPath="$PROJECT_DIR$/out/production/classes/de/haw/wpcgar/generator/MyTestWorld.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/de/haw/wpcgar/generator/WorldComponent.class" afterPath="$PROJECT_DIR$/out/production/classes/de/haw/wpcgar/generator/WorldComponent.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/de/haw/wpcgar/generator/WorldGenerator.class" afterPath="$PROJECT_DIR$/out/production/classes/de/haw/wpcgar/generator/WorldGenerator.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/de/haw/wpcgar/math/PerlinNoise.class" afterPath="$PROJECT_DIR$/out/production/classes/de/haw/wpcgar/math/PerlinNoise.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/de/haw/wpcgar/math/Random.class" afterPath="$PROJECT_DIR$/out/production/classes/de/haw/wpcgar/math/Random.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/de/haw/wpcgar/structure/Biome.class" afterPath="$PROJECT_DIR$/out/production/classes/de/haw/wpcgar/structure/Biome.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/de/haw/wpcgar/structure/Environment.class" afterPath="$PROJECT_DIR$/out/production/classes/de/haw/wpcgar/structure/Environment.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/de/haw/wpcgar/structure/Parameter.class" afterPath="$PROJECT_DIR$/out/production/classes/de/haw/wpcgar/structure/Parameter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/de/haw/wpcgar/structure/biomes/Forest.class" afterPath="$PROJECT_DIR$/out/production/classes/de/haw/wpcgar/structure/biomes/Forest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/render.png" afterPath="$PROJECT_DIR$/render.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules/wpcgar-project.iml" afterPath="$PROJECT_DIR$/.idea/modules/wpcgar-project.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules/wpcgar-project_main.iml" afterPath="$PROJECT_DIR$/.idea/modules/wpcgar-project_main.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules/wpcgar-project_test.iml" afterPath="$PROJECT_DIR$/.idea/modules/wpcgar-project_test.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Seminar/Golang/bin/hello.exe" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Seminar/Golang/src/github.com/golang/example" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Seminar/Latex/Presentation.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Seminar/Latex/Presentation.snm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Seminar/Latex/Presentation.synctex.gz" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Seminar/Latex/docker.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Seminar/Latex/elasticsearch.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Seminar/Latex/golanglogo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Seminar/Latex/javalogo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Seminar/Golang/.idea/Golang.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Seminar/Golang/.idea/modules.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Seminar/Golang/.idea/vcs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Seminar/Golang/.idea/workspace.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Seminar/Golang/src/main.go" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Seminar/Latex/Presentation.aux" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Seminar/Latex/Presentation.log" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Seminar/Latex/Presentation.nav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Seminar/Latex/Presentation.out" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Seminar/Latex/Presentation.tex" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Seminar/Latex/Presentation.toc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Seminar/Latex/Presentation.vrb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Seminar/Latex/listings-golang.sty" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/sonarIssues.xml" afterPath="$PROJECT_DIR$/.idea/sonarIssues.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.gradle" afterPath="$PROJECT_DIR$/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/haw/wpcgar/generator/MyTestWorld.java" afterPath="$PROJECT_DIR$/src/main/java/de/haw/wpcgar/generator/MyTestWorld.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/haw/wpcgar/generator/WorldComponent.java" afterPath="$PROJECT_DIR$/src/main/java/de/haw/wpcgar/generator/WorldComponent.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/haw/wpcgar/generator/WorldGenerator.java" afterPath="$PROJECT_DIR$/src/main/java/de/haw/wpcgar/generator/WorldGenerator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/haw/wpcgar/math/PerlinNoise.java" afterPath="$PROJECT_DIR$/src/main/java/de/haw/wpcgar/math/PerlinNoise.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/haw/wpcgar/math/Random.java" afterPath="$PROJECT_DIR$/src/main/java/de/haw/wpcgar/math/Random.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/haw/wpcgar/structure/Biome.java" afterPath="$PROJECT_DIR$/src/main/java/de/haw/wpcgar/structure/Biome.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/haw/wpcgar/structure/Environment.java" afterPath="$PROJECT_DIR$/src/main/java/de/haw/wpcgar/structure/Environment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/haw/wpcgar/structure/Parameter.java" afterPath="$PROJECT_DIR$/src/main/java/de/haw/wpcgar/structure/Parameter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/haw/wpcgar/structure/biomes/Forest.java" afterPath="$PROJECT_DIR$/src/main/java/de/haw/wpcgar/structure/biomes/Forest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/haw/wpcgar/structure/biomes/Lake.java" afterPath="$PROJECT_DIR$/src/main/java/de/haw/wpcgar/structure/biomes/Lake.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/haw/wpcgar/structure/biomes/Mountain.java" afterPath="$PROJECT_DIR$/src/main/java/de/haw/wpcgar/structure/biomes/Mountain.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/haw/wpcgar/structure/biomes/Plain.java" afterPath="$PROJECT_DIR$/src/main/java/de/haw/wpcgar/structure/biomes/Plain.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/haw/wpcgar/structure/biomes/Snow.java" afterPath="$PROJECT_DIR$/src/main/java/de/haw/wpcgar/structure/biomes/Snow.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -91,7 +73,7 @@
     </system>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -567,9 +549,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -680,6 +659,9 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="AndroidView" />
     </panes>
   </component>
@@ -840,30 +822,26 @@
       <workItem from="1519520558660" duration="240000" />
       <workItem from="1519565768243" duration="17069000" />
       <workItem from="1519585557546" duration="1212000" />
-      <workItem from="1520265970132" duration="5493000" />
-      <workItem from="1520327562001" duration="2637000" />
+      <workItem from="1520331108898" duration="5000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="72469000" />
+    <option name="totallyTimeSpent" value="56592000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32873806" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32944915" sideWeight="0.50208336" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33404028" sideWeight="0.49791667" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33404028" sideWeight="0.49791667" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.228125" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32873806" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="SonarQube" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296875" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -871,15 +849,16 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3993644" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32944915" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32944915" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -934,7 +913,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="476">
           <caret line="51" column="35" lean-forward="false" selection-start-line="51" selection-start-column="35" selection-end-line="51" selection-end-column="35" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -942,7 +920,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="867">
           <caret line="76" column="43" lean-forward="false" selection-start-line="76" selection-start-column="43" selection-end-line="76" selection-end-column="43" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -950,31 +927,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
           <caret line="49" column="28" lean-forward="false" selection-start-line="49" selection-start-column="22" selection-end-line="49" selection-end-column="28" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/log.txt">
-      <provider editor-type-id="LargeFileEditor">
-        <state relative-caret-position="136">
-          <caret line="8" column="26" lean-forward="false" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="42" lean-forward="false" selection-start-line="1" selection-start-column="42" selection-end-line="1" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/output.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/log.txt" />
+    <entry file="file://$PROJECT_DIR$/output.txt" />
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/hawhamburg/shared/math/MeshGenerator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="415">
@@ -994,7 +951,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="467">
           <caret line="127" column="5" lean-forward="false" selection-start-line="127" selection-start-column="5" selection-end-line="127" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1018,7 +974,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-23460">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1048,14 +1003,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/de/haw/wpcgar/math/Helper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="9" lean-forward="true" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/haw/wpcgar/math/Helper.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/de/haw/wpcgar/math/PerlinNoise.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="483">
