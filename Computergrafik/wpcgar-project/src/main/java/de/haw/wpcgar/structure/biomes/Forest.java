@@ -1,13 +1,10 @@
 package de.haw.wpcgar.structure.biomes;
 
-import de.haw.wpcgar.generator.MeshGenerator;
 import de.haw.wpcgar.generator.WorldGenerator;
 import de.haw.wpcgar.structure.Biome;
 import de.haw.wpcgar.structure.params.HeightMap;
 import de.haw.wpcgar.structure.params.Temperature;
 import edu.hawhamburg.shared.math.Vector;
-
-import java.io.IOException;
 
 /**
  * Forest biome.

@@ -6,8 +6,6 @@ import de.haw.wpcgar.structure.params.HeightMap;
 import de.haw.wpcgar.structure.params.Temperature;
 import edu.hawhamburg.shared.math.Vector;
 
-import java.awt.*;
-
 public class Desert extends Biome {
 
     public Desert(WorldGenerator generator) {

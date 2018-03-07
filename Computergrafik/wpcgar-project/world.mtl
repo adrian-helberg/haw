@@ -18,11 +18,6 @@ kd 0.0 0.5 0.0
 ks 0.0 0.0 0.0
 illum 0
 
-newmtl valley
-kd 0.04 0.04 0.04
-ks 0.0 0.0 0.0
-illum 0
-
 newmtl plain
 kd 0.0 1.0 0.0
 ks 0.0 0.0 0.0
@@ -41,5 +36,6 @@ illum 0
 newmtl ocean
 kd 0.0 0.0 1.0
 ks 0.0 0.0 0.0
-illum 0
+d 0.5
+illum 4
 

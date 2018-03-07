@@ -13,12 +13,27 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/.idea/workspace.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/build.gradle">
           <value>
             <set />
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/output.txt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/de/haw/wpcgar/MyTestWorld.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/de/haw/wpcgar/generator/MeshGenerator.java">
           <value>
             <set />
           </value>
@@ -83,6 +98,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/de/haw/wpcgar/structure/biomes/Ocean.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/main/java/de/haw/wpcgar/structure/biomes/Plain.java">
           <value>
             <set />
@@ -94,6 +114,11 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/src/main/java/de/haw/wpcgar/structure/biomes/Snow.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/de/haw/wpcgar/structure/biomes/Valley.java">
           <value>
             <set />
           </value>
@@ -144,6 +169,11 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/src/main/java/edu/hawhamburg/shared/math/Vector.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/world.mtl">
           <value>
             <set />
           </value>

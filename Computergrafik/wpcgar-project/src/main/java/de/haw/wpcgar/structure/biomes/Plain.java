@@ -5,8 +5,6 @@ import de.haw.wpcgar.structure.Biome;
 import de.haw.wpcgar.structure.params.HeightMap;
 import edu.hawhamburg.shared.math.Vector;
 
-import java.awt.*;
-
 public class Plain extends Biome {
 
     public Plain(WorldGenerator generator) {

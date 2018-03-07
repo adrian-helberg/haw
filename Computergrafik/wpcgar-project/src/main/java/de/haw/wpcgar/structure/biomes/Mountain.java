@@ -5,8 +5,6 @@ import de.haw.wpcgar.structure.Biome;
 import de.haw.wpcgar.structure.params.HeightMap;
 import edu.hawhamburg.shared.math.Vector;
 
-import java.awt.*;
-
 public class Mountain extends Biome {
 
     public Mountain(WorldGenerator generator) {

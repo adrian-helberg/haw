@@ -67,7 +67,7 @@ public class MyTestWorld {
         generator.registerBiome(River.class);
         generator.registerBiome(Desert.class);
         generator.registerBiome(Forest.class);
-        generator.registerBiome(Valley.class);
+        //generator.registerBiome(Valley.class);
         generator.registerBiome(Plain.class);
         generator.registerBiome(Mountain.class);
 
@@ -75,7 +75,7 @@ public class MyTestWorld {
         generator.getEnvironment().registerParameter(HeightMap.class);
         generator.getEnvironment().registerParameter(Rivers.class);
         generator.getEnvironment().registerParameter(Temperature.class);
-        generator.getEnvironment().registerParameter(Population.class);
+        //generator.getEnvironment().registerParameter(Population.class);
 
         BufferedImage image = createImage();
         try

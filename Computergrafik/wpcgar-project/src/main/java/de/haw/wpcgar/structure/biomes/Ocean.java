@@ -5,8 +5,6 @@ import de.haw.wpcgar.structure.Biome;
 import de.haw.wpcgar.structure.Parameter;
 import edu.hawhamburg.shared.math.Vector;
 
-import java.awt.*;
-
 public class Ocean extends Biome {
     public Ocean(WorldGenerator generator) {
         super(generator, new Vector(0, 0, 1, "ocean"));
@@ -19,7 +17,7 @@ public class Ocean extends Biome {
 
         double height = h.getValue(x, y);
 
-        return height < 0.13;
+        return height <= 0.13;
 
     }
 

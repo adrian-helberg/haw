@@ -7,8 +7,6 @@ import de.haw.wpcgar.structure.params.Rivers;
 import de.haw.wpcgar.structure.params.Temperature;
 import edu.hawhamburg.shared.math.Vector;
 
-import java.awt.*;
-
 public class River extends Biome {
 
     public River(WorldGenerator generator) {

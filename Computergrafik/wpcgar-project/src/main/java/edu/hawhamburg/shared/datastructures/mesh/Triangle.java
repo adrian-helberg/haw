@@ -27,7 +27,7 @@ public class Triangle extends AbstractTriangle {
      */
     private int[] vertexIndices = {-1, -1, -1};
 
-    Triangle(int a, int b, int c) {
+    public Triangle(int a, int b, int c) {
         this(a, b, c, -1, -1, -1, new Vector(1, 0, 0));
     }
 
