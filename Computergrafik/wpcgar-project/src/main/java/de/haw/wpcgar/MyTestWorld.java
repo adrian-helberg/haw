@@ -102,7 +102,7 @@ public class MyTestWorld {
             Writer objWriter = new FileWriter(objFile);
             Writer mtlWriter = new FileWriter(mltFile);
 
-            MeshGenerator mg = new MeshGenerator(pointCloud, colors, 6);
+            MeshGenerator mg = new MeshGenerator(pointCloud, colors, 1);
             mg.writeOBJ(objWriter);
             mg.writeMTL(mtlWriter);
 

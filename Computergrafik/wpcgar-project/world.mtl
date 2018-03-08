@@ -36,6 +36,5 @@ illum 0
 newmtl ocean
 kd 0.0 0.0 1.0
 ks 0.0 0.0 0.0
-d 0.5
-illum 4
+illum 0
 

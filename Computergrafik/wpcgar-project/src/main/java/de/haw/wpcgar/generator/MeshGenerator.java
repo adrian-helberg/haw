@@ -65,48 +65,43 @@ public class MeshGenerator {
             for (int y = 0; y < resolutionY; y += vertexGenerationStep) {
                 if (x + vertexGenerationStep < resolutionX && y + vertexGenerationStep < resolutionX) {
 
-                    Triangle t1, t2;
+                    Triangle t1, t2, t3, t4;
 
                     t1 = new Triangle(
                             getOrCreateMeshVertex(x, y + vertexGenerationStep),
                             getOrCreateMeshVertex(x + vertexGenerationStep, y),
                             getOrCreateMeshVertex(x, y)
                     );
+                    t1.setColor(pointCloud[x][y + vertexGenerationStep].getColor());
                     triangleMesh.addTriangle(t1);
-
-//                    triangleMesh.addTriangle(
-//                            getOrCreateMeshVertex(x, y + vertexGenerationStep),
-//                            getOrCreateMeshVertex(x + vertexGenerationStep, y),
-//                            getOrCreateMeshVertex(x, y)
-//                    );
 
                     t2 = new Triangle(
                             getOrCreateMeshVertex(x, y + vertexGenerationStep),
                             getOrCreateMeshVertex(x + vertexGenerationStep, y + vertexGenerationStep),
                             getOrCreateMeshVertex(x + vertexGenerationStep, y)
                     );
+                    t2.setColor(pointCloud[x][y + vertexGenerationStep].getColor());
                     triangleMesh.addTriangle(t2);
 
-//                    triangleMesh.addTriangle(
-//                            getOrCreateMeshVertex(x, y + vertexGenerationStep),
-//                            getOrCreateMeshVertex(x + vertexGenerationStep, y + vertexGenerationStep),
-//                            getOrCreateMeshVertex(x + vertexGenerationStep, y)
-//                    );
-
                     if (Objects.equals(triangleMesh.getVertex(t1.getVertexIndex(0)).getColor().getName(), "ocean")
-                     || Objects.equals(triangleMesh.getVertex(t2.getVertexIndex(0)).getColor().getName(), "ocean"))
+                     || Objects.equals(triangleMesh.getVertex(t2.getVertexIndex(1)).getColor().getName(), "ocean")
+                     || Objects.equals(triangleMesh.getVertex(t2.getVertexIndex(2)).getColor().getName(), "ocean"))
                     {
-                        triangleMesh.addTriangle(
+                        t3 = new Triangle(
                             getOrCreateOceanLevelVertex(x, y + vertexGenerationStep),
                             getOrCreateOceanLevelVertex(x + vertexGenerationStep, y),
                             getOrCreateOceanLevelVertex(x, y)
                         );
+                        t3.setColor(new Vector(0, 0, 1, "ocean"));
+                        triangleMesh.addTriangle(t3);
 
-                        triangleMesh.addTriangle(
+                        t4 = new Triangle(
                             getOrCreateOceanLevelVertex(x, y + vertexGenerationStep),
                             getOrCreateOceanLevelVertex(x + vertexGenerationStep, y + vertexGenerationStep),
                             getOrCreateOceanLevelVertex(x + vertexGenerationStep, y)
                         );
+                        t4.setColor(new Vector(0, 0, 1, "ocean"));
+                        triangleMesh.addTriangle(t4);
                     }
                 }
             }
@@ -142,7 +137,7 @@ public class MeshGenerator {
 
         for (int i = 0; i < triangleMesh.getNumberOfTriangles(); i++) {
             Triangle t = triangleMesh.getTriangle(i);
-            mtl = triangleMesh.getVertex(t.getVertexIndex(0) + 1).getColor().getName();
+            mtl = t.getColor().getName();
 
             if(!Objects.equals(mtl, currentMLT) || i == 0) {
                 writer.append("usemtl ").append(mtl).append("\n");
