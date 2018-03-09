@@ -100,6 +100,7 @@ public class MeshGenerator {
                     t2.setColor(color);
                     triangleMesh.addTriangle(t2);
 
+                    // Create additional triangles to create ocean water level
                     if (Objects.equals(triangleMesh.getVertex(t1.getVertexIndex(0)).getColor().getName(), "ocean")
                      || Objects.equals(triangleMesh.getVertex(t2.getVertexIndex(1)).getColor().getName(), "ocean")
                      || Objects.equals(triangleMesh.getVertex(t2.getVertexIndex(2)).getColor().getName(), "ocean"))
@@ -133,18 +134,21 @@ public class MeshGenerator {
 
     /**
      * Get the most common color out of 3 vertex colors.
-     * Prefers river color to prevent interruptions in rivers
+     * Prefers river vertex color over all.
+     * Prefers all vertex colors over ocean vertex color.
+     * Plain vertex color as default color.
      * @param vertexColors Colors from 3 vertices.
      * @return most common color.
      */
     private Vector getMatchingColor(Vector[] vertexColors) {
         HashMap<Vector, Integer> occurances = new HashMap<>();
-        Integer occ = 0;
+        Integer occ = null;
+        Vector plain = new Vector(0, 1, 0, "plain");
 
         for (Vector vertexColor : vertexColors) {
 
             // At least one river vertex color
-            if (vertexColor.getName() == "river")
+            if (Objects.equals(vertexColor.getName(), "river"))
             {
                 return vertexColor;
             }
@@ -158,6 +162,7 @@ public class MeshGenerator {
             }
         }
 
+        // Get the entry for maximal occurrences
         Map.Entry<Vector, Integer> maxEntry = null;
         for (Map.Entry<Vector, Integer> entry : occurances.entrySet())
         {
@@ -167,7 +172,7 @@ public class MeshGenerator {
             }
         }
 
-        return maxEntry != null ? maxEntry.getKey() : null;
+        return Objects.equals(maxEntry.getKey().getName(), "ocean") && maxEntry.getValue() < 3 ? plain : maxEntry.getKey();
     }
 
     private int getOrCreateMeshVertex(int x, int y) {

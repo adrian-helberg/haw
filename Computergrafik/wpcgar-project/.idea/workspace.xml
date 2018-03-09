@@ -65,32 +65,26 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="MyTestWorld.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="MyTestWorld.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/de/haw/wpcgar/MyTestWorld.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-595">
-              <caret line="51" column="17" lean-forward="true" selection-start-line="51" selection-start-column="17" selection-end-line="51" selection-end-column="17" />
+            <state relative-caret-position="374">
+              <caret line="192" column="5" lean-forward="true" selection-start-line="192" selection-start-column="5" selection-end-line="192" selection-end-column="5" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MeshGenerator.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MeshGenerator.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/de/haw/wpcgar/generator/MeshGenerator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="257">
-              <caret line="148" column="35" lean-forward="true" selection-start-line="148" selection-start-column="35" selection-end-line="148" selection-end-column="35" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Ocean.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/de/haw/wpcgar/structure/biomes/Ocean.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="413">
+              <caret line="173" column="0" lean-forward="true" selection-start-line="173" selection-start-column="0" selection-end-line="173" selection-end-column="0" />
+              <folding>
+                <element signature="method#getOrCreateMeshVertex#0;class#MeshGenerator#0" expanded="false" />
+                <element signature="method#getOrCreateOceanLevelVertex#0;class#MeshGenerator#0" expanded="false" />
+                <element signature="method#writeMTL#0;class#MeshGenerator#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -563,8 +557,8 @@
         <option value="$PROJECT_DIR$/world.obj" />
         <option value="$PROJECT_DIR$/src/main/java/de/haw/wpcgar/structure/Parameter.java" />
         <option value="$PROJECT_DIR$/src/main/java/de/haw/wpcgar/structure/params/HeightMap.java" />
-        <option value="$PROJECT_DIR$/src/main/java/de/haw/wpcgar/MyTestWorld.java" />
         <option value="$PROJECT_DIR$/src/main/java/de/haw/wpcgar/generator/MeshGenerator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/de/haw/wpcgar/MyTestWorld.java" />
       </list>
     </option>
   </component>
@@ -855,12 +849,12 @@
       <workItem from="1520331389890" duration="180000" />
       <workItem from="1520331605682" duration="21908000" />
       <workItem from="1520435491613" duration="8171000" />
-      <workItem from="1520599366897" duration="6141000" />
+      <workItem from="1520599366897" duration="7250000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="96432000" />
+    <option name="totallyTimeSpent" value="97541000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1199,32 +1193,36 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/de/haw/wpcgar/structure/biomes/Ocean.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/de/haw/wpcgar/MyTestWorld.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-595">
-          <caret line="51" column="17" lean-forward="true" selection-start-line="51" selection-start-column="17" selection-end-line="51" selection-end-column="17" />
+        <state relative-caret-position="238">
+          <caret line="19" column="30" lean-forward="true" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/world.mtl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="10" lean-forward="false" selection-start-line="25" selection-start-column="10" selection-end-line="25" selection-end-column="10" />
+        <state relative-caret-position="357">
+          <caret line="21" column="14" lean-forward="true" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/de/haw/wpcgar/generator/MeshGenerator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="148" column="35" lean-forward="true" selection-start-line="148" selection-start-column="35" selection-end-line="148" selection-end-column="35" />
+        <state relative-caret-position="413">
+          <caret line="173" column="0" lean-forward="true" selection-start-line="173" selection-start-column="0" selection-end-line="173" selection-end-column="0" />
+          <folding>
+            <element signature="method#getOrCreateMeshVertex#0;class#MeshGenerator#0" expanded="false" />
+            <element signature="method#getOrCreateOceanLevelVertex#0;class#MeshGenerator#0" expanded="false" />
+            <element signature="method#writeMTL#0;class#MeshGenerator#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/haw/wpcgar/MyTestWorld.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="192" column="5" lean-forward="true" selection-start-line="192" selection-start-column="5" selection-end-line="192" selection-end-column="5" />
           <folding />
         </state>
       </provider>

@@ -40,7 +40,7 @@ public class MyTestWorld {
     private static int            resolutionY    = 800;
     public final static int       windowWidth    = 800;
     public final static int       windowHeight   = 800;
-    private static boolean        useDefaultSeed = true;
+    private static boolean        useDefaultSeed = false;
     private static String         defaultSeed    = "akjsndoisanj";
     public static double         heightScaling  = 280.0;
     // ---------------------------------------------- //
@@ -184,6 +184,7 @@ public class MyTestWorld {
         long end = System.currentTimeMillis();
         double diff = (end - start) / 1000;
         System.out.println("Process time: " + diff + " s");
+        System.out.println("seed: " + defaultSeed);
 
         return image;
     }
