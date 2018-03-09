@@ -150,7 +150,7 @@ public class PerlinNoise {
      * @param z Pixel z coordinate
      * @param octaves Iterations of noise
      * @param lacunarity Gap how fractals fill the space
-     * @param h TODO
+     * @param h Hurst parameter
      * @return value
      */
     public double fBm(double x, double y, double z, int octaves, double lacunarity, double h) {

@@ -8,7 +8,6 @@ import de.haw.wpcgar.structure.Parameter;
  */
 public class HeightMap extends Parameter
 {
-
     public HeightMap(String seed)
     {
         super("heightmap", seed);
@@ -30,5 +29,4 @@ public class HeightMap extends Parameter
 
         return result;
     }
-
 }

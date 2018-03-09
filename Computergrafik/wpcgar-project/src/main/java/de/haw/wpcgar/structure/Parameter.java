@@ -10,6 +10,7 @@ import de.haw.wpcgar.math.PerlinNoise;
 public abstract class Parameter {
     // Name of parameter to call
     private final String  name;
+    // Perlin noise instance
     protected final PerlinNoise noise;
     // Actual value representing the parameter
     private double value = -1.0;

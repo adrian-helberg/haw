@@ -9,9 +9,9 @@ import javax.swing.*;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.Writer;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Objects;
+import java.util.*;
+
+import static de.haw.wpcgar.MyTestWorld.heightScaling;
 
 /**
  * Create a mesh out of a point cloud an write it into a file.
@@ -66,13 +66,24 @@ public class MeshGenerator {
                 if (x + vertexGenerationStep < resolutionX && y + vertexGenerationStep < resolutionX) {
 
                     Triangle t1, t2, t3, t4;
+                    Vector color;
+                    Vector[] vertexColors = new Vector[3];
 
                     t1 = new Triangle(
                             getOrCreateMeshVertex(x, y + vertexGenerationStep),
                             getOrCreateMeshVertex(x + vertexGenerationStep, y),
                             getOrCreateMeshVertex(x, y)
                     );
-                    t1.setColor(pointCloud[x][y + vertexGenerationStep].getColor());
+
+                    // Get all colors from vertices
+                    vertexColors[0] = pointCloud[x][y + vertexGenerationStep].getColor();
+                    vertexColors[1] = pointCloud[x + vertexGenerationStep][y].getColor();
+                    vertexColors[2] = pointCloud[x][y].getColor();
+
+                    // Get the most common color
+                    color = getMatchingColor(vertexColors);
+
+                    t1.setColor(color);
                     triangleMesh.addTriangle(t1);
 
                     t2 = new Triangle(
@@ -80,7 +91,13 @@ public class MeshGenerator {
                             getOrCreateMeshVertex(x + vertexGenerationStep, y + vertexGenerationStep),
                             getOrCreateMeshVertex(x + vertexGenerationStep, y)
                     );
-                    t2.setColor(pointCloud[x][y + vertexGenerationStep].getColor());
+
+                    vertexColors[1] = pointCloud[x + vertexGenerationStep][y + vertexGenerationStep].getColor();
+                    vertexColors[2] = pointCloud[x + vertexGenerationStep][y].getColor();
+
+                    color = getMatchingColor(vertexColors);
+
+                    t2.setColor(color);
                     triangleMesh.addTriangle(t2);
 
                     if (Objects.equals(triangleMesh.getVertex(t1.getVertexIndex(0)).getColor().getName(), "ocean")
@@ -92,7 +109,10 @@ public class MeshGenerator {
                             getOrCreateOceanLevelVertex(x + vertexGenerationStep, y),
                             getOrCreateOceanLevelVertex(x, y)
                         );
-                        t3.setColor(new Vector(0, 0, 1, "ocean"));
+
+                        color = new Vector(0, 0, 1, "ocean");
+
+                        t3.setColor(color);
                         triangleMesh.addTriangle(t3);
 
                         t4 = new Triangle(
@@ -100,12 +120,54 @@ public class MeshGenerator {
                             getOrCreateOceanLevelVertex(x + vertexGenerationStep, y + vertexGenerationStep),
                             getOrCreateOceanLevelVertex(x + vertexGenerationStep, y)
                         );
-                        t4.setColor(new Vector(0, 0, 1, "ocean"));
+
+                        color = new Vector(0, 0, 1, "ocean");
+
+                        t4.setColor(color);
                         triangleMesh.addTriangle(t4);
                     }
                 }
             }
         }
+    }
+
+    /**
+     * Get the most common color out of 3 vertex colors.
+     * Prefers river color to prevent interruptions in rivers
+     * @param vertexColors Colors from 3 vertices.
+     * @return most common color.
+     */
+    private Vector getMatchingColor(Vector[] vertexColors) {
+        HashMap<Vector, Integer> occurances = new HashMap<>();
+        Integer occ = 0;
+
+        for (Vector vertexColor : vertexColors) {
+
+            // At least one river vertex color
+            if (vertexColor.getName() == "river")
+            {
+                return vertexColor;
+            }
+
+            occ = occurances.get(vertexColor);
+
+            if (occ == null) {
+                occurances.put(vertexColor, 1);
+            } else {
+                occurances.put(vertexColor, occ + 1);
+            }
+        }
+
+        Map.Entry<Vector, Integer> maxEntry = null;
+        for (Map.Entry<Vector, Integer> entry : occurances.entrySet())
+        {
+            if (maxEntry == null || entry.getValue().compareTo(maxEntry.getValue()) > 0)
+            {
+                maxEntry = entry;
+            }
+        }
+
+        return maxEntry != null ? maxEntry.getKey() : null;
     }
 
     private int getOrCreateMeshVertex(int x, int y) {
@@ -117,7 +179,7 @@ public class MeshGenerator {
 
     private int getOrCreateOceanLevelVertex(int x, int y) {
         Vertex current = pointCloud[x][y];
-        Vector v = new Vector(current.getPosition().x(), 0.13, current.getPosition().z());
+        Vector v = new Vector(current.getPosition().x(), 0.13 * heightScaling, current.getPosition().z());
 
         return triangleMesh.addVertex(v, current.getColor());
     }

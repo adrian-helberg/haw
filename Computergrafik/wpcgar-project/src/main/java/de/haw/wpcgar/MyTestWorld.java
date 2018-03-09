@@ -42,6 +42,7 @@ public class MyTestWorld {
     public final static int       windowHeight   = 800;
     private static boolean        useDefaultSeed = true;
     private static String         defaultSeed    = "akjsndoisanj";
+    public static double         heightScaling  = 280.0;
     // ---------------------------------------------- //
 
     private static BufferedImage  renderingImage;
@@ -102,7 +103,7 @@ public class MyTestWorld {
             Writer objWriter = new FileWriter(objFile);
             Writer mtlWriter = new FileWriter(mltFile);
 
-            MeshGenerator mg = new MeshGenerator(pointCloud, colors, 1);
+            MeshGenerator mg = new MeshGenerator(pointCloud, colors, 6);
             mg.writeOBJ(objWriter);
             mg.writeMTL(mtlWriter);
 
@@ -158,7 +159,7 @@ public class MyTestWorld {
 
                 pointPosition = new Vector(
                         x / ((double)(resolutionX / 2) / windowWidth),
-                        heightParam.getValue(x, y),
+                        heightParam.getValue(x, y) * heightScaling,
                         y / ((double)(resolutionY / 2) / windowHeight)
                 );
 
