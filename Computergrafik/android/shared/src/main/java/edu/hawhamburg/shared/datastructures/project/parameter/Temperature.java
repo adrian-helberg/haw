@@ -1,6 +1,6 @@
-package edu.hawhamburg.shared.datastructures.project.parameter;
+package de.haw.wpcgar.structure.params;
 
-import edu.hawhamburg.shared.datastructures.project.Parameter;
+import de.haw.wpcgar.structure.Parameter;
 
 public class Temperature extends Parameter {
 

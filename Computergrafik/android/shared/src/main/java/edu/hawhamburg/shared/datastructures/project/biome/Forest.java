@@ -1,11 +1,9 @@
-package edu.hawhamburg.shared.datastructures.project.biome;
+package de.haw.wpcgar.structure.biomes;
 
-import android.graphics.Color;
-
-import edu.hawhamburg.shared.datastructures.project.Biome;
-import edu.hawhamburg.shared.datastructures.project.WorldGenerator;
-import edu.hawhamburg.shared.datastructures.project.parameter.HeightMap;
-import edu.hawhamburg.shared.datastructures.project.parameter.Temperature;
+import de.haw.wpcgar.generator.WorldGenerator;
+import de.haw.wpcgar.structure.Biome;
+import de.haw.wpcgar.structure.params.HeightMap;
+import de.haw.wpcgar.structure.params.Temperature;
 import edu.hawhamburg.shared.math.Vector;
 
 /**
@@ -19,11 +17,9 @@ import edu.hawhamburg.shared.math.Vector;
  */
 public class Forest extends Biome {
 
-    private static final Vector COLOR_GREEN = new Vector(6, 163, 63, 1);
-
     public Forest(WorldGenerator generator)
     {
-        super(generator);
+        super(generator, new Vector(0, 0.5, 0, "forest"));
     }
 
     @Override
@@ -33,34 +29,11 @@ public class Forest extends Biome {
         double temperature = getValue(Temperature.class, x, y);
 
         return height > 0.1 && height < 0.75 && temperature > 35 && temperature < 50;
-
     }
 
-    /**
-     * Returns the color of the forest for corresponding coordinates
-     * Color is in between rgb(0,100,0) and rgb(0,200,0)
-     * @param x Pixel x coordinate
-     * @param y Pixel y coordinate
-     * @return Color of biome
-     */
     @Override
-    public Vector getColor(double x, double y)
+    public Vector getColor()
     {
-        if (check(x, y))
-        {
-            // Get height from heightmap to modify the color to corresponding height
-            //Parameter h = generator.getEnvironment().getParameter("heightmap");
-
-            //double height = h.getValue(x, y);
-
-            // Get the relative percentage of range hit by the height
-            //int green = Helper.getAlignedValueFromParameter(height, 100, 200, 0.1, 0.75);
-
-            // Always an instance of color green
-            //return new Color(0, green, 0);
-            return COLOR_GREEN;
-        }
-
-        return null;
+        return color;
     }
 }

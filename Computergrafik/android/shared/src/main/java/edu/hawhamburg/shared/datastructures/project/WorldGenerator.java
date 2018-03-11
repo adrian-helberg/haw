@@ -1,5 +1,9 @@
-package edu.hawhamburg.shared.datastructures.project;
+package de.haw.wpcgar.generator;
 
+import de.haw.wpcgar.structure.Biome;
+import de.haw.wpcgar.structure.Environment;
+
+import java.io.UncheckedIOException;
 import java.lang.reflect.Constructor;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -32,7 +36,7 @@ public class WorldGenerator {
         }
     }
 
-    public <T extends Biome> void registerBiome(T biome) {
+    private <T extends Biome> void registerBiome(T biome) {
         biomes.put(biome.getClass(), biome);
         priority.add(biome.getClass());
     }

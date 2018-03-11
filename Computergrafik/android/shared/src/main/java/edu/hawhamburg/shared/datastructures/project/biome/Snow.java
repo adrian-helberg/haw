@@ -1,45 +1,27 @@
-package edu.hawhamburg.shared.datastructures.project.biome;
+package de.haw.wpcgar.structure.biomes;
 
-import android.graphics.Color;
-
-import edu.hawhamburg.shared.datastructures.project.Biome;
-import edu.hawhamburg.shared.datastructures.project.WorldGenerator;
-import edu.hawhamburg.shared.datastructures.project.parameter.HeightMap;
-import edu.hawhamburg.shared.datastructures.project.parameter.Snowy;
-import edu.hawhamburg.shared.datastructures.project.parameter.Temperature;
+import de.haw.wpcgar.generator.WorldGenerator;
+import de.haw.wpcgar.structure.Biome;
+import de.haw.wpcgar.structure.params.HeightMap;
 import edu.hawhamburg.shared.math.Vector;
 
 public class Snow extends Biome {
 
-    private static final Vector COLOR_WHITE = new Vector(255. / 255, 255. / 255, 255. / 255, 1);
-
     public Snow(WorldGenerator generator) {
-        super(generator);
+        super(generator, new Vector(1, 1, 1, "snow"));
     }
 
     @Override
     public boolean check(double x, double y) {
 
         double height = getValue(HeightMap.class, x, y);
-        double temperature = getValue(Temperature.class, x, y);
-        double snow = getValue(Snowy.class, x, y);
 
-        if(height > 0.85 && temperature < 55 && snow > 0.5)
-        {
-            return true;
-        }
+        return height > 0.95;
 
-        return false;
     }
 
     @Override
-    public Vector getColor(double x, double y) {
-
-        if(check(x, y))
-        {
-            return COLOR_WHITE;
-        }
-
-        return null;
+    public Vector getColor() {
+        return color;
     }
 }

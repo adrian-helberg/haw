@@ -1,6 +1,6 @@
-package edu.hawhamburg.shared.datastructures.project.parameter;
+package de.haw.wpcgar.structure.params;
 
-import edu.hawhamburg.shared.datastructures.project.Parameter;
+import de.haw.wpcgar.structure.Parameter;
 
 /**
  * Parameter for 3rd dimension map.
@@ -8,7 +8,6 @@ import edu.hawhamburg.shared.datastructures.project.Parameter;
  */
 public class HeightMap extends Parameter
 {
-
     public HeightMap(String seed)
     {
         super("heightmap", seed);
@@ -20,15 +19,14 @@ public class HeightMap extends Parameter
         double result = 0.0;
 
         result += noise.fBm(
-                0.0009 * x,
-                0.0009 * y,
-                0.0009 * z,
+                0.004 * x,
+                0.004 * y,
+                0.004 * z,
                 50,
                 2.2341,
                 1.422561
-        ) + 0.4;
+        ) + 0.5;
 
         return result;
     }
-
 }

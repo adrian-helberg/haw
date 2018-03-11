@@ -1,18 +1,14 @@
-package edu.hawhamburg.shared.datastructures.project.biome;
+package de.haw.wpcgar.structure.biomes;
 
-import android.graphics.Color;
-
-import edu.hawhamburg.shared.datastructures.project.Biome;
-import edu.hawhamburg.shared.datastructures.project.WorldGenerator;
-import edu.hawhamburg.shared.datastructures.project.parameter.HeightMap;
+import de.haw.wpcgar.generator.WorldGenerator;
+import de.haw.wpcgar.structure.Biome;
+import de.haw.wpcgar.structure.params.HeightMap;
 import edu.hawhamburg.shared.math.Vector;
 
 public class Mountain extends Biome {
 
-    private static final Vector COLOR_GRAY = new Vector(128. / 255, 128. / 255, 128. / 255, 1);
-
     public Mountain(WorldGenerator generator) {
-        super(generator);
+        super(generator, new Vector(0.75, 0.75, 0.75, "mountain"));
     }
 
     @Override
@@ -21,19 +17,12 @@ public class Mountain extends Biome {
         HeightMap h = generator.getEnvironment().getParameter(HeightMap.class);
         double height = h.getValue(x, y);
 
-        if (height > 0.7) {
-            return true;
-        }
+        return height > 0.7;
 
-        return false;
     }
 
     @Override
-    public Vector getColor(double x, double y) {
-        if (check(x, y)) {
-            return COLOR_GRAY;
-        }
-
-        return null;
+    public Vector getColor() {
+        return color;
     }
 }

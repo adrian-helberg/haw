@@ -68,25 +68,9 @@
       <file leaf-file-name="MyTestWorld.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/de/haw/wpcgar/MyTestWorld.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
-              <caret line="119" column="0" lean-forward="true" selection-start-line="119" selection-start-column="0" selection-end-line="119" selection-end-column="0" />
+            <state relative-caret-position="469">
+              <caret line="118" column="48" lean-forward="true" selection-start-line="118" selection-start-column="48" selection-end-line="118" selection-end-column="48" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MeshGenerator.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/de/haw/wpcgar/generator/MeshGenerator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1058">
-              <caret line="232" column="5" lean-forward="true" selection-start-line="232" selection-start-column="5" selection-end-line="232" selection-end-column="5" />
-              <folding>
-                <element signature="method#getMatchingColor#0;class#MeshGenerator#0" expanded="false" />
-                <element signature="method#getOrCreateMeshVertex#0;class#MeshGenerator#0" expanded="false" />
-                <element signature="method#getOrCreateOceanLevelVertex#0;class#MeshGenerator#0" expanded="false" />
-                <element signature="method#writeOBJ#0;class#MeshGenerator#0" expanded="false" />
-                <element signature="method#writeMTL#0;class#MeshGenerator#0" expanded="false" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -650,6 +634,15 @@
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="wpcgar" type="462c0819:PsiDirectoryNode" />
+              <item name="math" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="wpcgar-project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="wpcgar-project" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="wpcgar" type="462c0819:PsiDirectoryNode" />
               <item name="structure" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -857,12 +850,12 @@
       <workItem from="1520331605682" duration="21908000" />
       <workItem from="1520435491613" duration="8171000" />
       <workItem from="1520599366897" duration="9752000" />
-      <workItem from="1520794145539" duration="1161000" />
+      <workItem from="1520794145539" duration="2562000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="101204000" />
+    <option name="totallyTimeSpent" value="102605000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -990,14 +983,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-337">
           <caret line="19" column="19" lean-forward="false" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/de/haw/wpcgar/generator/WorldComponent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="13" column="32" lean-forward="true" selection-start-line="13" selection-start-column="32" selection-end-line="13" selection-end-column="32" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1246,10 +1231,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/haw/wpcgar/generator/WorldComponent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="13" column="32" lean-forward="true" selection-start-line="13" selection-start-column="32" selection-end-line="13" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/de/haw/wpcgar/MyTestWorld.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="119" column="0" lean-forward="true" selection-start-line="119" selection-start-column="0" selection-end-line="119" selection-end-column="0" />
+        <state relative-caret-position="469">
+          <caret line="118" column="48" lean-forward="true" selection-start-line="118" selection-start-column="48" selection-end-line="118" selection-end-column="48" />
           <folding />
         </state>
       </provider>

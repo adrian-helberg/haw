@@ -1,6 +1,6 @@
-package edu.hawhamburg.shared.datastructures.project.parameter;
+package de.haw.wpcgar.structure.params;
 
-import edu.hawhamburg.shared.datastructures.project.Parameter;
+import de.haw.wpcgar.structure.Parameter;
 
 public class Rivers extends Parameter {
 
@@ -11,9 +11,9 @@ public class Rivers extends Parameter {
     @Override
     protected double value(double x, double y, double z) {
         double value = noise.fBm(
-                x * 0.01,
-                0.01 * y,
-                0.01 * (z + 1),
+                0.008 * x,
+                0.008 * y,
+                0.008 * (z + 1),
                 3,
                 2.1836171,
                 0.9631

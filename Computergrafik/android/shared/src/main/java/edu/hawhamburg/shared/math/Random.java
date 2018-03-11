@@ -1,4 +1,4 @@
-package edu.hawhamburg.shared.math;
+package de.haw.wpcgar.math;
 
 /**
  * Randomizer.
@@ -16,7 +16,7 @@ public class Random {
      *
      * @param seed The seed to use
      */
-    public Random(long seed) {
+    Random(long seed) {
         this._seed = seed;
     }
 
@@ -31,7 +31,7 @@ public class Random {
      * min: -9223372027538671720, max: 9223372026111068325
      * @return Random value
      */
-    public long randomLong() {
+    private long randomLong() {
         _seed ^= (_seed << 21);
         _seed ^= (_seed >>> 35);
         _seed ^= (_seed << 4);
@@ -43,7 +43,7 @@ public class Random {
      * min: -2147483646, max: 2147483631
      * @return Random value
      */
-    public int randomInt() {
+    int randomInt() {
         return (int) randomLong();
     }
 
@@ -52,17 +52,8 @@ public class Random {
      * min: -0.99_ , max: 0.99_
      * @return Random value
      */
-    public double randomDouble() {
+    private double randomDouble() {
         return randomLong() / ((double) Long.MAX_VALUE - 1d);
-    }
-
-    /**
-     * Returns a random value as boolean.
-     *
-     * @return Random value
-     */
-    public boolean randomBoolean() {
-        return randomLong() > 0;
     }
 
     /**
@@ -80,42 +71,5 @@ public class Random {
         }
 
         return s.toString();
-    }
-
-    /**
-     * Calculates a standardized normal distributed value (using the polar method).
-     *
-     * @return
-     */
-    public double standNormalDistrDouble() {
-
-        double q = Double.MAX_VALUE;
-        double u1 = 0;
-        double u2;
-
-        while (q >= 1d || q == 0) {
-            u1 = randomDouble();
-            u2 = randomDouble();
-
-            q = Math.pow(u1, 2) + Math.pow(u2, 2);
-        }
-
-        double p = Math.sqrt((-2d * (Math.log(q))) / q);
-        return u1 * p; // or u2 * p
-    }
-
-    /**
-     * Some random noise.
-     *
-     * @param x
-     * @param y
-     * @param z
-     * @param seed
-     * @return
-     */
-    public static double randomNoise(double x, double y, double z, int seed) {
-        int u = (int) x * 21342412 + (int) y * 423241324 + (int) z * 4123241 + seed * 41234234;
-        u = (u << 13) ^ u;
-        return (1.0 - ((u * (u * u * 15731 + 789221) + 1376312589) & 0x7fffffff) / 441441557.0);
     }
 }

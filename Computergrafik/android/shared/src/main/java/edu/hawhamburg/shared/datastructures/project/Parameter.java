@@ -1,6 +1,6 @@
-package edu.hawhamburg.shared.datastructures.project;
+package de.haw.wpcgar.structure;
 
-import edu.hawhamburg.shared.math.PerlinNoise;
+import de.haw.wpcgar.math.PerlinNoise;
 
 /**
  * Parameter container.
@@ -10,6 +10,7 @@ import edu.hawhamburg.shared.math.PerlinNoise;
 public abstract class Parameter {
     // Name of parameter to call
     private final String  name;
+    // Perlin noise instance
     protected final PerlinNoise noise;
     // Actual value representing the parameter
     private double value = -1.0;
@@ -29,18 +30,9 @@ public abstract class Parameter {
      * Name getter.
      * @return name.
      */
-    public String getName()
+    String getName()
     {
         return name;
-    }
-
-    /**
-     * Noise getter.
-     * @return noise.
-     */
-    public PerlinNoise getNoise()
-    {
-        return noise;
     }
 
     /**

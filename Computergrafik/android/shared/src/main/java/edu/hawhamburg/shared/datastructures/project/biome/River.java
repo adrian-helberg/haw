@@ -1,20 +1,16 @@
-package edu.hawhamburg.shared.datastructures.project.biome;
+package de.haw.wpcgar.structure.biomes;
 
-import android.graphics.Color;
-
-import edu.hawhamburg.shared.datastructures.project.Biome;
-import edu.hawhamburg.shared.datastructures.project.WorldGenerator;
-import edu.hawhamburg.shared.datastructures.project.parameter.HeightMap;
-import edu.hawhamburg.shared.datastructures.project.parameter.Rivers;
-import edu.hawhamburg.shared.datastructures.project.parameter.Temperature;
+import de.haw.wpcgar.generator.WorldGenerator;
+import de.haw.wpcgar.structure.Biome;
+import de.haw.wpcgar.structure.params.HeightMap;
+import de.haw.wpcgar.structure.params.Rivers;
+import de.haw.wpcgar.structure.params.Temperature;
 import edu.hawhamburg.shared.math.Vector;
 
 public class River extends Biome {
 
-    private static final Vector COLOR_BLUE = new Vector(0. / 255, 0. / 255, 255. / 255, 1);
-
     public River(WorldGenerator generator) {
-        super(generator);
+        super(generator, new Vector(0, 0.1, 1, "river"));
     }
 
     @Override
@@ -24,17 +20,12 @@ public class River extends Biome {
         double rivers = getValue(Rivers.class, x, y);
         double temperature = getValue(Temperature.class, x, y);
 
-        return rivers < 0.2 && temperature < 55 && !(height > 0.75 && temperature < 55);
+        return rivers < 0.2 && height > 0.13 && height < 0.6 && temperature < 55;
 
     }
 
     @Override
-    public Vector getColor(double x, double y) {
-
-        if (check(x, y)) {
-            return COLOR_BLUE;
-        }
-
-        return null;
+    public Vector getColor() {
+        return color;
     }
 }
