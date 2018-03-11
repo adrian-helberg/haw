@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "C:\\hawRepos\\computergrafik\\wpcgar\\android\\cannon\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_action_tombstone.xml",
+        "source": "C:\\Users\\adria\\.android\\build-cache\\b8545941376562f8347e5e11a3e38eeca4ee257e\\output\\res\\layout-v21\\notification_action_tombstone.xml"
+    },
+    {
+        "merged": "C:\\hawRepos\\computergrafik\\wpcgar\\android\\cannon\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_action.xml",
+        "source": "C:\\Users\\adria\\.android\\build-cache\\b8545941376562f8347e5e11a3e38eeca4ee257e\\output\\res\\layout-v21\\notification_action.xml"
+    },
+    {
+        "merged": "C:\\hawRepos\\computergrafik\\wpcgar\\android\\cannon\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_template_icon_group.xml",
+        "source": "C:\\Users\\adria\\.android\\build-cache\\b8545941376562f8347e5e11a3e38eeca4ee257e\\output\\res\\layout-v21\\notification_template_icon_group.xml"
+    },
+    {
+        "merged": "C:\\hawRepos\\computergrafik\\wpcgar\\android\\cannon\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_template_custom_big.xml",
+        "source": "C:\\Users\\adria\\.android\\build-cache\\b8545941376562f8347e5e11a3e38eeca4ee257e\\output\\res\\layout-v21\\notification_template_custom_big.xml"
+    }
+]

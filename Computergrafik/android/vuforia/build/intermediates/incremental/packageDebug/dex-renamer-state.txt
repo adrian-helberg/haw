@@ -1,0 +1,7 @@
+#Fri Nov 10 16:28:55 CET 2017
+base.0=C\:\\hawRepos\\computergrafik\\wpcgar\\android\\vuforia\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_f9c7415da453113c894cd2133909eff2a1849e65
+renamed.1=classes.dex
+renamed.0=classes2.dex
+file.1=C\:\\hawRepos\\computergrafik\\wpcgar\\android\\vuforia\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_f532af3edb31b8fa061390a185e0647454a5b305\\classes.dex
+base.1=C\:\\hawRepos\\computergrafik\\wpcgar\\android\\vuforia\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_f532af3edb31b8fa061390a185e0647454a5b305
+file.0=C\:\\hawRepos\\computergrafik\\wpcgar\\android\\vuforia\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_f9c7415da453113c894cd2133909eff2a1849e65\\classes.dex

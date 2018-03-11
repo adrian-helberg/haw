@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="main"><source path="C:\hawRepos\computergrafik\wpcgar\android\vuforia\src\main\jniLibs"><file name="armeabi-v7a/libVuforia.so" path="C:\hawRepos\computergrafik\wpcgar\android\vuforia\src\main\jniLibs\armeabi-v7a\libVuforia.so"/></source><source path="C:\hawRepos\computergrafik\build\lib"/></dataSet><dataSet config="debug"><source path="C:\hawRepos\computergrafik\wpcgar\android\vuforia\src\debug\jniLibs"/></dataSet></merger>

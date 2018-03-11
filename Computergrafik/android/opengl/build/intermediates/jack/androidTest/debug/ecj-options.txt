@@ -1,0 +1,1 @@
+"C:/hawRepos/computergrafik/wpcgar/android/opengl/build/generated/source/buildConfig/androidTest/debug/edu/hawhamburg/cg/test/BuildConfig.java"

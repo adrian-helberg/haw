@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="C:\Users\adria\.android\build-cache\d3123be4eb385891482c22d5898a092d6655ce03\output\jars\classes.jar"
+        revision="26.0.1"
+        sha1="952944218ecedea1554a513dec0c14d570642843">
+        <dex dex="C:\hawRepos\computergrafik\wpcgar\android\opengl\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-b925a4a74b09ce2dda0fdc9cfad4225156a0319a.jar" />
+    </item>
+    <item
+        jar="C:\Users\adria\.gradle\caches\modules-2\files-2.1\gov.nist.math\jama\1.0.3\8bcf5a314b76cadd68daa37eafe0a46d8909ab47\jama-1.0.3.jar"
+        revision="26.0.1"
+        sha1="8bcf5a314b76cadd68daa37eafe0a46d8909ab47">
+        <dex dex="C:\hawRepos\computergrafik\wpcgar\android\opengl\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\jama-1.0.3-1950280d387768934d16cc629a77bed8ddf07da7.jar" />
+    </item>
+    <item
+        jar="C:\Users\adria\.android\build-cache\7cb59f65a499bdb11d11193b66b70780b6690a36\output\jars\classes.jar"
+        revision="26.0.1"
+        sha1="2e92aa0163544a804a0b34f169ca61801770839a">
+        <dex dex="C:\hawRepos\computergrafik\wpcgar\android\opengl\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-0cb7507985700b00a203dac2b35a4268ebbe8f4b.jar" />
+    </item>
+    <item
+        jar="C:\Users\adria\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\26.0.0-alpha1\support-annotations-26.0.0-alpha1.jar"
+        revision="26.0.1"
+        sha1="023ee503b631f69511e335a061ea008f8da60f40">
+        <dex dex="C:\hawRepos\computergrafik\wpcgar\android\opengl\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\support-annotations-26.0.0-alpha1-dc61eca4150e556df4834f5e6ce78a8c92b69033.jar" />
+    </item>
+    <item
+        jar="C:\Users\adria\.android\build-cache\b8545941376562f8347e5e11a3e38eeca4ee257e\output\jars\classes.jar"
+        revision="26.0.1"
+        sha1="47471eb19df288158b00b8d9cfa41bce7373f5cc">
+        <dex dex="C:\hawRepos\computergrafik\wpcgar\android\opengl\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-6f2c5ccbb941b515606e2ff83e319ad1a2274730.jar" />
+    </item>
+    <item
+        jar="C:\Users\adria\.android\build-cache\76e5949056f8d5a3614082902d190480cc896c55\output\jars\classes.jar"
+        revision="26.0.1"
+        sha1="fcd01fd11233459f546c437ec927e9b61bf7caf1">
+        <dex dex="C:\hawRepos\computergrafik\wpcgar\android\opengl\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-5c4af06d7828735e4df200bbe0c4b7c84d81c8a9.jar" />
+    </item>
+    <item
+        jar="C:\Users\adria\.android\build-cache\aefa0e41511e1905001f2a88fc2127881340ed6c\output\jars\classes.jar"
+        revision="26.0.1"
+        sha1="889352e4b8098411a2d5734e26fd3db16ceb1d9e">
+        <dex dex="C:\hawRepos\computergrafik\wpcgar\android\opengl\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-3678619840e6e4b8ed6f7e5282d66d5e961ad509.jar" />
+    </item>
+    <item
+        jar="C:\Users\adria\.android\build-cache\826317cd0b707fb562b568ec881a99883f71c715\output\jars\classes.jar"
+        revision="26.0.1"
+        sha1="9935891f23923f39d002087085d9696568a9f657">
+        <dex dex="C:\hawRepos\computergrafik\wpcgar\android\opengl\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-b3a54279fed70a48df7696b499ed9b3f737ecbac.jar" />
+    </item>
+    <item
+        jar="C:\Users\adria\.android\build-cache\0d6d78ab8ca54310652c4fe2ae4611e77f8ce1d6\output\jars\classes.jar"
+        revision="26.0.1"
+        sha1="88246166d5afb106f532f6e6deae683c66b42c89">
+        <dex dex="C:\hawRepos\computergrafik\wpcgar\android\opengl\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-adc4b9a66a734aa2d75a1d4f2470cccd9a403d57.jar" />
+    </item>
+    <item
+        jar="C:\hawRepos\computergrafik\wpcgar\android\libs\Vuforia.jar"
+        revision="26.0.1"
+        sha1="177fc09d70ae5f94117c9ea1a7b3bec42c9d48b4">
+        <dex dex="C:\hawRepos\computergrafik\wpcgar\android\opengl\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\Vuforia-54155b28d769ec84c18bc5bcae4555cd6bf87e8f.jar" />
+    </item>
+    <item
+        jar="C:\hawRepos\computergrafik\wpcgar\android\shared\build\intermediates\bundles\default\classes.jar"
+        revision="26.0.1"
+        sha1="ba31dd05c108ab1006eb1b3c07ddfe2abb62e3f4">
+        <dex dex="C:\hawRepos\computergrafik\wpcgar\android\opengl\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-f003098afc5c46fb4f0dc8801d30201b1082702d.jar" />
+    </item>
+    <item
+        jar="C:\Users\adria\.android\build-cache\c70777f665cec52116b07d0a1ad1ba046a82ee17\output\jars\classes.jar"
+        revision="26.0.1"
+        sha1="18d31838aa4fcc768a8a0516e22cc13b94655d89">
+        <dex dex="C:\hawRepos\computergrafik\wpcgar\android\opengl\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-28cc7fadf67347d6583c955e3d5e85dd02982f8d.jar" />
+    </item>
+    <item
+        jar="C:\hawRepos\computergrafik\wpcgar\android\shared\build\intermediates\bundles\default\libs\obj-0.2.1.jar"
+        revision="26.0.1"
+        sha1="ad6c4b73a8179b382ad4377f31a98388b4c0ecef">
+        <dex dex="C:\hawRepos\computergrafik\wpcgar\android\opengl\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\obj-0.2.1-3263ecd31683fe493cca9a1d0ef6dea6038eeef2.jar" />
+    </item>
+    <item
+        jar="C:\hawRepos\computergrafik\wpcgar\android\libs\obj-0.2.1.jar"
+        revision="26.0.1"
+        sha1="d2df8e6fa7ba5aae4d0f847459ddd345d550ffaa">
+        <dex dex="C:\hawRepos\computergrafik\wpcgar\android\opengl\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\obj-0.2.1-40ced0bc87498ae0b29cce1a18a4356933030b1e.jar" />
+    </item>
+    <item
+        jar="C:\Users\adria\.android\build-cache\aefa0e41511e1905001f2a88fc2127881340ed6c\output\jars\libs\arcore_client.jar"
+        revision="26.0.1"
+        sha1="033d5155085fe9cb58612f4e899182c0b08ca0b7">
+        <dex dex="C:\hawRepos\computergrafik\wpcgar\android\opengl\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\arcore_client-efc040c7f771395fb972bc49e71812766568a66d.jar" />
+    </item>
+    <item
+        jar="C:\hawRepos\computergrafik\wpcgar\android\shared\build\intermediates\bundles\default\libs\Vuforia.jar"
+        revision="26.0.1"
+        sha1="6241e07a8b33a91dc6bcce12f7042bac290c83fb">
+        <dex dex="C:\hawRepos\computergrafik\wpcgar\android\opengl\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\Vuforia-f0b011680b1c8e069cd9cb0db7d5df372654e7e5.jar" />
+    </item>
+    <item
+        jar="C:\Users\adria\.android\build-cache\7baa69c3a982560aed75a3aa9ffea4cda38b4724\output\jars\classes.jar"
+        revision="26.0.1"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="C:\hawRepos\computergrafik\wpcgar\android\opengl\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-ceb365db7a9be0508ae42e82b5df6b77be1d6e57.jar" />
+    </item>
+    <item
+        jar="C:\Users\adria\.android\build-cache\070cedae9e5e277057e4d21d7c20df07b89fa1de\output\jars\classes.jar"
+        revision="26.0.1"
+        sha1="8df0e365e40beb151bc42dee20817721a6cab7b0">
+        <dex dex="C:\hawRepos\computergrafik\wpcgar\android\opengl\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-400159c51190dd9f0fe40d0ae0f94dee160002c8.jar" />
+    </item>
+
+</items>

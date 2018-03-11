@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/android.iml" filepath="$PROJECT_DIR$/android.iml" />
+      <module fileurl="file://$PROJECT_DIR$/arcore/arcore.iml" filepath="$PROJECT_DIR$/arcore/arcore.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bone/bone.iml" filepath="$PROJECT_DIR$/bone/bone.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cannon/cannon.iml" filepath="$PROJECT_DIR$/cannon/cannon.iml" />
+      <module fileurl="file://$PROJECT_DIR$/collision/collision.iml" filepath="$PROJECT_DIR$/collision/collision.iml" />
+      <module fileurl="file://$PROJECT_DIR$/opengl/opengl.iml" filepath="$PROJECT_DIR$/opengl/opengl.iml" />
+      <module fileurl="file://$PROJECT_DIR$/particle/particle.iml" filepath="$PROJECT_DIR$/particle/particle.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pjenke/pjenke.iml" filepath="$PROJECT_DIR$/pjenke/pjenke.iml" />
+      <module fileurl="file://$PROJECT_DIR$/project/project.iml" filepath="$PROJECT_DIR$/project/project.iml" />
+      <module fileurl="file://$PROJECT_DIR$/shared/shared.iml" filepath="$PROJECT_DIR$/shared/shared.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spline/spline.iml" filepath="$PROJECT_DIR$/spline/spline.iml" />
+      <module fileurl="file://$PROJECT_DIR$/watcher/watcher.iml" filepath="$PROJECT_DIR$/watcher/watcher.iml" />
+    </modules>
+  </component>
+</project>

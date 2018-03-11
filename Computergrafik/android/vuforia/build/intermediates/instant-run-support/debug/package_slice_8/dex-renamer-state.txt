@@ -1,0 +1,4 @@
+#Fri Nov 10 16:28:54 CET 2017
+base.0=C\:\\hawRepos\\computergrafik\\wpcgar\\android\\vuforia\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\5\\slice_8
+renamed.0=classes.dex
+file.0=C\:\\hawRepos\\computergrafik\\wpcgar\\android\\vuforia\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\5\\slice_8\\classes.dex
