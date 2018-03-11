@@ -82,8 +82,8 @@ public class MeshGenerator {
 
                     // Get the most common color
                     color = getMatchingColor(vertexColors);
-
                     t1.setColor(color);
+
                     triangleMesh.addTriangle(t1);
 
                     t2 = new Triangle(

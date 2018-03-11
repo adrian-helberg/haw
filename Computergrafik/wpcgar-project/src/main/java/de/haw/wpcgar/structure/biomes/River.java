@@ -10,7 +10,7 @@ import edu.hawhamburg.shared.math.Vector;
 public class River extends Biome {
 
     public River(WorldGenerator generator) {
-        super(generator, new Vector(0, 1, 1, "river"));
+        super(generator, new Vector(0, 0.1, 1, "river"));
     }
 
     @Override
