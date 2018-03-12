@@ -8,7 +8,6 @@ import de.haw.wpcgar.structure.Biome;
 import de.haw.wpcgar.structure.Parameter;
 import de.haw.wpcgar.structure.biomes.*;
 import de.haw.wpcgar.structure.params.HeightMap;
-import de.haw.wpcgar.structure.params.Population;
 import de.haw.wpcgar.structure.params.Rivers;
 import de.haw.wpcgar.structure.params.Temperature;
 import edu.hawhamburg.shared.datastructures.mesh.Vertex;
