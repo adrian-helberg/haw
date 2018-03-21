@@ -20,7 +20,7 @@ public class River extends Biome {
         double rivers = getValue(Rivers.class, x, y);
         double temperature = getValue(Temperature.class, x, y);
 
-        return rivers < 0.2 && height > 0.13 && height < 0.6 && temperature < 55;
+        return rivers < 0.2 && height > 0.13 && height < 0.5 && temperature < 55;
 
     }
 

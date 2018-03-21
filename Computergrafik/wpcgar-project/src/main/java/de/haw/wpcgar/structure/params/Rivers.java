@@ -16,7 +16,7 @@ public class Rivers extends Parameter {
                 0.008 * (z + 1),
                 3,
                 2.1836171,
-                0.9631
+                1.9631
         );
 
         value = Math.sqrt(Math.abs(value));

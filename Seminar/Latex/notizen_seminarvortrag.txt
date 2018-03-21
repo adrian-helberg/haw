@@ -1,0 +1,49 @@
+## Geschichte
+"Go is an open source programming language that makes it easy to build simple, reliable and efficient software."
+(From the Go website at golang.org)
+
+# Entwickler
+Konzipiert September 2007 von Robert Griesemer, Rob Pike und Ken Thompson
+
+Mitarbeiter von Google(R)
+
+Aus Frust heraus entstanden, einige Systeme bei Google führten zu einer Explosion der Komplexität
+
+"Complexity is multiplicative", Rob Pike
+-------------------------------------------------------------------------------
+# Entwurfsphase
+
+Ziel von Go und dessen Tools war es eine ausdrucksstarke und effiziente Kombination aus Kompilierung und Ausführung zu schaffen, 
+mit der zuverlässige und robuste Programme geschrieben werden konnte
+
+Oberflächlich gesehen viele Ähnlichkeiten mit C
+	-> Expression syntax, Control-flow anweisungen, Basistypen, Call-by-value Parametrisierung, Pointer, Kompiliserung zu Maschinencode, Kommunikation mit Abstraktionen 	heutiger Betriebssysteme
+
+Adaptiert gute Ideen aus einigen anderen Programmiersprachen
+	-> Modula-2: Paketkonzept, Oberon: Differenzierung zwischen Interfaces und Modulimplementation, Oberon-2: Syntax für Pakete, Imports, Deklarationen,
+	   Object Oberon: Syntax für Methodendeklaration
+
+Vermeiden von features, die zu komplexen, unzuverlässigen code führen würden
+
+Die Möglichkeiten zur Nebenläufigkeit sind neu und effizient
+
+Ansatz zur Datenabstraktion und Objektorientierung sind ungewohnt flexibel
+
+Automatische Speicherverwaltung (garbage collection)
+-------------------------------------------------------------------------------
+# Veröffentlichung
+Vorgestellt November 2009
+
+Berühmt als Nachfolger für nicht typisierte Sriptsprachen, da sie Ausdruckskraft mit Sicherheit verbindet
+
+<origin.png>
+-------------------------------------------------------------------------------
+# Go-Community
+
+Open-source projekt
+
+Quellcode des Compilers, Bibliotheken (libraries) und Tools sind frei verfügbar
+
+Aktive weltweite Community
+
+Läuft auf Unix, Mac und Windows (üblicherweise ohne Modifikation transportierbar)

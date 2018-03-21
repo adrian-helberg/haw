@@ -11,7 +11,7 @@
 \titlegraphic{\includegraphics[scale=0.1]{golanglogo.png}}
 \title{
 	\Large{\textit{\\Die Programmiersprache Go - Eine Einf\"uhrung}} \\
-	\Large{\textbf{\\Konzeptskizze}}
+	\Large{\textbf{\\Seminarvortrag}}
 }
 \author{Student: Adrian Helberg \\Prüfer: Prof. Dr. Axel Schmolitzky}
 \date{\today}
@@ -33,16 +33,110 @@
 
 \frame{\tableofcontents}
 
-\section{Geschichte}
 \begin{frame}
-\frametitle{Geschichte}
+
+\begin{quote}
+``Go is an open source programming language that makes it easy to build simple, reliable and efficient software." 
+\end{quote}
+
+\begin{flushright}
+\scriptsize (Go Website: \href{golang.org}{golang.org})
+\end{flushright}
+
+\begin{quote}
+Go ist eine Open-Source-Programmiersprache, die es einfach macht, einfache, zuverlässige und effiziente Software zu erstellen.
+\end{quote}
+
+\begin{flushright}
+\scriptsize (Eigene \"Ubersetzung)
+\end{flushright}
+
+\end{frame}
+
+\section{Geschichte}
+\subsection{Entwickler}
+\begin{frame}
+\frametitle{Entwickler}
 
 \begin{itemize}
-\setlength{\itemsep}{30pt}
-\item Entwickler
-\item Entwurfsphase
-\item Ver\"offentlichung
-\item Go-Community
+\setlength{\itemsep}{24pt}
+\item Konzipiert September 2007
+\item Robert Griesemer, Rob Pike und Ken Thompson
+\item Mitarbeiter von Google LLC. \textregistered
+\item Aus Frust heraus entstanden
+\item \textit{``Complexity is multiplicative''} - Rob Pike
+\end{itemize}
+
+\end{frame}
+
+\subsection{Entwurfsphase}
+\begin{frame}
+\frametitle{Entwurfsphase}
+
+\begin{itemize}
+\setlength{\itemsep}{40pt}
+\item Ausdrucksstarke und effiziente Kombination aus Kompilierung uns Ausf\"uhrung
+\item Ähnlichkeiten mit C
+\item Adaptiert gute Ideen aus einigen Programmiersprachen: \\
+Pascal, Modula-2, Oberon, Oberon-2, Alef, ...
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Entwurfsphase}
+
+\begin{figure}
+\centering
+\includegraphics[scale=0.45]{origin.png}
+\caption{The Go Programming Language,  Preface xii}
+\end{figure}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Entwurfsphase}
+
+\begin{itemize}
+\setlength{\itemsep}{40pt}
+\item Vermeiden von features, die zu komplexen, unzuverl\"assigen code führen w\"urden
+\item M\"oglichkeiten zur Nebenl\"aufigkeit sind neu und effizient
+\item Datenabstraktion und Objektorientierung sind ungewohnt flexibel
+\item Automatische Speicherverwaltung (garbage collection)
+\end{itemize}
+
+\end{frame}
+
+\subsection{Ver\"offentlichung}
+\begin{frame}
+\frametitle{Ver\"offentlichung}
+
+\begin{itemize}
+\setlength{\itemsep}{60pt}
+\item Vorgestellt November 2009
+\item Ber\"uhmt als Nachfolger für nicht typisierte Sriptsprachen
+\begin{itemize}
+\item[] $\rightarrow$ Verbindung aus Ausdruckskraft und Sicherheit
+\end{itemize}
+\end{itemize}
+
+\end{frame}
+
+\subsection{Go-Community}
+\begin{frame}
+\frametitle{Go-Community}
+
+\begin{itemize}
+\setlength{\itemsep}{44pt}
+\item Open-source projekt
+\begin{itemize}
+\item[] $\rightarrow$ Quellcode des Compilers, Bibliotheken (libraries) und Tools sind frei verfügbar
+\end{itemize}
+\item Aktive, weltweite Community
+\item L\"auft auf Unix, Mac und Windows
+\begin{itemize}
+\item[] $\rightarrow$ \"Ublicherweise ohne Modifikation transpotrierbar
+\end{itemize}
 \end{itemize}
 
 \end{frame}

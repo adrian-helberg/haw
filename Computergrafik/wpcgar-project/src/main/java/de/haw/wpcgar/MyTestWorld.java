@@ -39,7 +39,7 @@ public class MyTestWorld {
     private static int            resolutionY    = 800;
     public final static int       windowWidth    = 800;
     public final static int       windowHeight   = 800;
-    private static boolean        useDefaultSeed = false;
+    private static boolean        useDefaultSeed = true;
     private static String         defaultSeed    = "akjsndoisanj";
     public static double         heightScaling  = 280.0;
     // ---------------------------------------------- //
