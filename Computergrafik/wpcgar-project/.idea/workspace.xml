@@ -2,21 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0a44feef-2470-4c04-850f-83b30b3921e4" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/de/haw/wpcgar/structure/biomes/Forest.class" afterPath="$PROJECT_DIR$/out/production/classes/de/haw/wpcgar/structure/biomes/Forest.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/render.png" afterPath="$PROJECT_DIR$/render.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/haw/wpcgar/structure/biomes/Mountain.java" afterPath="$PROJECT_DIR$/src/main/java/de/haw/wpcgar/structure/biomes/Mountain.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/haw/wpcgar/MyTestWorld.java" afterPath="$PROJECT_DIR$/src/main/java/de/haw/wpcgar/MyTestWorld.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/haw/wpcgar/structure/biomes/Snow.java" afterPath="$PROJECT_DIR$/src/main/java/de/haw/wpcgar/structure/biomes/Snow.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/haw/wpcgar/structure/biomes/River.java" afterPath="$PROJECT_DIR$/src/main/java/de/haw/wpcgar/structure/biomes/River.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/haw/wpcgar/structure/biomes/Plain.java" afterPath="$PROJECT_DIR$/src/main/java/de/haw/wpcgar/structure/biomes/Plain.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/haw/wpcgar/structure/biomes/Ocean.java" afterPath="$PROJECT_DIR$/src/main/java/de/haw/wpcgar/structure/biomes/Ocean.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/sonarIssues.xml" afterPath="$PROJECT_DIR$/.idea/sonarIssues.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/world.mtl" afterPath="$PROJECT_DIR$/world.mtl" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/haw/wpcgar/structure/biomes/Forest.java" afterPath="$PROJECT_DIR$/src/main/java/de/haw/wpcgar/structure/biomes/Forest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/haw/wpcgar/structure/biomes/Plain.java" afterPath="$PROJECT_DIR$/src/main/java/de/haw/wpcgar/structure/biomes/Plain.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/haw/wpcgar/structure/biomes/Mountain.java" afterPath="$PROJECT_DIR$/src/main/java/de/haw/wpcgar/structure/biomes/Mountain.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/haw/wpcgar/structure/biomes/Desert.java" afterPath="$PROJECT_DIR$/src/main/java/de/haw/wpcgar/structure/biomes/Desert.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/render.png" afterPath="$PROJECT_DIR$/render.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/haw/wpcgar/structure/biomes/River.java" afterPath="$PROJECT_DIR$/src/main/java/de/haw/wpcgar/structure/biomes/River.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/haw/wpcgar/generator/MeshGenerator.java" afterPath="$PROJECT_DIR$/src/main/java/de/haw/wpcgar/generator/MeshGenerator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/haw/wpcgar/structure/biomes/Snow.java" afterPath="$PROJECT_DIR$/src/main/java/de/haw/wpcgar/structure/biomes/Snow.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/de/haw/wpcgar/structure/biomes/Forest.class" afterPath="$PROJECT_DIR$/out/production/classes/de/haw/wpcgar/structure/biomes/Forest.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/world.mtl" afterPath="$PROJECT_DIR$/world.mtl" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/hawhamburg/shared/datastructures/mesh/Triangle.java" afterPath="$PROJECT_DIR$/src/main/java/edu/hawhamburg/shared/datastructures/mesh/Triangle.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -68,12 +68,10 @@
       <file leaf-file-name="MyTestWorld.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/de/haw/wpcgar/MyTestWorld.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-455">
-              <caret line="156" column="24" lean-forward="true" selection-start-line="156" selection-start-column="24" selection-end-line="156" selection-end-column="24" />
+            <state relative-caret-position="2278">
+              <caret line="156" column="24" lean-forward="false" selection-start-line="156" selection-start-column="24" selection-end-line="156" selection-end-column="24" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#6748#6947#0" expanded="true" />
-                <element signature="e#6946#6947#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -83,7 +81,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/de/haw/wpcgar/generator/MeshGenerator.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="348">
-              <caret line="103" column="57" lean-forward="true" selection-start-line="103" selection-start-column="57" selection-end-line="103" selection-end-column="57" />
+              <caret line="103" column="57" lean-forward="false" selection-start-line="103" selection-start-column="57" selection-end-line="103" selection-end-column="57" />
               <folding>
                 <element signature="method#getMatchingColor#0;class#MeshGenerator#0" expanded="false" />
                 <element signature="method#getOrCreateOceanLevelVertex#0;class#MeshGenerator#0" expanded="false" />
@@ -575,9 +573,8 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="181" />
-    <option name="y" value="-8" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="960" />
     <option name="width" value="960" />
     <option name="height" value="1040" />
   </component>
@@ -597,6 +594,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -712,10 +710,9 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
       <pane id="AndroidView" />
       <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -882,18 +879,19 @@
       <workItem from="1520599366897" duration="9752000" />
       <workItem from="1520794145539" duration="3229000" />
       <workItem from="1520861670152" duration="10654000" />
+      <workItem from="1521817779105" duration="8000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="113926000" />
+    <option name="totallyTimeSpent" value="113934000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="960" y="0" width="960" height="1040" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32873806" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -904,9 +902,8 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.5084746" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32944915" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296875" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -919,7 +916,9 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="SonarQube" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32873806" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32944915" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1149,19 +1148,18 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="14" lean-forward="true" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/world.obj">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="10" column="8" lean-forward="false" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
-        </state>
-      </provider>
       <provider editor-type-id="LargeFileEditor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="10" column="8" lean-forward="false" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
         </state>
       </provider>
     </entry>
@@ -1250,12 +1248,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/de/haw/wpcgar/MyTestWorld.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-455">
-          <caret line="156" column="24" lean-forward="true" selection-start-line="156" selection-start-column="24" selection-end-line="156" selection-end-column="24" />
+        <state relative-caret-position="2278">
+          <caret line="156" column="24" lean-forward="false" selection-start-line="156" selection-start-column="24" selection-end-line="156" selection-end-column="24" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#6748#6947#0" expanded="true" />
-            <element signature="e#6946#6947#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1264,14 +1260,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="20" column="31" lean-forward="true" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/de/haw/wpcgar/generator/MeshGenerator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="348">
-          <caret line="103" column="57" lean-forward="true" selection-start-line="103" selection-start-column="57" selection-end-line="103" selection-end-column="57" />
+          <caret line="103" column="57" lean-forward="false" selection-start-line="103" selection-start-column="57" selection-end-line="103" selection-end-column="57" />
           <folding>
             <element signature="method#getMatchingColor#0;class#MeshGenerator#0" expanded="false" />
             <element signature="method#getOrCreateOceanLevelVertex#0;class#MeshGenerator#0" expanded="false" />

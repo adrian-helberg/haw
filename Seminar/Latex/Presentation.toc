@@ -4,11 +4,11 @@
 \beamer@subsectionintoc {1}{2}{Entwurfsphase}{5}{0}{1}
 \beamer@subsectionintoc {1}{3}{Ver\"offentlichung}{8}{0}{1}
 \beamer@subsectionintoc {1}{4}{Go-Community}{9}{0}{1}
-\beamer@sectionintoc {2}{\"Uberblick}{10}{0}{2}
-\beamer@sectionintoc {3}{Merkmale}{11}{0}{3}
-\beamer@sectionintoc {4}{Syntax}{13}{0}{4}
-\beamer@sectionintoc {5}{Paradigmen}{14}{0}{5}
-\beamer@sectionintoc {6}{Zentrale Fragestellung}{15}{0}{6}
-\beamer@sectionintoc {7}{Pro \& Contra}{16}{0}{7}
-\beamer@sectionintoc {8}{Compiler}{18}{0}{8}
-\beamer@sectionintoc {9}{Einzelnachweise}{19}{0}{9}
+\beamer@sectionintoc {2}{Merkmale}{10}{0}{2}
+\beamer@subsectionintoc {2}{1}{Einsatzbereich}{10}{0}{2}
+\beamer@sectionintoc {3}{Syntax}{13}{0}{3}
+\beamer@sectionintoc {4}{Paradigmen}{14}{0}{4}
+\beamer@sectionintoc {5}{Zentrale Fragestellung}{15}{0}{5}
+\beamer@sectionintoc {6}{Pro \& Contra}{16}{0}{6}
+\beamer@sectionintoc {7}{Compiler}{18}{0}{7}
+\beamer@sectionintoc {8}{Einzelnachweise}{19}{0}{8}
