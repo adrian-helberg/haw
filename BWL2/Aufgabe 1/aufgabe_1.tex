@@ -3,6 +3,7 @@
 \usepackage[english,german]{babel} 
 \usepackage{listings} 
 \usepackage{listings-golang}
+\usepackage{tikz}
 
 \usepackage[absolute,overlay]{textpos}
   \setlength{\TPHorizModule}{1mm}
@@ -12,7 +13,7 @@
 \title{
 	\textit{\"Ubung zur Lehrveranstaltung ``Betriebswirtschaftslehre II''} \\
 	\textbf{\\ \"Ubungsblatt 1 - Gruppe 1} \\
-	\scriptsize{Version 1.0}
+	\scriptsize{Version 2.0}
 }
 \author{Adrian Helberg, \\ Thomas Bednorz \\\textbf{\\ Prüfer: Prof. Dr. M. Schultz}}
 \date{\today}
@@ -86,17 +87,28 @@ Welches sind die wichtigsten Produkte für das Unternehmen?
 \end{quote}
 
 \begin{itemize}
-\setlength{\itemsep}{20pt}
-\item Hochwertige Komponenten aus der ganzen Welt (beste, verf\"ugbare Bauteile)
+\setlength{\itemsep}{14pt}
+
+\item Enduro 250
 \begin{itemize}
-\item Abheben von der Konkurrenz
-\item Bekannte Markennamen als Verkaufsargument
+\item \$3250
 \end{itemize}
-\item Rahmen als Eigenmarke
+
+\item Enduro 550
 \begin{itemize}
-\item Unternehmenstypisches Aussehen $\rightarrow$ Wiedererkennungswert
+\item \$7600
 \end{itemize}
-\item Internes Know-how
+
+\item Moto 300
+\begin{itemize}
+\item \$4295
+\end{itemize}
+
+\item Moto 450
+\begin{itemize}
+\item \$8995
+\end{itemize}
+
 \end{itemize}
 
 \end{frame}
@@ -135,8 +147,7 @@ Welches sind die wert- und mengenm\"aßig wichtigsten Zulieferteile, die Dirt Bi
 \end{quote}
 
 \begin{figure}
-\includegraphics[scale=0.43]{pivot_itemNO_quantity.PNG}
-\caption{Bestellquantit\"at pro Item Nummer (in Stck.)}
+\includegraphics[scale=0.34]{pivot_itemNO_quantity.PNG}
 \end{figure}
 
 \end{frame}
@@ -149,8 +160,7 @@ Welches sind die wert- und mengenm\"aßig wichtigsten Zulieferteile, die Dirt Bi
 \end{quote}
 
 \begin{figure}
-\includegraphics[scale=0.40]{pivot_itemNO_costs.PNG}
-\caption{Bestellkosten pro Item Nummer (in \$)}
+\includegraphics[scale=0.34]{pivot_itemNO_costs.PNG}
 \end{figure}
 
 \end{frame}
@@ -184,15 +194,40 @@ Welches sind die wert- und mengenm\"aßig wichtigsten Zulieferteile, die Dirt Bi
 \frametitle{Frage c)}
 
 \begin{quote}
+Gibt es bei den Produkten über das Jahr auff\"allige Schwankungen? (Kosten)
+\end{quote}
+
+\begin{figure}
+\includegraphics[scale=0.34]{pivot_itemNO_costs2.PNG}
+\end{figure}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Frage c)}
+
+\begin{quote}
+Gibt es bei den Produkten über das Jahr auff\"allige Schwankungen? (Menge)
+\end{quote}
+
+\begin{figure}
+\includegraphics[scale=0.34]{pivot_itemNO_quantity2.PNG}
+\caption{Bestellkosten pro Item Nummer (in \$)}
+\end{figure}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Frage c)}
+
+\begin{quote}
 Gibt es bei den Produkten über das Jahr auff\"allige Schwankungen?
 \end{quote}
 
 \begin{itemize}
-\setlength{\itemsep}{14pt}
-\item Signifikante Ausschl\"age der Kosten gibt es bei den Produktnummern 1122, 5417 und 8008 jeweils im Jannuar, Oktober und M\"arz.
-Beim Produkt 1122 ist evtl. einen Großeinkauf der Ware passiert, die dann auf die folgenden Monate verteilt werden kann.
-\item Signifikante Ausschl\"age der Menge gibt es bei den Produktnummern 1122, 5462  jeweils im Jannuar und Mai,
-Auch hier wird evtl. die Menge auf Folgemonate verteilt.
+\setlength{\itemsep}{30pt}
+\item Signifikante Ausschl\"age der Kosten gibt es bei den Produkten ``Airframe fasteners'' und ``Control Panel''
+\item Signifikante Ausschl\"age der Menge gibt es bei den Produkten ``Airframe fasteners'' und ``Shielded Cable/ft.''
 \end{itemize}
 
 \end{frame}
@@ -206,7 +241,14 @@ Welches sind die wichtigsten Lieferanten für Dirt Bikes?
 
 \begin{itemize}
 \setlength{\itemsep}{14pt}
-\item Die wichtigsten Lieferanten sind nach Auswerten der Kosten und Mengen die Firmen ``Hulky Fasteners'' und ``Steelpin Inc.''
+\item ``Hulky Fasteners''
+\begin{itemize}
+\item \$3.358.200 Bestellkosten f\"ur ``Airframe fasteners''
+\end{itemize}
+\item ``Steelpin Inc.''
+\begin{itemize}
+\item 896.400 Stck. Bestellmenge f\"ur ``Shielded Cable-ft.''
+\end{itemize}
 \end{itemize}
 
 \end{frame}
@@ -219,12 +261,19 @@ Welches sind die wichtigsten Lieferanten für Dirt Bikes?
 Wie ist die aktuelle finanzielle Situation des Unternehmens (Aus Sicht des Jahres 2007)?
 \end{quote}
 
+\begin{figure}
+\includegraphics[scale=0.34]{financials.PNG}
+\end{figure}
+
 \begin{itemize}
 \setlength{\itemsep}{14pt}
-\item Da die Absatzzahlen seit 2002 stetig gestiegen sind, kann davon ausgegangen werden,
-dass sich ``Dirt Bikes'' in einer guten finanziellen Situation befindet (2007)
-\item Allerdings sollte die Annahme mit Vorsicht getroffen werden, da der Absatz im Jahr 2006
-gefallen ist
+\item ``Dirt Bikes'' ist in einer guten finanziellen Situation:
+\begin{itemize}
+\item Steigende Verbindlichkeiten
+\item Sinkende Kosten
+\item Steigende Verkaufszahlen
+\item Positives Absetzen der Bruttoeinnahmen von den Ausgaben
+\end{itemize}
 \end{itemize}
 
 \end{frame}
@@ -238,21 +287,14 @@ Welche Informationssysteme wären für ein Unternehmen wie Dirt Bikes am wichtig
 \end{quote}
 
 \begin{itemize}
-\setlength{\itemsep}{14pt}
 \item Betriebliches Informationssystem
 \begin{itemize}
+\setlength{\itemsep}{10pt}
 \item Enterprise Architecture Frameworks (EAF)
 \item Enterprise Resource Planning (ERP)
 \item Supply Chain Management (SCM)
 \item Customer Relationship Management (CRM)
 \item E-Business-Systeme (E-Commerce)
-\end{itemize}
-\item Sonstige
-\begin{itemize}
-\item Rechnergest\"utztes Informationssystem
-\item Internes Informationssystemem
-\item Operatives Informationssystem
-\item Brancheninformationssystem
 \end{itemize}
 \end{itemize}
 
@@ -265,20 +307,22 @@ Welche Informationssysteme wären für ein Unternehmen wie Dirt Bikes am wichtig
 Welche Schnittstellen werden zwischen den Systemen bestehen?
 \end{quote}
 
-\begin{itemize}
-\item Informationssystem-Landschaft mit
-\begin{itemize}
-\setlength{\itemsep}{8pt}
-\item Gra­fi­schen Benut­zer­schnitt­stel­len
-\item Erfassung, Speicherung, Analyse, Darstellung
-\item Zugriffsstrukturen
-\item Datenbanksystemen (DBS)
-\begin{itemize}
-\item Datenbankmanagementsystem (DBMS)
-\item Datenbank (DB)
-\end{itemize}
-\end{itemize}
-\end{itemize}
+\centering
+\begin{tikzpicture}
+\node[draw] (a) at (1,0) {EAF};
+\node[draw] (b) at (5,0) {ERP};
+\node[draw] (c) at (0,-3) {SCM};
+\node[draw] (d) at (3,-4) {CRM};
+\node[draw] (e) at (6,-3) {E-Business};
+
+\draw[-, thick] (a) to (c);
+\draw[-, thick] (a) to (d);
+\draw[-, thick] (a) to (e);
+
+\draw[-, thick] (b) to (b);
+\draw[-, thick] (b) to (c);
+\draw[-, thick] (b) to (e);
+\end{tikzpicture}
 
 \end{frame}
 

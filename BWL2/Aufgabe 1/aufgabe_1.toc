@@ -2,7 +2,7 @@
 \beamer@sectionintoc {1}{Frage a) - Teil I}{3}{0}{1}
 \beamer@sectionintoc {2}{Frage b)}{6}{0}{2}
 \beamer@sectionintoc {3}{Frage c)}{7}{0}{3}
-\beamer@sectionintoc {4}{Frage d)}{12}{0}{4}
-\beamer@sectionintoc {5}{Frage e)}{13}{0}{5}
-\beamer@sectionintoc {6}{Frage a) - Teil II}{15}{0}{6}
-\beamer@sectionintoc {7}{Frage b)}{16}{0}{7}
+\beamer@sectionintoc {4}{Frage d)}{14}{0}{4}
+\beamer@sectionintoc {5}{Frage e)}{15}{0}{5}
+\beamer@sectionintoc {6}{Frage a) - Teil II}{17}{0}{6}
+\beamer@sectionintoc {7}{Frage b)}{18}{0}{7}
