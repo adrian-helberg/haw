@@ -316,28 +316,83 @@ func getField(v *Vertex, field string) int {
 \begin{itemize}
 \setlength{\itemsep}{12pt}
 \item Keine explizite Markierung von Interface-Implementierungen (Java: \textit{implements})
-\item Stimmt eine Methodensignatur mit der des Interfaces \"uberein, wird diese automatisch implementiert (\textit{duck-typing})
+\item Stimmt eine Methodensignatur mit der des Interfaces \"uberein, wird diese automatisch implementiert (\"ahnlich: \textit{duck-typing})
 \item Einfaches Erweitern externer Methoden (Library Funtionen)
 \end{itemize}
+\item OOP durch \textit{struct} und \textit{interface} m\"oglich
 \end{itemize}
 
 \end{frame}
 
 \subsection{Objektorientierung}
-\begin{frame}
+\begin{frame}[fragile]
 \frametitle{Objektorientierung}
 
 \begin{itemize}
-\setlength{\itemsep}{24pt}
 \item Typ \textit{struct}
 \begin{itemize}
-\item ...
+\setlength{\itemsep}{12pt}
+\item Sammlung von Variablen und Funktionen
+\item Methoden nicht virtuell
+\item Man spricht bei Funktionen von \textbf{Methoden} durch Zugeh\"origkeit des \textit{structs}
+\item Konvention: Nutzen von Zeigern bei ``Settern'',\\ \textit{Call-by-Value} bei ``Gettern''
 \end{itemize}
+\end{itemize}
+
+\begin{lstlisting}
+func (c *Circle) Enlarge() {
+  c.radius += 1
+}
+\end{lstlisting}
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Objektorientierung}
+
+\begin{itemize}
 \item Typ \textit{interface}
 \begin{itemize}
-\item ...
+\setlength{\itemsep}{12pt}
+\item Virtuell
+\item Objekt vom Typ \textit{Circle} kann einer Variable vom Typ \textit{Shape} zugeordnet werden, weil \textit{Circle} die notwendige Funktion \textbf{Area} bietet
+\item Beliebig viele Interfaces!
 \end{itemize}
 \end{itemize}
+
+\begin{lstlisting}
+type Shape interface {
+  Area() float64
+}
+
+func main() {
+  var shape Shape = Circle{2}
+  fmt.Println(shape.Area())
+}
+\end{lstlisting}
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Objektorientierung}
+
+\begin{itemize}
+\item Polymorphie
+\end{itemize}
+
+\begin{lstlisting}
+type Shape interface {
+  Area() float64
+}
+
+func (c Circle) Area() float64{
+  return math.Pi * c.radius * c.radius
+}
+
+func (r Rectangle) Area() float64{
+  return r.length * r.width
+}
+\end{lstlisting}
 
 \end{frame}
 
@@ -354,75 +409,44 @@ func getField(v *Vertex, field string) int {
 
 \end{frame}
 
+\section{Docker}
 \begin{frame}
+
+\frametitle{Docker}
 
 \begin{itemize}
-\setlength{\itemsep}{16pt}
-\item Keine Klassen $\rightarrow$ Java Vergleich
-\item Pakete
+\setlength{\itemsep}{12pt}
+\item Open-Source Apache 2.0 Lizens
+\item Basiert auf \textit{Namespaces}
+\item Isolierung von Anwendungen mit Containervirtualisierung
+\item Ressourcentrennung (Code, Laufzeitmodul, Systemwerkzeuge, Systembibliotheken, ...)
+\item Offiziell von der IANA zugewiesene Portnummern 2375 für HTTP- und 2376 für HTTPS-Kommunikation
+\item Erstellung von Containern mit virtuellen Betriebssystemen
 \end{itemize}
 
-\end{frame}
-
-\begin{frame}
-
-\frametitle{Projekte}
-
-\begin{textblock}{20}(10,30)
-\textit{Go}
+\begin{textblock}{20}(84,0)
 \includegraphics[scale=0.22]{docker.png}
 \end{textblock}
 
-\begin{textblock}{20}(60,32)
-\textit{Java}
-\includegraphics[scale=0.22]{elasticsearch.png}
-\end{textblock}
-
 \end{frame}
 
-\section{Syntax}
-\begin{frame}[fragile]
-\frametitle{Syntax}
-
-%%% GO
-Go
-\begin{lstlisting}
-package main
-
-import "fmt"
-
-func main() {
-    fmt.Println("Hello World!")
-}
-\end{lstlisting}
-
-%%% JAVA
-Java
-\lstset{language=Java}
-\begin{lstlisting}
-public class HelloWorld 
-{ 
-    public static void main (String[] args)
-    {
-        System.out.println("Hello World!");
-    }
-}
-\end{lstlisting}
-
-\end{frame}
-
-\section{Paradigmen}
 \begin{frame}
-\frametitle{Paradigmen}
+
+\frametitle{Docker}
 
 \begin{itemize}
 \setlength{\itemsep}{20pt}
-\item Nebenläufig
-\item Imperativ
-\item Strukturiert
-\item Modular
-\item Objektorientiert
+\item Docker Hub als Online-Dienst als Verteiler fest integriert
+\item Eingebaute Versionsverwaltung, angelehnt an
 \end{itemize}
+
+\begin{textblock}{20}(84,0)
+\includegraphics[scale=0.22]{docker.png}
+\end{textblock}
+
+\begin{textblock}{20}(92,49)
+\includegraphics[scale=0.22]{gitlogo.png}
+\end{textblock}
 
 \end{frame}
 

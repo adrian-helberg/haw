@@ -9,10 +9,9 @@
 \beamer@subsectionintoc {2}{2}{Reflection}{13}{0}{2}
 \beamer@subsectionintoc {2}{3}{Typsicherheit}{16}{0}{2}
 \beamer@subsectionintoc {2}{4}{Objektorientierung}{17}{0}{2}
-\beamer@subsectionintoc {2}{5}{Speicherbereinigung}{18}{0}{2}
-\beamer@sectionintoc {3}{Syntax}{21}{0}{3}
-\beamer@sectionintoc {4}{Paradigmen}{22}{0}{4}
-\beamer@sectionintoc {5}{Zentrale Fragestellung}{23}{0}{5}
-\beamer@sectionintoc {6}{Pro \& Contra}{24}{0}{6}
-\beamer@sectionintoc {7}{Compiler}{26}{0}{7}
-\beamer@sectionintoc {8}{Einzelnachweise}{27}{0}{8}
+\beamer@subsectionintoc {2}{5}{Speicherbereinigung}{20}{0}{2}
+\beamer@sectionintoc {3}{Docker}{21}{0}{3}
+\beamer@sectionintoc {4}{Zentrale Fragestellung}{23}{0}{4}
+\beamer@sectionintoc {5}{Pro \& Contra}{24}{0}{5}
+\beamer@sectionintoc {6}{Compiler}{26}{0}{6}
+\beamer@sectionintoc {7}{Einzelnachweise}{27}{0}{7}

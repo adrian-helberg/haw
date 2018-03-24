@@ -1,27 +1,20 @@
-\frametitle{Syntax}
+\frametitle{Objektorientierung}
 
-%%% GO
-Go
+\begin{itemize}
+\item Polymorphie
+\end{itemize}
+
 \begin{lstlisting}
-package main
-
-import "fmt"
-
-func main() {
-    fmt.Println("Hello World!")
+type Shape interface {
+  Area() float64
 }
-\end{lstlisting}
 
-%%% JAVA
-Java
-\lstset{language=Java}
-\begin{lstlisting}
-public class HelloWorld
-{
-    public static void main (String[] args)
-    {
-        System.out.println("Hello World!");
-    }
+func (c Circle) Area() float64{
+  return math.Pi * c.radius * c.radius
+}
+
+func (r Rectangle) Area() float64{
+  return r.length * r.width
 }
 \end{lstlisting}
 
