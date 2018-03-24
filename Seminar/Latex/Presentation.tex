@@ -3,6 +3,8 @@
 \usepackage[english,german]{babel} 
 \usepackage{listings} 
 \usepackage{listings-golang}
+\usepackage[absolute,overlay]{textpos}
+\usepackage{tcolorbox}
 
 \usepackage[absolute,overlay]{textpos}
   \setlength{\TPHorizModule}{1mm}
@@ -53,7 +55,11 @@ Go ist eine Open-Source-Programmiersprache, die es einfach macht, einfache, zuve
 
 \end{frame}
 
+%%%%%%%%%%%%%%%%%% GESCHICHTE %%%%%%%%%%%%%%%%%%
+
 \section{Geschichte}
+
+%%%%%%%%%%%%%%%%%% ENTWICKLER %%%%%%%%%%%%%%%%%%
 \subsection{Entwickler}
 \begin{frame}
 \frametitle{Entwickler}
@@ -68,6 +74,8 @@ Go ist eine Open-Source-Programmiersprache, die es einfach macht, einfache, zuve
 \end{itemize}
 
 \end{frame}
+
+%%%%%%%%%%%%%%%%%% ENTWURFSPHASE %%%%%%%%%%%%%%%%%%
 
 \subsection{Entwurfsphase}
 \begin{frame}
@@ -107,6 +115,8 @@ Pascal, Modula-2, Oberon, Oberon-2, Alef, ...
 
 \end{frame}
 
+%%%%%%%%%%%%%%%%%% VERÖFFENTLICHUNG %%%%%%%%%%%%%%%%%%
+
 \subsection{Ver\"offentlichung}
 \begin{frame}
 \frametitle{Ver\"offentlichung}
@@ -121,6 +131,8 @@ Pascal, Modula-2, Oberon, Oberon-2, Alef, ...
 \end{itemize}
 
 \end{frame}
+
+%%%%%%%%%%%%%%%%%% GO-COMMUNITY %%%%%%%%%%%%%%%%%%
 
 \subsection{Go-Community}
 \begin{frame}
@@ -141,16 +153,203 @@ Pascal, Modula-2, Oberon, Oberon-2, Alef, ...
 
 \end{frame}
 
-\section{Merkmale}
+%%%%%%%%%%%%%%%%%% MERKMALE UND SPRACHMITTEL %%%%%%%%%%%%%%%%%%
 
-\subsection{Einsatzbereich}
+\section{Merkmale und Sprachmittel}
+
+%%%%%%%%%%%%%%%%%% CLOSURES %%%%%%%%%%%%%%%%%%
+
+\subsection{Closures}
+\begin{frame}[fragile]
+\frametitle{Closures}
+
+Java
+\lstset{language=Java, basicstyle=\scriptsize}
+\begin{lstlisting}
+private static Function<String, Supplier<String>> intSeq = 
+x -> {
+
+    AtomicInteger atomicInteger = new AtomicInteger();
+    return () -> x + ": " + atomicInteger.incrementAndGet();
+}
+
+public static void main(String[] args) {
+
+    Supplier<String> nextInt = intSeq.apply("Test 1");
+
+    System.out.println(nextInt.get());
+    System.out.println(nextInt.get());
+}
+\end{lstlisting}
+
+\begin{textblock}{36}(88,66)
+\begin{tcolorbox}
+\textit{Ausgabe:\\}\\
+Test 1: 1 \\
+Test 1: 2
+\end{tcolorbox}
+\end{textblock}
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Closures}
+
+Go
+\begin{lstlisting}
+func intSeq(x string) func() string {
+	i := 0
+	return func() string {
+		i++
+		return x + ": " + strconv.Itoa(i)
+	}
+}
+
+func main() {
+	nextInt := intSeq("Test 1")
+
+	fmt.Println(nextInt())
+	fmt.Println(nextInt())
+}
+\end{lstlisting}
+
+\begin{textblock}{36}(88,66)
+\begin{tcolorbox}
+\textit{Ausgabe:\\}\\
+Test 1: 1 \\
+Test 1: 2
+\end{tcolorbox}
+\end{textblock}
+
+\end{frame}
+
 \begin{frame}
-\frametitle{Einsatzbereich}
+\frametitle{Closures}
 
 \begin{itemize}
-\item ``Alles was auf dem Server l\"auft''
-\item \"Okosystem
-\item vorhendene Libraries und Projekte
+\setlength{\itemsep}{24pt}
+\item Philosophie: \textit{``Kommuniziere nicht, indem du Speicher teilst, sondern teile Speicher durch Kommunikation'}
+\item Keine Einschr\"ankung beim Nutzen unsicherer Zugriffsmethode
+\item \"Ublich: Goroutines, Channels
+\begin{itemize}
+\item Keine ``Race Conditions''
+\end{itemize}
+\end{itemize}
+
+\end{frame}
+
+\subsection{Reflection}
+\begin{frame}[fragile]
+\frametitle{Reflection}
+
+Java
+\lstset{language=Java, basicstyle=\scriptsize}
+\begin{lstlisting}
+public static String getStringProperty(Object object, 
+                                        String methodname) {
+    String value = null;
+
+    try {
+        Method getter = object.getClass()
+                        .getMethod(methodname, new Class[0]);
+
+        value = (String) getter
+                        .invoke(object, new Object[0]);
+
+    } catch (Exception e) {}
+
+    return value;
+}
+\end{lstlisting}
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Reflection}
+
+Go
+\begin{lstlisting}
+func getField(v *Vertex, field string) int {
+
+    r := reflect.ValueOf(v)
+    f := reflect.Indirect(r).FieldByName(field)
+
+    return int(f.Int())
+}
+\end{lstlisting}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Reflection}
+
+\begin{itemize}
+\setlength{\itemsep}{24pt}
+\item func ValueOf(i interface{}) Value
+\begin{itemize}
+\item Gibt ein Objekt Value (reflection interface) zurück, das auf den konkreten Wert initialisiert wurde, der in der Schnittstelle i gespeichert ist
+\end{itemize}
+\item func Indirect(v Value) Value
+\begin{itemize}
+\item Gibt den Wert zurück, auf den v zeigt
+\end{itemize}
+\item func (Value) FieldByName
+\begin{itemize}
+\item Gibt das \textit{struct field} mit dem angegebenen Namen zur\"uck
+\end{itemize}
+\item func (v Value) Int() int64
+\begin{itemize}
+\item Gibt den zugrunde liegenden Wert von v zur\"uck
+\end{itemize}
+\end{itemize}
+
+\end{frame}
+
+\subsection{Typsicherheit}
+\begin{frame}
+\frametitle{Typsicherheit}
+
+\begin{itemize}
+\setlength{\itemsep}{24pt}
+\item Starke, statische Typisierung
+\item Features simulieren dynamische Typisierung
+\begin{itemize}
+\setlength{\itemsep}{12pt}
+\item Keine explizite Markierung von Interface-Implementierungen (Java: \textit{implements})
+\item Stimmt eine Methodensignatur mit der des Interfaces \"uberein, wird diese automatisch implementiert (\textit{duck-typing})
+\item Einfaches Erweitern externer Methoden (Library Funtionen)
+\end{itemize}
+\end{itemize}
+
+\end{frame}
+
+\subsection{Objektorientierung}
+\begin{frame}
+\frametitle{Objektorientierung}
+
+\begin{itemize}
+\setlength{\itemsep}{24pt}
+\item Typ \textit{struct}
+\begin{itemize}
+\item ...
+\end{itemize}
+\item Typ \textit{interface}
+\begin{itemize}
+\item ...
+\end{itemize}
+\end{itemize}
+
+\end{frame}
+
+\subsection{Speicherbereinigung}
+\begin{frame}
+\frametitle{Speicherbereinigung}
+
+\begin{itemize}
+\setlength{\itemsep}{30pt}
+\item Automatisch
+\item \textit{Garbage Collector}
+\item Wird eine Variable unerreichbar, wird sie recyklet
 \end{itemize}
 
 \end{frame}
@@ -159,10 +358,6 @@ Pascal, Modula-2, Oberon, Oberon-2, Alef, ...
 
 \begin{itemize}
 \setlength{\itemsep}{16pt}
-\item Reflection
-\item Typsicherheit
-\item Autmoatische Speicherbereinigung
-\item Interfaces, Mixins $\rightarrow$ Objektorientierung
 \item Keine Klassen $\rightarrow$ Java Vergleich
 \item Pakete
 \end{itemize}

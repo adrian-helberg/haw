@@ -1,23 +1,21 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"strconv"
+)
 
-func intSeq() func() int {
+func intSeq(x string) func() string {
 	i := 0
-	return func() int {
+	return func() string {
 		i++
-		return i
+		return x + ": " + strconv.Itoa(i)
 	}
 }
 
 func main() {
-	nextInt := intSeq()
+	nextInt := intSeq("Test 1")
 
 	fmt.Println(nextInt())
 	fmt.Println(nextInt())
-	fmt.Println(nextInt())
-
-	newInt := intSeq()
-	fmt.Println(newInt())
-	fmt.Println(newInt())
 }
