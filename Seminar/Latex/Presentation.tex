@@ -5,6 +5,7 @@
 \usepackage{listings-golang}
 \usepackage[absolute,overlay]{textpos}
 \usepackage{tcolorbox}
+\usepackage{multicol}
 
 \usepackage[absolute,overlay]{textpos}
   \setlength{\TPHorizModule}{1mm}
@@ -33,7 +34,13 @@
 
 \maketitle
 
-\frame{\tableofcontents}
+%\frame{\tableofcontents}
+
+\frame{
+\begin{multicols}{3}
+\tableofcontents[hideothersubsections]
+\end{multicols}
+ }
 
 \begin{frame}
 
@@ -117,7 +124,7 @@ Pascal, Modula-2, Oberon, Oberon-2, Alef, ...
 
 \begin{itemize}
 \setlength{\itemsep}{40pt}
-\item Vermeiden von features, die zu komplexen, unzuverl\"assigen code führen w\"urden
+\item Vermeiden von Features, die zu komplexem, unzuverl\"assigem code führen w\"urden
 \item M\"oglichkeiten zur Nebenl\"aufigkeit sind neu und effizient
 \item Datenabstraktion und Objektorientierung sind ungewohnt flexibel
 \item Automatische Speicherverwaltung (garbage collection)
@@ -179,6 +186,14 @@ Pascal, Modula-2, Oberon, Oberon-2, Alef, ...
 \section{Merkmale und Sprachmittel}
 \begin{frame}
 \frametitle{Merkmale und Sprachmittel}
+
+\begin{textblock}{50}(40, 57)
+\begin{figure}
+\caption{Golang ``Gopher''}
+\includegraphics[scale=0.35]{gopherHead.png}
+\end{figure}
+\end{textblock}
+
 \end{frame}
 
 %%%%%%%%%%%%%%%%%% CLOSURES %%%%%%%%%%%%%%%%%%
@@ -579,6 +594,18 @@ func (r Rectangle) Area() float64{
 \begin{figure}
 \includegraphics[scale=0.3]{book.png}
 \caption{The Go Programming Language, von Alan A. A. Donovan und Brian W. Kernighan, 2016}
+\end{figure}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Ende}
+
+\centering
+Danke f\"ur die Aufmerksamkeit!
+
+\begin{figure}
+\includegraphics[scale=0.4]{joda.png}
 \end{figure}
 
 \end{frame}
