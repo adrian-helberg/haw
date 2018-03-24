@@ -1,17 +1,18 @@
 \select@language {german}
 \beamer@sectionintoc {1}{Geschichte}{4}{0}{1}
-\beamer@subsectionintoc {1}{1}{Entwickler}{4}{0}{1}
-\beamer@subsectionintoc {1}{2}{Entwurfsphase}{5}{0}{1}
-\beamer@subsectionintoc {1}{3}{Ver\"offentlichung}{8}{0}{1}
-\beamer@subsectionintoc {1}{4}{Go-Community}{9}{0}{1}
-\beamer@sectionintoc {2}{Merkmale und Sprachmittel}{10}{0}{2}
-\beamer@subsectionintoc {2}{1}{Closures}{10}{0}{2}
-\beamer@subsectionintoc {2}{2}{Reflection}{13}{0}{2}
-\beamer@subsectionintoc {2}{3}{Typsicherheit}{16}{0}{2}
-\beamer@subsectionintoc {2}{4}{Objektorientierung}{17}{0}{2}
-\beamer@subsectionintoc {2}{5}{Speicherbereinigung}{20}{0}{2}
-\beamer@sectionintoc {3}{Docker}{21}{0}{3}
-\beamer@sectionintoc {4}{Zentrale Fragestellung}{23}{0}{4}
-\beamer@sectionintoc {5}{Pro \& Contra}{24}{0}{5}
-\beamer@sectionintoc {6}{Compiler}{26}{0}{6}
-\beamer@sectionintoc {7}{Einzelnachweise}{27}{0}{7}
+\beamer@subsectionintoc {1}{1}{Entwickler}{5}{0}{1}
+\beamer@subsectionintoc {1}{2}{Entwurfsphase}{6}{0}{1}
+\beamer@subsectionintoc {1}{3}{Ver\"offentlichung}{9}{0}{1}
+\beamer@subsectionintoc {1}{4}{Go-Community}{10}{0}{1}
+\beamer@sectionintoc {2}{Merkmale und Sprachmittel}{12}{0}{2}
+\beamer@subsectionintoc {2}{1}{Closures}{13}{0}{2}
+\beamer@subsectionintoc {2}{2}{Reflection}{16}{0}{2}
+\beamer@subsectionintoc {2}{3}{Typsicherheit}{19}{0}{2}
+\beamer@subsectionintoc {2}{4}{Objektorientierung}{20}{0}{2}
+\beamer@subsectionintoc {2}{5}{Speicherbereinigung}{23}{0}{2}
+\beamer@sectionintoc {3}{Docker}{24}{0}{3}
+\beamer@sectionintoc {4}{Zentrale Fragestellung}{26}{0}{4}
+\beamer@sectionintoc {5}{Java Vs Go}{27}{0}{5}
+\beamer@sectionintoc {6}{Pro \& Contra}{29}{0}{6}
+\beamer@sectionintoc {7}{Compiler}{31}{0}{7}
+\beamer@sectionintoc {8}{Einzelnachweise}{32}{0}{8}

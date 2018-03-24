@@ -7,83 +7,96 @@
 \headcommand {\sectionentry {1}{Geschichte}{4}{Geschichte}{0}}
 \headcommand {\beamer@sectionpages {1}{3}}
 \headcommand {\beamer@subsectionpages {1}{3}}
-\headcommand {\beamer@subsectionentry {0}{1}{1}{4}{Entwickler}}\headcommand {\beamer@subsectionpages {4}{3}}
-\headcommand {\slideentry {1}{1}{1}{4/4}{Entwickler}{0}}
+\headcommand {\slideentry {1}{0}{1}{4/4}{}{0}}
 \headcommand {\beamer@framepages {4}{4}}
-\headcommand {\beamer@subsectionentry {0}{1}{2}{5}{Entwurfsphase}}\headcommand {\beamer@subsectionpages {4}{4}}
-\headcommand {\slideentry {1}{2}{1}{5/5}{Entwurfsphase}{0}}
+\headcommand {\beamer@subsectionentry {0}{1}{1}{5}{Entwickler}}\headcommand {\beamer@subsectionpages {4}{4}}
+\headcommand {\slideentry {1}{1}{1}{5/5}{Entwickler}{0}}
 \headcommand {\beamer@framepages {5}{5}}
-\headcommand {\slideentry {1}{2}{2}{6/6}{Entwurfsphase}{0}}
+\headcommand {\beamer@subsectionentry {0}{1}{2}{6}{Entwurfsphase}}\headcommand {\beamer@subsectionpages {5}{5}}
+\headcommand {\slideentry {1}{2}{1}{6/6}{Entwurfsphase}{0}}
 \headcommand {\beamer@framepages {6}{6}}
-\headcommand {\slideentry {1}{2}{3}{7/7}{Entwurfsphase}{0}}
+\headcommand {\slideentry {1}{2}{2}{7/7}{Entwurfsphase}{0}}
 \headcommand {\beamer@framepages {7}{7}}
-\headcommand {\beamer@subsectionentry {0}{1}{3}{8}{Ver\"offentlichung}}\headcommand {\beamer@subsectionpages {5}{7}}
-\headcommand {\slideentry {1}{3}{1}{8/8}{Ver\"offentlichung}{0}}
+\headcommand {\slideentry {1}{2}{3}{8/8}{Entwurfsphase}{0}}
 \headcommand {\beamer@framepages {8}{8}}
-\headcommand {\beamer@subsectionentry {0}{1}{4}{9}{Go-Community}}\headcommand {\beamer@subsectionpages {8}{8}}
-\headcommand {\slideentry {1}{4}{1}{9/9}{Go-Community}{0}}
+\headcommand {\beamer@subsectionentry {0}{1}{3}{9}{Ver\"offentlichung}}\headcommand {\beamer@subsectionpages {6}{8}}
+\headcommand {\slideentry {1}{3}{1}{9/9}{Ver\"offentlichung}{0}}
 \headcommand {\beamer@framepages {9}{9}}
-\headcommand {\sectionentry {2}{Merkmale und Sprachmittel}{10}{Merkmale und Sprachmittel}{0}}
-\headcommand {\beamer@sectionpages {4}{9}}
-\headcommand {\beamer@subsectionpages {9}{9}}
-\headcommand {\beamer@subsectionentry {0}{2}{1}{10}{Closures}}\headcommand {\beamer@subsectionpages {10}{9}}
-\headcommand {\slideentry {2}{1}{1}{10/10}{Closures}{0}}
+\headcommand {\beamer@subsectionentry {0}{1}{4}{10}{Go-Community}}\headcommand {\beamer@subsectionpages {9}{9}}
+\headcommand {\slideentry {1}{4}{1}{10/10}{Go-Community}{0}}
 \headcommand {\beamer@framepages {10}{10}}
-\headcommand {\slideentry {2}{1}{2}{11/11}{Closures}{0}}
+\headcommand {\slideentry {1}{4}{2}{11/11}{Go-Community}{0}}
 \headcommand {\beamer@framepages {11}{11}}
-\headcommand {\slideentry {2}{1}{3}{12/12}{Closures}{0}}
+\headcommand {\sectionentry {2}{Merkmale und Sprachmittel}{12}{Merkmale und Sprachmittel}{0}}
+\headcommand {\beamer@sectionpages {4}{11}}
+\headcommand {\beamer@subsectionpages {10}{11}}
+\headcommand {\slideentry {2}{0}{1}{12/12}{}{0}}
 \headcommand {\beamer@framepages {12}{12}}
-\headcommand {\beamer@subsectionentry {0}{2}{2}{13}{Reflection}}\headcommand {\beamer@subsectionpages {10}{12}}
-\headcommand {\slideentry {2}{2}{1}{13/13}{Reflection}{0}}
+\headcommand {\beamer@subsectionentry {0}{2}{1}{13}{Closures}}\headcommand {\beamer@subsectionpages {12}{12}}
+\headcommand {\slideentry {2}{1}{1}{13/13}{Closures}{0}}
 \headcommand {\beamer@framepages {13}{13}}
-\headcommand {\slideentry {2}{2}{2}{14/14}{Reflection}{0}}
+\headcommand {\slideentry {2}{1}{2}{14/14}{Closures}{0}}
 \headcommand {\beamer@framepages {14}{14}}
-\headcommand {\slideentry {2}{2}{3}{15/15}{Reflection}{0}}
+\headcommand {\slideentry {2}{1}{3}{15/15}{Closures}{0}}
 \headcommand {\beamer@framepages {15}{15}}
-\headcommand {\beamer@subsectionentry {0}{2}{3}{16}{Typsicherheit}}\headcommand {\beamer@subsectionpages {13}{15}}
-\headcommand {\slideentry {2}{3}{1}{16/16}{Typsicherheit}{0}}
+\headcommand {\beamer@subsectionentry {0}{2}{2}{16}{Reflection}}\headcommand {\beamer@subsectionpages {13}{15}}
+\headcommand {\slideentry {2}{2}{1}{16/16}{Reflection}{0}}
 \headcommand {\beamer@framepages {16}{16}}
-\headcommand {\beamer@subsectionentry {0}{2}{4}{17}{Objektorientierung}}\headcommand {\beamer@subsectionpages {16}{16}}
-\headcommand {\slideentry {2}{4}{1}{17/17}{Objektorientierung}{0}}
+\headcommand {\slideentry {2}{2}{2}{17/17}{Reflection}{0}}
 \headcommand {\beamer@framepages {17}{17}}
-\headcommand {\slideentry {2}{4}{2}{18/18}{Objektorientierung}{0}}
+\headcommand {\slideentry {2}{2}{3}{18/18}{Reflection}{0}}
 \headcommand {\beamer@framepages {18}{18}}
-\headcommand {\slideentry {2}{4}{3}{19/19}{Objektorientierung}{0}}
+\headcommand {\beamer@subsectionentry {0}{2}{3}{19}{Typsicherheit}}\headcommand {\beamer@subsectionpages {16}{18}}
+\headcommand {\slideentry {2}{3}{1}{19/19}{Typsicherheit}{0}}
 \headcommand {\beamer@framepages {19}{19}}
-\headcommand {\beamer@subsectionentry {0}{2}{5}{20}{Speicherbereinigung}}\headcommand {\beamer@subsectionpages {17}{19}}
-\headcommand {\slideentry {2}{5}{1}{20/20}{Speicherbereinigung}{0}}
+\headcommand {\beamer@subsectionentry {0}{2}{4}{20}{Objektorientierung}}\headcommand {\beamer@subsectionpages {19}{19}}
+\headcommand {\slideentry {2}{4}{1}{20/20}{Objektorientierung}{0}}
 \headcommand {\beamer@framepages {20}{20}}
-\headcommand {\sectionentry {3}{Docker}{21}{Docker}{0}}
-\headcommand {\beamer@sectionpages {10}{20}}
-\headcommand {\beamer@subsectionpages {20}{20}}
-\headcommand {\slideentry {3}{0}{1}{21/21}{}{0}}
+\headcommand {\slideentry {2}{4}{2}{21/21}{Objektorientierung}{0}}
 \headcommand {\beamer@framepages {21}{21}}
-\headcommand {\slideentry {3}{0}{2}{22/22}{}{0}}
+\headcommand {\slideentry {2}{4}{3}{22/22}{Objektorientierung}{0}}
 \headcommand {\beamer@framepages {22}{22}}
-\headcommand {\sectionentry {4}{Zentrale Fragestellung}{23}{Zentrale Fragestellung}{0}}
-\headcommand {\beamer@sectionpages {21}{22}}
-\headcommand {\beamer@subsectionpages {21}{22}}
-\headcommand {\slideentry {4}{0}{1}{23/23}{}{0}}
+\headcommand {\beamer@subsectionentry {0}{2}{5}{23}{Speicherbereinigung}}\headcommand {\beamer@subsectionpages {20}{22}}
+\headcommand {\slideentry {2}{5}{1}{23/23}{Speicherbereinigung}{0}}
 \headcommand {\beamer@framepages {23}{23}}
-\headcommand {\sectionentry {5}{Pro \& Contra}{24}{Pro \& Contra}{0}}
-\headcommand {\beamer@sectionpages {23}{23}}
+\headcommand {\sectionentry {3}{Docker}{24}{Docker}{0}}
+\headcommand {\beamer@sectionpages {12}{23}}
 \headcommand {\beamer@subsectionpages {23}{23}}
-\headcommand {\slideentry {5}{0}{1}{24/24}{}{0}}
+\headcommand {\slideentry {3}{0}{1}{24/24}{}{0}}
 \headcommand {\beamer@framepages {24}{24}}
-\headcommand {\slideentry {5}{0}{2}{25/25}{}{0}}
+\headcommand {\slideentry {3}{0}{2}{25/25}{}{0}}
 \headcommand {\beamer@framepages {25}{25}}
-\headcommand {\sectionentry {6}{Compiler}{26}{Compiler}{0}}
+\headcommand {\sectionentry {4}{Zentrale Fragestellung}{26}{Zentrale Fragestellung}{0}}
 \headcommand {\beamer@sectionpages {24}{25}}
 \headcommand {\beamer@subsectionpages {24}{25}}
-\headcommand {\slideentry {6}{0}{1}{26/26}{}{0}}
+\headcommand {\slideentry {4}{0}{1}{26/26}{}{0}}
 \headcommand {\beamer@framepages {26}{26}}
-\headcommand {\sectionentry {7}{Einzelnachweise}{27}{Einzelnachweise}{0}}
+\headcommand {\sectionentry {5}{Java Vs Go}{27}{Java Vs Go}{0}}
 \headcommand {\beamer@sectionpages {26}{26}}
 \headcommand {\beamer@subsectionpages {26}{26}}
-\headcommand {\slideentry {7}{0}{1}{27/27}{}{0}}
+\headcommand {\slideentry {5}{0}{1}{27/27}{}{0}}
 \headcommand {\beamer@framepages {27}{27}}
-\headcommand {\beamer@partpages {1}{27}}
-\headcommand {\beamer@subsectionpages {27}{27}}
-\headcommand {\beamer@sectionpages {27}{27}}
-\headcommand {\beamer@documentpages {27}}
-\headcommand {\def \inserttotalframenumber {27}}
+\headcommand {\slideentry {5}{0}{2}{28/28}{}{0}}
+\headcommand {\beamer@framepages {28}{28}}
+\headcommand {\sectionentry {6}{Pro \& Contra}{29}{Pro \& Contra}{0}}
+\headcommand {\beamer@sectionpages {27}{28}}
+\headcommand {\beamer@subsectionpages {27}{28}}
+\headcommand {\slideentry {6}{0}{1}{29/29}{}{0}}
+\headcommand {\beamer@framepages {29}{29}}
+\headcommand {\slideentry {6}{0}{2}{30/30}{}{0}}
+\headcommand {\beamer@framepages {30}{30}}
+\headcommand {\sectionentry {7}{Compiler}{31}{Compiler}{0}}
+\headcommand {\beamer@sectionpages {29}{30}}
+\headcommand {\beamer@subsectionpages {29}{30}}
+\headcommand {\slideentry {7}{0}{1}{31/31}{}{0}}
+\headcommand {\beamer@framepages {31}{31}}
+\headcommand {\sectionentry {8}{Einzelnachweise}{32}{Einzelnachweise}{0}}
+\headcommand {\beamer@sectionpages {31}{31}}
+\headcommand {\beamer@subsectionpages {31}{31}}
+\headcommand {\slideentry {8}{0}{1}{32/32}{}{0}}
+\headcommand {\beamer@framepages {32}{32}}
+\headcommand {\beamer@partpages {1}{32}}
+\headcommand {\beamer@subsectionpages {32}{32}}
+\headcommand {\beamer@sectionpages {32}{32}}
+\headcommand {\beamer@documentpages {32}}
+\headcommand {\def \inserttotalframenumber {32}}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.4.17)  24 MAR 2018 20:53
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.4.17)  24 MAR 2018 22:47
 entering extended mode
 **./Presentation.tex
 (Presentation.tex
@@ -1281,7 +1281,7 @@ Dictionary: translator-theorem-dictionary, Language: English
 LaTeX Info: Redefining \includegraphics on input line 23.
 \c@lstlisting=\count173
  (Presentation.nav)
-<golanglogo.png, id=76, 1228.59pt x 441.65pt>
+<golanglogo.png, id=80, 1228.59pt x 441.65pt>
 File: golanglogo.png Graphic file (type png)
  <use golanglogo.png>
 Package pdftex.def Info: golanglogo.png used on input line 34.
@@ -1299,50 +1299,73 @@ LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <4> not available
 ] [3
 
 ]
-LaTeX Font Info:    Try loading font information for U+msa on input line 76.
+<designers.png, id=199, 630.355pt x 356.33125pt>
+File: designers.png Graphic file (type png)
+ <use designers.png>
+Package pdftex.def Info: designers.png used on input line 70.
+(pdftex.def)             Requested size: 315.17673pt x 178.16518pt.
+
+Overfull \hbox (7.88686pt too wide) in paragraph at lines 70--70
+ [] 
+ []
+
+[4
+
+ <./designers.png>]
+LaTeX Font Info:    Try loading font information for U+msa on input line 86.
  (D:\MikTex\tex\latex\amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 76.
+LaTeX Font Info:    Try loading font information for U+msb on input line 86.
 
 (D:\MikTex\tex\latex\amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Try loading font information for OT1+mathkerncmss on input 
-line 76.
+line 86.
 
 (D:\MikTex\tex\latex\sansmathaccent\ot1mathkerncmss.fd
 File: ot1mathkerncmss.fd 2013/03/27 Fontinst v1.933 font definitions for OT1/ma
 thkerncmss.
 )
-LaTeX Font Info:    Try loading font information for OMS+cmss on input line 76.
+LaTeX Font Info:    Try loading font information for OMS+cmss on input line 86.
 
-LaTeX Font Info:    No file OMScmss.fd. on input line 76.
+LaTeX Font Info:    No file OMScmss.fd. on input line 86.
 
 
 LaTeX Font Warning: Font shape `OMS/cmss/m/n' undefined
-(Font)              using `OMS/cmsy/m/n' instead on input line 76.
+(Font)              using `OMS/cmsy/m/n' instead on input line 86.
 
-[4
+[5
 
-] [5
+] [6
 
-] <origin.png, id=244, 557.83406pt x 468.24937pt>
+] <origin.png, id=278, 557.83406pt x 468.24937pt>
 File: origin.png Graphic file (type png)
  <use origin.png>
-Package pdftex.def Info: origin.png used on input line 103.
+Package pdftex.def Info: origin.png used on input line 113.
 (pdftex.def)             Requested size: 251.023pt x 210.71027pt.
 
-Overfull \vbox (6.9816pt too high) detected at line 103
+Overfull \vbox (6.9816pt too high) detected at line 113
  []
 
-[6
+[7
 
- <./origin.png>] [7
-
-] [8
+ <./origin.png>] [8
 
 ] [9
+
+] [10
+
+] <graph.png, id=377, 1020.81375pt x 610.28pt>
+File: graph.png Graphic file (type png)
+
+<use graph.png>
+Package pdftex.def Info: graph.png used on input line 175.
+(pdftex.def)             Requested size: 306.24649pt x 183.0854pt.
+ [11
+
+ <./graph.png>] [12
 
 ]
 \openout4 = `Presentation.vrb'.
@@ -1364,7 +1387,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 24--27
 
  []
 
-) [10
+) [13
 
 ]
 \openout4 = `Presentation.vrb'.
@@ -1374,9 +1397,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 23--26
 
  []
 
-) [11
+) [14
 
-] [12
+] [15
 
 ]
 \openout4 = `Presentation.vrb'.
@@ -1386,86 +1409,101 @@ Overfull \hbox (3.81702pt too wide) in paragraph at lines 12--14
 [][][][][][][][][][][][][][][] 
  []
 
-) [13
-
-]
-\openout4 = `Presentation.vrb'.
-
- (Presentation.vrb) [14
-
-] [15
-
-] [16
+) [16
 
 ]
 \openout4 = `Presentation.vrb'.
 
  (Presentation.vrb) [17
 
-]
-\openout4 = `Presentation.vrb'.
+] [18
 
-
-(Presentation.vrb) [18
+] [19
 
 ]
 \openout4 = `Presentation.vrb'.
 
- (Presentation.vrb) [19
-
-] [20
+ (Presentation.vrb) [20
 
 ]
-<docker.png, id=620, 578.6418pt x 490.9542pt>
-File: docker.png Graphic file (type png)
- <use docker.png>
-Package pdftex.def Info: docker.png used on input line 431.
-(pdftex.def)             Requested size: 127.30159pt x 108.01025pt.
+\openout4 = `Presentation.vrb'.
 
-Overfull \hbox (70.39638pt too wide) in paragraph at lines 431--431
-[][]  
- []
 
-[21
-
- <./docker.png>]
-File: docker.png Graphic file (type png)
- <use docker.png>
-Package pdftex.def Info: docker.png used on input line 451.
-(pdftex.def)             Requested size: 127.30159pt x 108.01025pt.
-
-Overfull \hbox (70.39638pt too wide) in paragraph at lines 451--451
-[][]  
- []
-
-<gitlogo.png, id=647, 150.5625pt x 63.23625pt>
-File: gitlogo.png Graphic file (type png)
- <use gitlogo.png>
-Package pdftex.def Info: gitlogo.png used on input line 451.
-(pdftex.def)             Requested size: 33.12384pt x 13.912pt.
- [22
-
- <./gitlogo.png>] [23
+(Presentation.vrb) [21
 
 ]
-Overfull \hbox (15.46405pt too wide) in paragraph at lines 487--487
+\openout4 = `Presentation.vrb'.
+
+ (Presentation.vrb) [22
+
+] [23
+
+]
+<docker.png, id=703, 578.6418pt x 490.9542pt>
+File: docker.png Graphic file (type png)
+ <use docker.png>
+Package pdftex.def Info: docker.png used on input line 455.
+(pdftex.def)             Requested size: 127.30159pt x 108.01025pt.
+
+Overfull \hbox (70.39638pt too wide) in paragraph at lines 455--455
 [][]  
  []
 
 [24
 
-]
-Overfull \hbox (15.46405pt too wide) in paragraph at lines 512--512
+ <./docker.png>]
+File: docker.png Graphic file (type png)
+ <use docker.png>
+Package pdftex.def Info: docker.png used on input line 474.
+(pdftex.def)             Requested size: 127.30159pt x 108.01025pt.
+
+Overfull \hbox (70.39638pt too wide) in paragraph at lines 474--474
 [][]  
  []
 
-[25
+<gitlogo.png, id=730, 150.5625pt x 63.23625pt>
+File: gitlogo.png Graphic file (type png)
+ <use gitlogo.png>
+Package pdftex.def Info: gitlogo.png used on input line 474.
+(pdftex.def)             Requested size: 33.12384pt x 13.912pt.
+ [25
 
-] [26
+ <./gitlogo.png>] [26
 
-] [27
+] <javaVsGo.png, id=781, 542.025pt x 225.84375pt>
+File: javaVsGo.png Graphic file (type png)
+ <use javaVsGo.png>
+Package pdftex.def Info: javaVsGo.png used on input line 495.
+(pdftex.def)             Requested size: 271.01183pt x 112.92159pt.
+
+[27
+
+ <./javaVsGo.png>] [28
 
 ]
+Overfull \hbox (15.46405pt too wide) in paragraph at lines 535--535
+[][]  
+ []
+
+[29
+
+]
+Overfull \hbox (15.46405pt too wide) in paragraph at lines 560--560
+[][]  
+ []
+
+[30
+
+] [31
+
+] <book.png, id=906, 451.79568pt x 559.98431pt>
+File: book.png Graphic file (type png)
+ <use book.png>
+Package pdftex.def Info: book.png used on input line 584.
+(pdftex.def)             Requested size: 135.53975pt x 167.99658pt.
+ [32
+
+ <./book.png>]
 \tf@nav=\write8
 \openout8 = `Presentation.nav'.
 
@@ -1475,13 +1513,13 @@ Overfull \hbox (15.46405pt too wide) in paragraph at lines 512--512
 \tf@snm=\write10
 \openout10 = `Presentation.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 537.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 537.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 586.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 586.
  (Presentation.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 537.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 537.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 586.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 586.
 Package rerunfilecheck Info: File `Presentation.out' has not changed.
-(rerunfilecheck)             Checksum: 70B6308256C60A0A155AF5C3AA74656D;937.
+(rerunfilecheck)             Checksum: DC5C85C2CC6BD717E8C12C7935E12142;985.
 
 
 LaTeX Font Warning: Size substitutions with differences
@@ -1492,10 +1530,10 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 22019 strings out of 493333
- 409706 string characters out of 3146981
- 528497 words of memory out of 3000000
- 24974 multiletter control sequences out of 15000+200000
+ 22064 strings out of 493333
+ 410227 string characters out of 3146981
+ 527931 words of memory out of 3000000
+ 25004 multiletter control sequences out of 15000+200000
  16398 words of font info for 59 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  56i,14n,75p,807b,1441s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1508,9 +1546,9 @@ fb><D:/MikTex/fonts/type1/public/amsfonts/cm/cmssi10.pfb><D:/MikTex/fonts/type1
 0.pfb><D:/MikTex/fonts/type1/public/amsfonts/cm/cmsy8.pfb><D:/MikTex/fonts/type
 1/public/amsfonts/cm/cmsy9.pfb><D:/MikTex/fonts/type1/public/amsfonts/symbols/m
 sam10.pfb><D:/MikTex/fonts/type1/public/amsfonts/symbols/msam7.pfb>
-Output written on Presentation.pdf (27 pages, 466089 bytes).
+Output written on Presentation.pdf (32 pages, 1348148 bytes).
 PDF statistics:
- 853 PDF objects out of 1000 (max. 8388607)
- 71 named destinations out of 1000 (max. 500000)
- 191 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 993 PDF objects out of 1000 (max. 8388607)
+ 82 named destinations out of 1000 (max. 500000)
+ 219 words of extra memory for PDF output out of 10000 (max. 10000000)
 
