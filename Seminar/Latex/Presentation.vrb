@@ -1,20 +1,13 @@
-\frametitle{Objektorientierung}
+\frametitle{Reflection}
 
-\begin{itemize}
-\item Polymorphie
-\end{itemize}
-
+Go
 \begin{lstlisting}
-type Shape interface {
-  Area() float64
-}
+func getField(v *Vertex, field string) int {
 
-func (c Circle) Area() float64{
-  return math.Pi * c.radius * c.radius
-}
+    r := reflect.ValueOf(v)
+    f := reflect.Indirect(r).FieldByName(field)
 
-func (r Rectangle) Area() float64{
-  return r.length * r.width
+    return int(f.Int())
 }
 \end{lstlisting}
 

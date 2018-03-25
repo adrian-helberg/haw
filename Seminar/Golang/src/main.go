@@ -1,21 +1,20 @@
 package main
 
-import (
-	"fmt"
-	"strconv"
-)
+import "fmt"
+import "reflect"
 
-func intSeq(x string) func() string {
-	i := 0
-	return func() string {
-		i++
-		return x + ": " + strconv.Itoa(i)
-	}
+type Person struct {
+	Vorname string
+	Nachname string
 }
 
 func main() {
-	nextInt := intSeq("Test 1")
+	p := Person{"Hans", "Peter"}
+	fmt.Println(getField(&p, "Vorname"))
+}
 
-	fmt.Println(nextInt())
-	fmt.Println(nextInt())
+func getField(p *Person, field string) string {
+	r := reflect.ValueOf(p)
+	f := reflect.Indirect(r).FieldByName(field)
+	return f.String()
 }

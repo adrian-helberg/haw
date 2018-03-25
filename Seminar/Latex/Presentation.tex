@@ -6,12 +6,17 @@
 \usepackage[absolute,overlay]{textpos}
 \usepackage{tcolorbox}
 \usepackage{multicol}
-
 \usepackage[absolute,overlay]{textpos}
   \setlength{\TPHorizModule}{1mm}
   \setlength{\TPVertModule}{1mm}
 
-\titlegraphic{\includegraphics[scale=0.1]{golanglogo.png}}
+
+\titlegraphic{
+\includegraphics[scale=0.1]{golanglogo.png}
+\begin{textblock}{36}(0,80)
+\includegraphics[scale=0.4]{logoHaw.png}
+\end{textblock}
+}
 \title{
 	\Large{\textit{\\Die Programmiersprache Go - Eine Einf\"uhrung}} \\
 	\Large{\textbf{\\Seminarvortrag}}
@@ -34,13 +39,7 @@
 
 \maketitle
 
-%\frame{\tableofcontents}
-
-\frame{
-\begin{multicols}{3}
-\tableofcontents[hideothersubsections]
-\end{multicols}
- }
+\frame{\tableofcontents[hideothersubsections]}
 
 \begin{frame}
 
@@ -124,7 +123,7 @@ Pascal, Modula-2, Oberon, Oberon-2, Alef, ...
 
 \begin{itemize}
 \setlength{\itemsep}{40pt}
-\item Vermeiden von Features, die zu komplexem, unzuverl\"assigem code führen w\"urden
+\item Vermeiden von Features, die zu komplexem, unzuverl\"assigem Code führen w\"urden
 \item M\"oglichkeiten zur Nebenl\"aufigkeit sind neu und effizient
 \item Datenabstraktion und Objektorientierung sind ungewohnt flexibel
 \item Automatische Speicherverwaltung (garbage collection)
@@ -181,11 +180,11 @@ Pascal, Modula-2, Oberon, Oberon-2, Alef, ...
 
 \end{frame}
 
-%%%%%%%%%%%%%%%%%% MERKMALE UND SPRACHMITTEL %%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%% MERKMALE %%%%%%%%%%%%%%%%%%
 
-\section{Merkmale und Sprachmittel}
+\section{Merkmale}
 \begin{frame}
-\frametitle{Merkmale und Sprachmittel}
+\frametitle{Merkmale}
 
 \begin{textblock}{50}(40, 57)
 \begin{figure}
@@ -193,6 +192,233 @@ Pascal, Modula-2, Oberon, Oberon-2, Alef, ...
 \includegraphics[scale=0.35]{gopherHead.png}
 \end{figure}
 \end{textblock}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%% HELLO WORLD %%%%%%%%%%%%%%%%%%
+
+\begin{frame}[fragile]
+\frametitle{Hello World!}
+
+Go
+\begin{lstlisting}
+package main
+import "fmt"
+
+func main() {
+    fmt.Println("Hello World!")
+}
+\end{lstlisting}
+
+Java
+\lstset{language=Java}%, basicstyle=\scriptsize}
+\begin{lstlisting}
+public class HelloWorld 
+{ 
+    public static void main (String[] args)
+    {
+        System.out.println("Hello World!");
+    }
+}
+\end{lstlisting}
+
+\begin{textblock}{32}(86,41)
+\begin{tcolorbox}
+\textit{Ausgabe:\\}\\
+Hello World!
+\end{tcolorbox}
+\end{textblock}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%% KEYWORDS AND OPERATORS %%%%%%%%%%%%%%%%%%
+
+\begin{frame}[fragile]
+\frametitle{Keywords und Operatoren}
+
+\includegraphics[scale=0.9]{keywords.png}\\
+\includegraphics[scale=0.9]{operators.png}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%% TYPSICHERHEIT %%%%%%%%%%%%%%%%%%
+
+\subsection{Typsicherheit}
+\begin{frame}
+\frametitle{Typsicherheit}
+
+\begin{itemize}
+\setlength{\itemsep}{24pt}
+\item Starke, statische Typisierung
+\item Features simulieren dynamische Typisierung
+\begin{itemize}
+\setlength{\itemsep}{12pt}
+\item Keine explizite Markierung von Interface-Implementierungen (Java: \textit{implements})
+\item Stimmt eine Methodensignatur mit der des Interfaces \"uberein, wird diese automatisch implementiert (\"ahnlich: \textit{duck-typing})
+\item Einfaches Erweitern externer Methoden (Library Funtionen)
+\end{itemize}
+\item OOP durch \textit{struct} und \textit{interface} m\"oglich
+\end{itemize}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%% OBJEKTORIENTIERUNG %%%%%%%%%%%%%%%%%%
+
+\subsection{Objektorientierung}
+\begin{frame}[fragile]
+\frametitle{Objektorientierung}
+
+\begin{itemize}
+\item Typ \textit{struct}
+\begin{itemize}
+\setlength{\itemsep}{12pt}
+\item Sammlung von Variablen und Funktionen
+\item Methoden nicht virtuell
+\item Man spricht bei Funktionen von \textbf{Methoden} durch Zugeh\"origkeit des \textit{structs}
+\item Konvention: Nutzen von Zeigern bei ``Settern'',\\ \textit{Call-by-Value} bei ``Gettern''
+\end{itemize}
+\end{itemize}
+
+\begin{lstlisting}
+func (c *Circle) Enlarge() {
+  c.radius += 1
+}
+\end{lstlisting}
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Objektorientierung}
+
+\begin{itemize}
+\item Typ \textit{interface}
+\begin{itemize}
+\setlength{\itemsep}{12pt}
+\item Virtuell
+\item Objekt vom Typ \textit{Circle} kann einer Variable vom Typ \textit{Shape} zugeordnet werden, weil \textit{Circle} die notwendige Funktion \textbf{Area} bietet
+\item Beliebig viele Interfaces!
+\end{itemize}
+\end{itemize}
+
+\begin{lstlisting}
+type Shape interface {
+  Area() float64
+}
+
+func main() {
+  var shape Shape = Circle{2}
+  fmt.Println(shape.Area())
+}
+\end{lstlisting}
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Objektorientierung}
+
+\begin{itemize}
+\item Polymorphie
+\end{itemize}
+
+\begin{lstlisting}
+type Shape interface {
+  Area() float64
+}
+
+func (c Circle) Area() float64{
+  return math.Pi * c.radius * c.radius
+}
+
+func (r Rectangle) Area() float64{
+  return r.length * r.width
+}
+\end{lstlisting}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%% SPEICHERBEREINIGUNG %%%%%%%%%%%%%%%%%%
+
+\subsection{Speicherbereinigung}
+\begin{frame}
+\frametitle{Speicherbereinigung}
+
+\begin{itemize}
+\setlength{\itemsep}{30pt}
+\item Automatisch
+\item \textit{Garbage Collector}
+\item Wird eine Variable unerreichbar, wird sie recyklet
+\end{itemize}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%% ERROR HANDLING %%%%%%%%%%%%%%%%%%
+
+\section{Error Handling}
+\begin{frame}[fragile]
+\frametitle{Error Handling}
+
+\begin{lstlisting} 
+func main() {
+
+    f, err := os.Open("filename.ext")
+
+    if err != nil {
+        log.Fatal(err)
+    }
+
+    defer f.Close()
+}
+\end{lstlisting}
+
+\begin{itemize}
+\item Panik-System
+\item \textit{defer} statt \textit{finally}
+\item Benutzerdefinierte Errors: \textit{errors.New(``oh no'')}
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Error Handling}
+
+\begin{lstlisting} 
+func main() {
+
+    f , _ := os.Open("filename.ext")
+
+    defer f.Close()
+}
+\end{lstlisting}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%% PERFORMANCE %%%%%%%%%%%%%%%%%%
+
+\section{Performance}
+\begin{frame}
+\frametitle{Performance}
+
+\centering
+\includegraphics[scale=0.6]{performance1.png}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Performance}
+
+\centering
+\includegraphics[scale=0.6]{performance2.png}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%% SPRACHMITTEL %%%%%%%%%%%%%%%%%%
+
+\section{Sprachmittel}
+\begin{frame}
+\frametitle{Sprachmittel}
+
+\centering
+\includegraphics[scale=0.5]{sprachmittel.png}
 
 \end{frame}
 
@@ -277,6 +503,8 @@ Test 1: 2
 
 \end{frame}
 
+%%%%%%%%%%%%%%%%%% REFLECTION %%%%%%%%%%%%%%%%%%
+
 \subsection{Reflection}
 \begin{frame}[fragile]
 \frametitle{Reflection}
@@ -344,113 +572,10 @@ func getField(v *Vertex, field string) int {
 
 \end{frame}
 
-\subsection{Typsicherheit}
-\begin{frame}
-\frametitle{Typsicherheit}
-
-\begin{itemize}
-\setlength{\itemsep}{24pt}
-\item Starke, statische Typisierung
-\item Features simulieren dynamische Typisierung
-\begin{itemize}
-\setlength{\itemsep}{12pt}
-\item Keine explizite Markierung von Interface-Implementierungen (Java: \textit{implements})
-\item Stimmt eine Methodensignatur mit der des Interfaces \"uberein, wird diese automatisch implementiert (\"ahnlich: \textit{duck-typing})
-\item Einfaches Erweitern externer Methoden (Library Funtionen)
-\end{itemize}
-\item OOP durch \textit{struct} und \textit{interface} m\"oglich
-\end{itemize}
-
-\end{frame}
-
-\subsection{Objektorientierung}
-\begin{frame}[fragile]
-\frametitle{Objektorientierung}
-
-\begin{itemize}
-\item Typ \textit{struct}
-\begin{itemize}
-\setlength{\itemsep}{12pt}
-\item Sammlung von Variablen und Funktionen
-\item Methoden nicht virtuell
-\item Man spricht bei Funktionen von \textbf{Methoden} durch Zugeh\"origkeit des \textit{structs}
-\item Konvention: Nutzen von Zeigern bei ``Settern'',\\ \textit{Call-by-Value} bei ``Gettern''
-\end{itemize}
-\end{itemize}
-
-\begin{lstlisting}
-func (c *Circle) Enlarge() {
-  c.radius += 1
-}
-\end{lstlisting}
-
-\end{frame}
-
-\begin{frame}[fragile]
-\frametitle{Objektorientierung}
-
-\begin{itemize}
-\item Typ \textit{interface}
-\begin{itemize}
-\setlength{\itemsep}{12pt}
-\item Virtuell
-\item Objekt vom Typ \textit{Circle} kann einer Variable vom Typ \textit{Shape} zugeordnet werden, weil \textit{Circle} die notwendige Funktion \textbf{Area} bietet
-\item Beliebig viele Interfaces!
-\end{itemize}
-\end{itemize}
-
-\begin{lstlisting}
-type Shape interface {
-  Area() float64
-}
-
-func main() {
-  var shape Shape = Circle{2}
-  fmt.Println(shape.Area())
-}
-\end{lstlisting}
-
-\end{frame}
-
-\begin{frame}[fragile]
-\frametitle{Objektorientierung}
-
-\begin{itemize}
-\item Polymorphie
-\end{itemize}
-
-\begin{lstlisting}
-type Shape interface {
-  Area() float64
-}
-
-func (c Circle) Area() float64{
-  return math.Pi * c.radius * c.radius
-}
-
-func (r Rectangle) Area() float64{
-  return r.length * r.width
-}
-\end{lstlisting}
-
-\end{frame}
-
-\subsection{Speicherbereinigung}
-\begin{frame}
-\frametitle{Speicherbereinigung}
-
-\begin{itemize}
-\setlength{\itemsep}{30pt}
-\item Automatisch
-\item \textit{Garbage Collector}
-\item Wird eine Variable unerreichbar, wird sie recyklet
-\end{itemize}
-
-\end{frame}
+%%%%%%%%%%%%%%%%%% DOCKER %%%%%%%%%%%%%%%%%%
 
 \section{Docker}
 \begin{frame}
-
 \frametitle{Docker}
 
 \begin{itemize}
@@ -488,7 +613,8 @@ func (r Rectangle) Area() float64{
 
 \end{frame}
 
-\section{Zentrale Fragestellung}
+%%%%%%%%%%%%%%%%%% ZENTRALE FRAGESTELLUNG %%%%%%%%%%%%%%%%%%
+
 \begin{frame}
 \frametitle{Zentrale Fragestellung}
 
@@ -497,30 +623,7 @@ func (r Rectangle) Area() float64{
 
 \end{frame}
 
-\section{Java Vs Go}
-\begin{frame}
-\frametitle{Java Vs Go}
-
-\centering
-\begin{figure}
-\includegraphics[scale=0.5]{javaVsGo.png}
-\caption{David gegen Goliath}
-\end{figure}
-
-\end{frame}
-
-\begin{frame}
-\frametitle{Java Vs Go}
-
-\begin{itemize}
-\setlength{\itemsep}{20pt}
-\item Zeit bis zur Markteinführung
-\item Speicher und Geschwindigkeit
-\item Skalierbarkeit
-\item Kostenpunkt Sicherheit
-\end{itemize}
-
-\end{frame}
+%%%%%%%%%%%%%%%%%% PRO & CONTRA %%%%%%%%%%%%%%%%%%
 
 \section{Pro \& Contra}
 \begin{frame}
@@ -567,22 +670,9 @@ func (r Rectangle) Area() float64{
 \item Unbefriedigende API-Dokumentation
 \item Teilweise umständliche APIs
 \item Umst\"andliches Mocking
-\item Kleines \"Okosystem
 \end{itemize}
 \\
 \end{tabular}
-
-\end{frame}
-
-\section{Compiler}
-\begin{frame}
-\frametitle{Compiler}
-
-\begin{itemize}
-\setlength{\itemsep}{20pt}
-\item Gc
-\item Gccgo
-\end{itemize}
 
 \end{frame}
 
