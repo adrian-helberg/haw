@@ -29,7 +29,7 @@
 \begin{document}
 \lstset{
     frame=single,
-    basicstyle=\footnotesize,
+    basicstyle=\scriptsize,
     keywordstyle=\color{blue},
     showstringspaces=false, 
     stringstyle=\color{mygreen},
@@ -39,7 +39,10 @@
 
 \maketitle
 
-\frame{\tableofcontents[hideothersubsections]}
+\frame{
+\frametitle{Inhalt}
+\tableofcontents[hideothersubsections]
+}
 
 \begin{frame}
 
@@ -211,7 +214,7 @@ func main() {
 \end{lstlisting}
 
 Java
-\lstset{language=Java}%, basicstyle=\scriptsize}
+\lstset{language=Java}
 \begin{lstlisting}
 public class HelloWorld 
 { 
@@ -418,7 +421,10 @@ func main() {
 \frametitle{Sprachmittel}
 
 \centering
-\includegraphics[scale=0.5]{sprachmittel.png}
+\begin{figure}
+\includegraphics[scale=0.45]{sprachmittel.png}
+\caption{Noch ein ``Gopher''!}
+\end{figure}
 
 \end{frame}
 
@@ -429,7 +435,7 @@ func main() {
 \frametitle{Closures}
 
 Java
-\lstset{language=Java, basicstyle=\scriptsize}
+\lstset{language=Java}
 \begin{lstlisting}
 private static Function<String, Supplier<String>> intSeq = 
 x -> {
@@ -459,7 +465,6 @@ Test 1: 2
 
 \begin{frame}[fragile]
 \frametitle{Closures}
-
 Go
 \begin{lstlisting}
 func intSeq(x string) func() string {
@@ -510,7 +515,7 @@ Test 1: 2
 \frametitle{Reflection}
 
 Java
-\lstset{language=Java, basicstyle=\scriptsize}
+\lstset{language=Java}
 \begin{lstlisting}
 public static String getStringProperty(Object object, 
                                         String methodname) {
