@@ -1,20 +1,23 @@
 package main
 
-import "fmt"
-import "reflect"
+import (
+	"fmt"
+	"math"
+)
 
-type Person struct {
-	Vorname string
-	Nachname string
+type Shape interface {
+Area() float64
+}
+
+type Circle struct {
+radius float64
+}
+
+func (c Circle) Area() float64 {
+	return math.Pi * c.radius * c.radius
 }
 
 func main() {
-	p := Person{"Hans", "Peter"}
-	fmt.Println(getField(&p, "Vorname"))
-}
-
-func getField(p *Person, field string) string {
-	r := reflect.ValueOf(p)
-	f := reflect.Indirect(r).FieldByName(field)
-	return f.String()
+var shape Shape = Circle{2}
+fmt.Println(shape.Area())
 }

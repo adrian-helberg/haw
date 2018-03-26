@@ -10,6 +10,7 @@
   \setlength{\TPHorizModule}{1mm}
   \setlength{\TPVertModule}{1mm}
 
+\setbeamertemplate{footline}[frame number]
 
 \titlegraphic{
 \includegraphics[scale=0.1]{golanglogo.png}
@@ -144,7 +145,7 @@ Pascal, Modula-2, Oberon, Oberon-2, Alef, ...
 \setlength{\itemsep}{40pt}
 \item Vorgestellt November 2009
 \item Stable Release am 16. Februar 2018
-\item Ber\"uhmt als Nachfolger für nicht typisierte Sriptsprachen
+\item Ber\"uhmt als Nachfolger für nicht typisierte Scriptsprachen
 \begin{itemize}
 \item[] $\rightarrow$ Verbindung aus Ausdruckskraft und Sicherheit
 \end{itemize}
@@ -167,7 +168,7 @@ Pascal, Modula-2, Oberon, Oberon-2, Alef, ...
 \item Aktive, weltweite Community
 \item L\"auft auf Unix, Mac und Windows
 \begin{itemize}
-\item[] $\rightarrow$ \"Ublicherweise ohne Modifikation transpotrierbar
+\item[] $\rightarrow$ \"Ublicherweise ohne Modifikation transportierbar
 \end{itemize}
 \end{itemize}
 
@@ -234,16 +235,6 @@ Hello World!
 
 \end{frame}
 
-%%%%%%%%%%%%%%%%%% KEYWORDS AND OPERATORS %%%%%%%%%%%%%%%%%%
-
-\begin{frame}[fragile]
-\frametitle{Keywords und Operatoren}
-
-\includegraphics[scale=0.9]{keywords.png}\\
-\includegraphics[scale=0.9]{operators.png}
-
-\end{frame}
-
 %%%%%%%%%%%%%%%%%% TYPSICHERHEIT %%%%%%%%%%%%%%%%%%
 
 \subsection{Typsicherheit}
@@ -252,7 +243,7 @@ Hello World!
 
 \begin{itemize}
 \setlength{\itemsep}{24pt}
-\item Starke, statische Typisierung
+\item Statische Typisierung
 \item Features simulieren dynamische Typisierung
 \begin{itemize}
 \setlength{\itemsep}{12pt}
@@ -274,45 +265,59 @@ Hello World!
 \begin{itemize}
 \item Typ \textit{struct}
 \begin{itemize}
-\setlength{\itemsep}{12pt}
+\setlength{\itemsep}{24pt}
 \item Sammlung von Variablen und Funktionen
 \item Methoden nicht virtuell
 \item Man spricht bei Funktionen von \textbf{Methoden} durch Zugeh\"origkeit des \textit{structs}
-\item Konvention: Nutzen von Zeigern bei ``Settern'',\\ \textit{Call-by-Value} bei ``Gettern''
+\item Konvention: Nutzen von Zeigern bei ``Settern'',\\ \textit{Wertkopien} bei ``Gettern''
 \end{itemize}
 \end{itemize}
 
-\begin{lstlisting}
-func (c *Circle) Enlarge() {
-  c.radius += 1
-}
-\end{lstlisting}
+\end{frame}
+
+\begin{frame}
+\frametitle{Objektorientierung}
+
+\begin{itemize}
+\item Typ \textit{interface}
+\begin{itemize}
+\setlength{\itemsep}{24pt}
+\item Sammlung von Funktionssignaturen
+\item Objekt vom Typ \textit{Circle} kann einer Variable vom Typ \textit{Shape} zugeordnet werden, weil \textit{Circle} die notwendige Funktion \textbf{Area} bietet
+\item Mehrfachvererbung m\"oglich!
+\end{itemize}
+\end{itemize}
 
 \end{frame}
 
 \begin{frame}[fragile]
 \frametitle{Objektorientierung}
 
-\begin{itemize}
-\item Typ \textit{interface}
-\begin{itemize}
-\setlength{\itemsep}{12pt}
-\item Virtuell
-\item Objekt vom Typ \textit{Circle} kann einer Variable vom Typ \textit{Shape} zugeordnet werden, weil \textit{Circle} die notwendige Funktion \textbf{Area} bietet
-\item Beliebig viele Interfaces!
-\end{itemize}
-\end{itemize}
-
 \begin{lstlisting}
 type Shape interface {
-  Area() float64
+    Area() float64
+}
+
+type Circle struct {
+    radius float64
+}
+
+func (c Circle) Area() float64 {
+	return math.Pi * c.radius * c.radius
 }
 
 func main() {
-  var shape Shape = Circle{2}
-  fmt.Println(shape.Area())
+    var shape Shape = Circle{2}
+    fmt.Println(shape.Area())
 }
 \end{lstlisting}
+
+\begin{textblock}{42}(80,60)
+\begin{tcolorbox}
+\textit{Ausgabe:\\}\\
+12.566370614359172
+\end{tcolorbox}
+\end{textblock}
 
 \end{frame}
 
@@ -337,6 +342,11 @@ func (r Rectangle) Area() float64{
 }
 \end{lstlisting}
 
+\begin{itemize}
+\setlength{\itemsep}{24pt}
+\item Kein ``echtes'' \textit{Duck-Typing}, da statische Typ\"uberpr\"ufung
+\end{itemize}
+
 \end{frame}
 
 %%%%%%%%%%%%%%%%%% SPEICHERBEREINIGUNG %%%%%%%%%%%%%%%%%%
@@ -349,7 +359,7 @@ func (r Rectangle) Area() float64{
 \setlength{\itemsep}{30pt}
 \item Automatisch
 \item \textit{Garbage Collector}
-\item Wird eine Variable unerreichbar, wird sie recyklet
+\item Wird eine Variable unerreichbar, wird ihr Speicherbereich freigegeben
 \end{itemize}
 
 \end{frame}
@@ -402,7 +412,10 @@ func main() {
 \frametitle{Performance}
 
 \centering
+\begin{figure}
 \includegraphics[scale=0.6]{performance1.png}
+\caption{64-bit Ubuntu quad core}
+\end{figure}
 
 \end{frame}
 
@@ -410,7 +423,10 @@ func main() {
 \frametitle{Performance}
 
 \centering
+\begin{figure}
 \includegraphics[scale=0.6]{performance2.png}
+\caption{64-bit Ubuntu quad core}
+\end{figure}
 
 \end{frame}
 
@@ -577,6 +593,32 @@ func getField(v *Vertex, field string) int {
 
 \end{frame}
 
+%%%%%%%%%%%%%%%%%% GOROUTINES %%%%%%%%%%%%%%%%%%
+
+\subsection{Goroutines}
+\begin{frame}[fragile]
+\frametitle{Goroutines}
+
+\begin{itemize}
+\setlength{\itemsep}{24pt}
+\item Schl\"usselwort \textit{go}
+\item Kommunikation \"uber \textit{channels}:
+\end{itemize}
+
+\begin{lstlisting}
+messages := make(chan string)
+
+go func() { messages <- "ping" }()
+\end{lstlisting}
+
+\begin{lstlisting}
+msg := <- messages
+
+fmt.Println(msg)
+\end{lstlisting}
+
+\end{frame}
+
 %%%%%%%%%%%%%%%%%% DOCKER %%%%%%%%%%%%%%%%%%
 
 \section{Docker}
@@ -585,11 +627,10 @@ func getField(v *Vertex, field string) int {
 
 \begin{itemize}
 \setlength{\itemsep}{12pt}
-\item Open-Source Apache 2.0 Lizens
+\item Open-Source Apache 2.0 Lizenz
 \item Basiert auf \textit{Namespaces}
 \item Isolierung von Anwendungen mit Containervirtualisierung
 \item Ressourcentrennung (Code, Laufzeitmodul, Systemwerkzeuge, Systembibliotheken, ...)
-\item Offiziell von der IANA zugewiesene Portnummern 2375 für HTTP- und 2376 für HTTPS-Kommunikation
 \item Erstellung von Containern mit virtuellen Betriebssystemen
 \end{itemize}
 
@@ -685,11 +726,23 @@ func getField(v *Vertex, field string) int {
 \begin{frame}
 \frametitle{Einzelnachweise}
 
-
 \begin{figure}
 \includegraphics[scale=0.3]{book.png}
 \caption{The Go Programming Language, von Alan A. A. Donovan und Brian W. Kernighan, 2016}
 \end{figure}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Einzelnachweise}
+
+\begin{itemize}
+\setlength{\itemsep}{20pt}
+\item Performance-Grafik: \href{https://benchmarksgame.alioth.debian.org/u64q/go.htmll}{benchmarksgame.alioth.debian.org/u64q/go.html}
+\item Diverse ``Gopher'' Grafiken: \href{https://golang.org/}{golang.org}
+\item Bild der Entwickler, Bild ``Go im Vergleich'': \href{https://www.quora.com/Why-should-I-learn-Go-Golang-instead-of-Scala-Kotlin-Rust-Erlang-Haskell-Clojure-OCaml-etc}{quora.com/Why-should-I-learn-Go-Golang-instead-of-Scala-Kotlin-Rust-Erlang-Haskell-Clojure-OCaml-etc}
+\item Bild ``Docker'': \href{https://www.docker.com/}{docker.com}
+\end{itemize}
 
 \end{frame}
 

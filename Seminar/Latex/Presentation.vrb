@@ -1,13 +1,20 @@
-\frametitle{Reflection}
+\frametitle{Goroutines}
 
-Go
+\begin{itemize}
+\setlength{\itemsep}{24pt}
+\item Schl\"usselwort \textit{go}
+\item Kommunikation \"uber \textit{channels}:
+\end{itemize}
+
 \begin{lstlisting}
-func getField(v *Vertex, field string) int {
+messages := make(chan string)
 
-    r := reflect.ValueOf(v)
-    f := reflect.Indirect(r).FieldByName(field)
+go func() { messages <- "ping" }()
+\end{lstlisting}
 
-    return int(f.Int())
-}
+\begin{lstlisting}
+msg := <- messages
+
+fmt.Println(msg)
 \end{lstlisting}
 
