@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.4.17)  26 MAR 2018 19:37
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.4.17)  27 MAR 2018 19:20
 entering extended mode
 **./Presentation.tex
 (Presentation.tex
@@ -1541,8 +1541,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 22--25
 
 ) [26
 
-] [27
-
 ]
 \openout4 = `Presentation.vrb'.
 
@@ -1551,12 +1549,14 @@ Overfull \hbox (3.81702pt too wide) in paragraph at lines 12--14
 [][][][][][][][][][][][][][][] 
  []
 
-) [28
+) [27
 
 ]
 \openout4 = `Presentation.vrb'.
 
- (Presentation.vrb) [29
+ (Presentation.vrb) [28
+
+] [29
 
 ] [30
 
@@ -1569,10 +1569,10 @@ Overfull \hbox (3.81702pt too wide) in paragraph at lines 12--14
 <docker.png, id=905, 578.6418pt x 490.9542pt>
 File: docker.png Graphic file (type png)
  <use docker.png>
-Package pdftex.def Info: docker.png used on input line 641.
+Package pdftex.def Info: docker.png used on input line 642.
 (pdftex.def)             Requested size: 127.30159pt x 108.01025pt.
 
-Overfull \hbox (70.39638pt too wide) in paragraph at lines 641--641
+Overfull \hbox (70.39638pt too wide) in paragraph at lines 642--642
 [][]  
  []
 
@@ -1581,31 +1581,31 @@ Overfull \hbox (70.39638pt too wide) in paragraph at lines 641--641
  <./docker.png>]
 File: docker.png Graphic file (type png)
  <use docker.png>
-Package pdftex.def Info: docker.png used on input line 660.
+Package pdftex.def Info: docker.png used on input line 661.
 (pdftex.def)             Requested size: 127.30159pt x 108.01025pt.
 
-Overfull \hbox (70.39638pt too wide) in paragraph at lines 660--660
+Overfull \hbox (70.39638pt too wide) in paragraph at lines 661--661
 [][]  
  []
 
 <gitlogo.png, id=933, 150.5625pt x 63.23625pt>
 File: gitlogo.png Graphic file (type png)
  <use gitlogo.png>
-Package pdftex.def Info: gitlogo.png used on input line 660.
+Package pdftex.def Info: gitlogo.png used on input line 661.
 (pdftex.def)             Requested size: 33.12384pt x 13.912pt.
  [33
 
  <./gitlogo.png>] [34
 
 ]
-Overfull \hbox (15.46405pt too wide) in paragraph at lines 699--699
+Overfull \hbox (15.46405pt too wide) in paragraph at lines 700--700
 [][]  
  []
 
 [35
 
 ]
-Overfull \hbox (15.46405pt too wide) in paragraph at lines 723--723
+Overfull \hbox (15.46405pt too wide) in paragraph at lines 724--724
 [][]  
  []
 
@@ -1614,7 +1614,7 @@ Overfull \hbox (15.46405pt too wide) in paragraph at lines 723--723
 ] <book.png, id=1032, 451.79568pt x 559.98431pt>
 File: book.png Graphic file (type png)
  <use book.png>
-Package pdftex.def Info: book.png used on input line 734.
+Package pdftex.def Info: book.png used on input line 735.
 (pdftex.def)             Requested size: 135.53975pt x 167.99658pt.
  [37
 
@@ -1623,7 +1623,7 @@ Package pdftex.def Info: book.png used on input line 734.
 ] <joda.png, id=1089, 366.61969pt x 421.575pt>
 File: joda.png Graphic file (type png)
  <use joda.png>
-Package pdftex.def Info: joda.png used on input line 759.
+Package pdftex.def Info: joda.png used on input line 760.
 (pdftex.def)             Requested size: 146.64526pt x 168.627pt.
  [39
 
@@ -1637,13 +1637,13 @@ Package pdftex.def Info: joda.png used on input line 759.
 \tf@snm=\write10
 \openout10 = `Presentation.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 761.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 761.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 762.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 762.
  (Presentation.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 761.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 761.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 762.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 762.
 Package rerunfilecheck Info: File `Presentation.out' has not changed.
-(rerunfilecheck)             Checksum: 915A6217F4ABFFFBABB20D25BB25FE35;1027.
+(rerunfilecheck)             Checksum: 9872E5C82DF0AB751FFF31B8269A65EB;1027.
 
 
 LaTeX Font Warning: Size substitutions with differences
@@ -1656,7 +1656,7 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 Here is how much of TeX's memory you used:
  22252 strings out of 493333
  412933 string characters out of 3146981
- 533071 words of memory out of 3000000
+ 533073 words of memory out of 3000000
  25163 multiletter control sequences out of 15000+200000
  15837 words of font info for 57 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1669,7 +1669,7 @@ blic/amsfonts/cm/cmssbx10.pfb><D:/MikTex/fonts/type1/public/amsfonts/cm/cmssi10
 e1/public/amsfonts/cm/cmsy10.pfb><D:/MikTex/fonts/type1/public/amsfonts/cm/cmsy
 8.pfb><D:/MikTex/fonts/type1/public/amsfonts/symbols/msam10.pfb><D:/MikTex/font
 s/type1/public/amsfonts/symbols/msam7.pfb>
-Output written on Presentation.pdf (39 pages, 2090991 bytes).
+Output written on Presentation.pdf (39 pages, 2090994 bytes).
 PDF statistics:
  1175 PDF objects out of 1200 (max. 8388607)
  97 named destinations out of 1000 (max. 500000)

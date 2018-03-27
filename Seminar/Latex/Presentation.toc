@@ -12,8 +12,8 @@
 \beamer@sectionintoc {4}{Performance}{22}{0}{4}
 \beamer@sectionintoc {5}{Sprachmittel}{24}{0}{5}
 \beamer@subsectionintoc {5}{1}{Closures}{25}{0}{5}
-\beamer@subsectionintoc {5}{2}{Reflection}{28}{0}{5}
-\beamer@subsectionintoc {5}{3}{Goroutines}{31}{0}{5}
+\beamer@subsectionintoc {5}{2}{Reflection}{27}{0}{5}
+\beamer@subsectionintoc {5}{3}{Goroutines}{30}{0}{5}
 \beamer@sectionintoc {6}{Docker}{32}{0}{6}
 \beamer@sectionintoc {7}{Pro \& Contra}{35}{0}{7}
 \beamer@sectionintoc {8}{Einzelnachweise}{37}{0}{8}
