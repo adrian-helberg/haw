@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.4.17)  6 APR 2018 14:50
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.4.17)  6 APR 2018 15:31
 entering extended mode
 **./aufgabe_1.tex
 (aufgabe_1.tex
@@ -1138,10 +1138,6 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\\' on input line 18.
 
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\\' on input line 18.
-
 (aufgabe_1.aux)
 \openout1 = `aufgabe_1.aux'.
 
@@ -1318,7 +1314,10 @@ Dictionary: translator-theorem-dictionary, Language: English
 LaTeX Info: Redefining \includegraphics on input line 23.
 \c@lstlisting=\count179
  (aufgabe_1.nav)
-<logoHaw.png, id=40, 301.125pt x 110.4125pt>
+(C:\Users\Main\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\lstlang1.sty
+File: lstlang1.sty 2015/06/04 1.6 listings language file
+)
+<logoHaw.png, id=16, 301.125pt x 110.4125pt>
 File: logoHaw.png Graphic file (type png)
  <use logoHaw.png>
 Package pdftex.def Info: logoHaw.png used on input line 34.
@@ -1333,102 +1332,7 @@ LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <4> not available
 {C:/Users/Main/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./logoHaw.pn
 g (PNG copy)>] (aufgabe_1.toc) [2
 
-]
-LaTeX Font Info:    Try loading font information for U+msa on input line 58.
- (D:\MikTex\tex\latex\amsfonts\umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Try loading font information for U+msb on input line 58.
-
-(D:\MikTex\tex\latex\amsfonts\umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-LaTeX Font Info:    Try loading font information for OT1+mathkerncmss on input 
-line 58.
-
-(D:\MikTex\tex\latex\sansmathaccent\ot1mathkerncmss.fd
-File: ot1mathkerncmss.fd 2013/03/27 Fontinst v1.933 font definitions for OT1/ma
-thkerncmss.
-) [3
-
-] [4
-
-] [5
-
-] [6
-
-]
-<pivot_itemNO_quantity.PNG, id=213, 842.39719pt x 536.0025pt>
-File: pivot_itemNO_quantity.PNG Graphic file (type png)
-
-<use pivot_itemNO_quantity.PNG>
-Package pdftex.def Info: pivot_itemNO_quantity.PNG used on input line 153.
-(pdftex.def)             Requested size: 286.41125pt x 182.23843pt.
- [7
-
- <./pivot_itemNO_quantity.PNG>]
-<pivot_itemNO_costs.PNG, id=243, 831.105pt x 539.76656pt>
-File: pivot_itemNO_costs.PNG Graphic file (type png)
-
-<use pivot_itemNO_costs.PNG>
-Package pdftex.def Info: pivot_itemNO_costs.PNG used on input line 166.
-(pdftex.def)             Requested size: 282.57196pt x 183.5182pt.
- [8
-
- <./pivot_itemNO_costs.PNG>] [9
-
-]
-<pivot_itemNO_costs2.PNG, id=295, 919.18407pt x 537.50812pt>
-File: pivot_itemNO_costs2.PNG Graphic file (type png)
-
-<use pivot_itemNO_costs2.PNG>
-Package pdftex.def Info: pivot_itemNO_costs2.PNG used on input line 204.
-(pdftex.def)             Requested size: 312.51845pt x 182.75034pt.
-
-Overfull \hbox (5.22858pt too wide) in paragraph at lines 204--204
- [] 
- []
-
-[10
-
- <./pivot_itemNO_costs2.PNG>]
-<pivot_itemNO_quantity2.PNG, id=322, 940.26282pt x 538.26094pt>
-File: pivot_itemNO_quantity2.PNG Graphic file (type png)
-
-<use pivot_itemNO_quantity2.PNG>
-Package pdftex.def Info: pivot_itemNO_quantity2.PNG used on input line 218.
-(pdftex.def)             Requested size: 319.68513pt x 183.0063pt.
-
-Overfull \hbox (12.39526pt too wide) in paragraph at lines 218--218
- [] 
- []
-
-
-Overfull \vbox (30.37485pt too high) detected at line 218
- []
-
-[11
-
- <./pivot_itemNO_quantity2.PNG>] [12
-
-] [13
-
-]
-<financials.PNG, id=398, 464.4853pt x 286.82156pt>
-File: financials.PNG Graphic file (type png)
- <use financials.PNG>
-Package pdftex.def Info: financials.PNG used on input line 279.
-(pdftex.def)             Requested size: 157.92291pt x 97.51804pt.
-
-[14
-
- <./financials.PNG>] [15
-
-] [16
-
-] [17
-
-] [18
+] [3
 
 ]
 \tf@nav=\write6
@@ -1440,13 +1344,13 @@ Package pdftex.def Info: financials.PNG used on input line 279.
 \tf@snm=\write8
 \openout8 = `aufgabe_1.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 375.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 375.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 44.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 44.
  (aufgabe_1.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 375.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 375.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 44.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 44.
 Package rerunfilecheck Info: File `aufgabe_1.out' has not changed.
-(rerunfilecheck)             Checksum: 94CE064B5573D9DBA23BD28EB7A0F82D;334.
+(rerunfilecheck)             Checksum: AF305FFE12DFE1BD0E8A446AA593497B;40.
 
 
 LaTeX Font Warning: Size substitutions with differences
@@ -1454,23 +1358,20 @@ LaTeX Font Warning: Size substitutions with differences
 
  ) 
 Here is how much of TeX's memory you used:
- 22203 strings out of 493333
- 418866 string characters out of 3146981
- 501350 words of memory out of 3000000
- 25184 multiletter control sequences out of 15000+200000
- 13539 words of font info for 49 fonts, out of 3000000 for 9000
+ 21861 strings out of 493333
+ 412457 string characters out of 3146981
+ 511652 words of memory out of 3000000
+ 24904 multiletter control sequences out of 15000+200000
+ 6399 words of font info for 23 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  56i,14n,59p,804b,559s stack positions out of 5000i,500n,10000p,200000b,50000s
 <D:/MikTex/fonts/type1/public/amsfonts/cm/cmss10.pfb><D:/MikTex/fonts/type1/p
 ublic/amsfonts/cm/cmss12.pfb><D:/MikTex/fonts/type1/public/amsfonts/cm/cmss8.pf
 b><D:/MikTex/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><D:/MikTex/fonts/type1
-/public/amsfonts/cm/cmssi10.pfb><D:/MikTex/fonts/type1/public/amsfonts/cm/cmssi
-12.pfb><D:/MikTex/fonts/type1/public/amsfonts/cm/cmsy10.pfb><D:/MikTex/fonts/ty
-pe1/public/amsfonts/symbols/msam10.pfb><D:/MikTex/fonts/type1/public/amsfonts/s
-ymbols/msam7.pfb>
-Output written on aufgabe_1.pdf (18 pages, 332832 bytes).
+/public/amsfonts/cm/cmssi12.pfb>
+Output written on aufgabe_1.pdf (3 pages, 74884 bytes).
 PDF statistics:
- 563 PDF objects out of 1000 (max. 8388607)
- 44 named destinations out of 1000 (max. 500000)
- 129 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 120 PDF objects out of 1000 (max. 8388607)
+ 8 named destinations out of 1000 (max. 500000)
+ 56 words of extra memory for PDF output out of 10000 (max. 10000000)
 

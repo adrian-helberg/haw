@@ -1,0 +1,762 @@
+\documentclass{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[english,german]{babel} 
+\usepackage{listings} 
+\usepackage{listings-golang}
+\usepackage[absolute,overlay]{textpos}
+\usepackage{tcolorbox}
+\usepackage{multicol}
+\usepackage[absolute,overlay]{textpos}
+  \setlength{\TPHorizModule}{1mm}
+  \setlength{\TPVertModule}{1mm}
+
+\setbeamertemplate{footline}[frame number]
+
+\titlegraphic{
+\includegraphics[scale=0.1]{golanglogo.png}
+\begin{textblock}{36}(0,80)
+\includegraphics[scale=0.4]{logoHaw.png}
+\end{textblock}
+}
+\title{
+	\Large{\textit{\\Die Programmiersprache Go - Eine Einf\"uhrung}} \\
+	\Large{\textbf{\\Seminarvortrag}}
+}
+\author{Student: Adrian Helberg \\Prüfer: Prof. Dr. Axel Schmolitzky}
+\date{\today}
+
+\definecolor{mygreen}{rgb}{0,0.6,0}
+
+\begin{document}
+\lstset{
+    frame=single,
+    basicstyle=\scriptsize,
+    keywordstyle=\color{blue},
+    showstringspaces=false, 
+    stringstyle=\color{mygreen},
+    tabsize=4,
+    language=Golang
+}
+
+\maketitle
+
+\frame{
+\frametitle{Inhalt}
+\tableofcontents[hideothersubsections]
+}
+
+\begin{frame}
+
+\begin{quote}
+``Go is an open source programming language that makes it easy to build simple, reliable and efficient software." 
+\end{quote}
+
+\begin{flushright}
+\scriptsize (Go Website: \href{golang.org}{golang.org})
+\end{flushright}
+
+\begin{quote}
+Go ist eine Open-Source-Programmiersprache, die es einfach macht, simple, zuverlässige und effiziente Software zu erstellen.
+\end{quote}
+
+\begin{flushright}
+\scriptsize (Eigene \"Ubersetzung)
+\end{flushright}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%% GESCHICHTE %%%%%%%%%%%%%%%%%%
+
+\section{Geschichte}
+\begin{frame}
+\frametitle{Geschichte}
+
+\centering
+\begin{figure}
+\includegraphics[scale=0.5]{designers.png}
+\caption{Robert Griesemer, Rob Pike und Ken Thompson.}
+\end{figure}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%% ENTWICKLER %%%%%%%%%%%%%%%%%%
+\subsection{Entwickler}
+\begin{frame}
+\frametitle{Entwickler}
+
+\begin{itemize}
+\setlength{\itemsep}{24pt}
+\item Konzipiert September 2007
+\item Robert Griesemer, Rob Pike und Ken Thompson
+\item Mitarbeiter von Google LLC \textregistered
+\item Aus Frust heraus entstanden
+\item \textit{``Complexity is multiplicative''} - Rob Pike
+\end{itemize}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%% ENTWURFSPHASE %%%%%%%%%%%%%%%%%%
+
+\subsection{Entwurfsphase}
+\begin{frame}
+\frametitle{Entwurfsphase}
+
+\begin{itemize}
+\setlength{\itemsep}{20pt}
+\item Ausdrucksstarke und effiziente Kombination aus Kompilierung und Ausf\"uhrung
+\item Ähnlichkeiten mit C
+\item Adaptiert gute Ideen aus einigen Programmiersprachen: \\
+Pascal, Modula-2, Oberon, Oberon-2, Alef, ...
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Entwurfsphase}
+
+\begin{figure}
+\centering
+\includegraphics[scale=0.45]{origin.png}
+\caption{The Go Programming Language,  Preface xii}
+\end{figure}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Entwurfsphase}
+
+\begin{itemize}
+\setlength{\itemsep}{40pt}
+\item Vermeiden von Features, die zu komplexem, unzuverl\"assigem Code führen w\"urden
+\item M\"oglichkeiten zur Nebenl\"aufigkeit sind neu und effizient
+\item Datenabstraktion und Objektorientierung sind ungewohnt flexibel
+\item Automatische Speicherverwaltung (garbage collection)
+\end{itemize}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%% VERÖFFENTLICHUNG %%%%%%%%%%%%%%%%%%
+
+\subsection{Ver\"offentlichung}
+\begin{frame}
+\frametitle{Ver\"offentlichung}
+
+\begin{itemize}
+\setlength{\itemsep}{40pt}
+\item Vorgestellt November 2009
+\item Stable Release am 16. Februar 2018
+\item Ber\"uhmt als Nachfolger für nicht typisierte Scriptsprachen
+\begin{itemize}
+\item[] $\rightarrow$ Verbindung aus Ausdruckskraft und Sicherheit
+\end{itemize}
+\end{itemize}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%% GO-COMMUNITY %%%%%%%%%%%%%%%%%%
+
+\subsection{Go-Community}
+\begin{frame}
+\frametitle{Go-Community}
+
+\begin{itemize}
+\setlength{\itemsep}{44pt}
+\item Open-source projekt
+\begin{itemize}
+\item[] $\rightarrow$ Quellcode des Compilers, Bibliotheken (libraries) und Tools sind frei verfügbar
+\end{itemize}
+\item Aktive, weltweite Community
+\item L\"auft auf Unix, Mac und Windows
+\begin{itemize}
+\item[] $\rightarrow$ \"Ublicherweise ohne Modifikation transportierbar
+\end{itemize}
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}
+ %\frametitle{Statistik}
+
+\begin{figure}
+\includegraphics[scale=0.3]{graph.png}
+\caption{Go im Vergleich}
+\end{figure}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%% MERKMALE %%%%%%%%%%%%%%%%%%
+
+\section{Merkmale}
+\begin{frame}
+\frametitle{Merkmale}
+
+\begin{textblock}{50}(40, 57)
+\begin{figure}
+\caption{Golang ``Gopher''}
+\includegraphics[scale=0.35]{gopherHead.png}
+\end{figure}
+\end{textblock}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%% HELLO WORLD %%%%%%%%%%%%%%%%%%
+
+\begin{frame}[fragile]
+\frametitle{Hello World!}
+
+Go
+\begin{lstlisting}
+package main
+import "fmt"
+
+func main() {
+    fmt.Println("Hello World!")
+}
+\end{lstlisting}
+
+Java
+\lstset{language=Java}
+\begin{lstlisting}
+public class HelloWorld 
+{ 
+    public static void main (String[] args)
+    {
+        System.out.println("Hello World!");
+    }
+}
+\end{lstlisting}
+
+\begin{textblock}{32}(86,41)
+\begin{tcolorbox}
+\textit{Ausgabe:\\}\\
+Hello World!
+\end{tcolorbox}
+\end{textblock}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%% TYPSICHERHEIT %%%%%%%%%%%%%%%%%%
+
+\subsection{Typsicherheit}
+\begin{frame}
+\frametitle{Typsicherheit}
+
+\begin{itemize}
+\setlength{\itemsep}{24pt}
+\item Statische Typisierung
+\item Features simulieren dynamische Typisierung
+\begin{itemize}
+\setlength{\itemsep}{12pt}
+\item Keine explizite Markierung von Interface-Implementierungen (Java: \textit{implements})
+\item Stimmt eine Methodensignatur mit der des Interfaces \"uberein, wird diese automatisch implementiert (\"ahnlich: \textit{duck-typing})
+\item Einfaches Erweitern externer Methoden (Library Funtionen)
+\end{itemize}
+\item OOP durch \textit{struct} und \textit{interface} m\"oglich
+\end{itemize}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%% OBJEKTORIENTIERUNG %%%%%%%%%%%%%%%%%%
+
+\subsection{Objektorientierung}
+\begin{frame}[fragile]
+\frametitle{Objektorientierung}
+
+\begin{itemize}
+\item Typ \textit{struct}
+\begin{itemize}
+\setlength{\itemsep}{24pt}
+\item Sammlung von Variablen und Funktionen
+\item Methoden nicht virtuell
+\item Man spricht bei Funktionen von \textbf{Methoden} durch Zugeh\"origkeit des \textit{structs}
+\item Konvention: Nutzen von Zeigern bei ``Settern'',\\ \textit{Wertkopien} bei ``Gettern''
+\end{itemize}
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Objektorientierung}
+
+\begin{itemize}
+\item Typ \textit{interface}
+\begin{itemize}
+\setlength{\itemsep}{24pt}
+\item Sammlung von Funktionssignaturen
+\item Objekt vom Typ \textit{Circle} kann einer Variable vom Typ \textit{Shape} zugeordnet werden, weil \textit{Circle} die notwendige Funktion \textbf{Area} bietet
+\item Mehrfachvererbung m\"oglich!
+\end{itemize}
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Objektorientierung}
+
+\begin{lstlisting}
+type Shape interface {
+    Area() float64
+}
+
+type Circle struct {
+    radius float64
+}
+
+func (c Circle) Area() float64 {
+	return math.Pi * c.radius * c.radius
+}
+
+func main() {
+    var shape Shape = Circle{2}
+    fmt.Println(shape.Area())
+}
+\end{lstlisting}
+
+\begin{textblock}{42}(80,60)
+\begin{tcolorbox}
+\textit{Ausgabe:\\}\\
+12.566370614359172
+\end{tcolorbox}
+\end{textblock}
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Objektorientierung}
+
+\begin{itemize}
+\item Polymorphie
+\end{itemize}
+
+\begin{lstlisting}
+type Shape interface {
+  Area() float64
+}
+
+func (c Circle) Area() float64{
+  return math.Pi * c.radius * c.radius
+}
+
+func (r Rectangle) Area() float64{
+  return r.length * r.width
+}
+\end{lstlisting}
+
+\begin{itemize}
+\setlength{\itemsep}{24pt}
+\item Kein ``echtes'' \textit{Duck-Typing}, da statische Typ\"uberpr\"ufung
+\end{itemize}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%% SPEICHERBEREINIGUNG %%%%%%%%%%%%%%%%%%
+
+\subsection{Speicherbereinigung}
+\begin{frame}
+\frametitle{Speicherbereinigung}
+
+\begin{itemize}
+\setlength{\itemsep}{30pt}
+\item Automatisch
+\item \textit{Garbage Collector}
+\item Wird eine Variable unerreichbar, wird ihr Speicherbereich freigegeben
+\end{itemize}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%% ERROR HANDLING %%%%%%%%%%%%%%%%%%
+
+\section{Error Handling}
+\begin{frame}[fragile]
+\frametitle{Error Handling}
+
+\begin{lstlisting} 
+func main() {
+
+    f, err := os.Open("filename.ext")
+
+    if err != nil {
+        log.Fatal(err)
+    }
+
+    defer f.Close()
+}
+\end{lstlisting}
+
+\begin{itemize}
+\item Panik-System
+\item \textit{defer} statt \textit{finally}
+\item Benutzerdefinierte Errors: \textit{errors.New(``oh no'')}
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Error Handling}
+
+\begin{lstlisting} 
+func main() {
+
+    f , _ := os.Open("filename.ext")
+
+    defer f.Close()
+}
+\end{lstlisting}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%% PERFORMANCE %%%%%%%%%%%%%%%%%%
+
+\section{Performance}
+\begin{frame}
+\frametitle{Performance}
+
+\centering
+\begin{figure}
+\includegraphics[scale=0.6]{performance1.png}
+\caption{64-bit Ubuntu quad core}
+\end{figure}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Performance}
+
+\centering
+\begin{figure}
+\includegraphics[scale=0.6]{performance2.png}
+\caption{64-bit Ubuntu quad core}
+\end{figure}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%% SPRACHMITTEL %%%%%%%%%%%%%%%%%%
+
+\section{Sprachmittel}
+\begin{frame}
+\frametitle{Sprachmittel}
+
+\centering
+\begin{figure}
+\includegraphics[scale=0.45]{sprachmittel.png}
+\caption{Noch ein ``Gopher''!}
+\end{figure}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%% CLOSURES %%%%%%%%%%%%%%%%%%
+
+\subsection{Closures}
+\begin{frame}[fragile]
+\frametitle{Closures}
+
+Java
+\lstset{language=Java}
+\begin{lstlisting}
+private static Function<String, Supplier<String>> intSeq = 
+x -> {
+
+    AtomicInteger atomicInteger = new AtomicInteger();
+    return () -> x + ": " + atomicInteger.incrementAndGet();
+}
+
+public static void main(String[] args) {
+
+    Supplier<String> nextInt = intSeq.apply("Test 1");
+
+    System.out.println(nextInt.get());
+    System.out.println(nextInt.get());
+}
+\end{lstlisting}
+
+\begin{textblock}{36}(88,66)
+\begin{tcolorbox}
+\textit{Ausgabe:\\}\\
+Test 1: 1 \\
+Test 1: 2
+\end{tcolorbox}
+\end{textblock}
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Closures}
+Go
+\begin{lstlisting}
+func intSeq(x string) func() string {
+	i := 0
+	return func() string {
+		i++
+		return x + ": " + strconv.Itoa(i)
+	}
+}
+
+func main() {
+	nextInt := intSeq("Test 1")
+
+	fmt.Println(nextInt())
+	fmt.Println(nextInt())
+}
+\end{lstlisting}
+
+\begin{textblock}{36}(88,66)
+\begin{tcolorbox}
+\textit{Ausgabe:\\}\\
+Test 1: 1 \\
+Test 1: 2
+\end{tcolorbox}
+\end{textblock}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%% REFLECTION %%%%%%%%%%%%%%%%%%
+
+\subsection{Reflection}
+\begin{frame}[fragile]
+\frametitle{Reflection}
+
+Java
+\lstset{language=Java}
+\begin{lstlisting}
+public static String getStringProperty(Object object, 
+                                        String methodname) {
+    String value = null;
+
+    try {
+        Method getter = object.getClass()
+                        .getMethod(methodname, new Class[0]);
+
+        value = (String) getter
+                        .invoke(object, new Object[0]);
+
+    } catch (Exception e) {}
+
+    return value;
+}
+\end{lstlisting}
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Reflection}
+
+Go
+\begin{lstlisting}
+func getField(v *Vertex, field string) int {
+
+    r := reflect.ValueOf(v)
+    f := reflect.Indirect(r).FieldByName(field)
+
+    return int(f.Int())
+}
+\end{lstlisting}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Reflection}
+
+\begin{itemize}
+\setlength{\itemsep}{24pt}
+\item func ValueOf(i interface{}) Value
+\begin{itemize}
+\item Gibt ein Objekt Value (reflection interface) zurück, das auf den konkreten Wert initialisiert wurde, der in der Schnittstelle i gespeichert ist
+\end{itemize}
+\item func Indirect(v Value) Value
+\begin{itemize}
+\item Gibt den Wert zurück, auf den v zeigt
+\end{itemize}
+\item func (Value) FieldByName
+\begin{itemize}
+\item Gibt das \textit{struct field} mit dem angegebenen Namen zur\"uck
+\end{itemize}
+\item func (v Value) Int() int64
+\begin{itemize}
+\item Gibt den zugrunde liegenden Wert von v zur\"uck
+\end{itemize}
+\end{itemize}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%% GOROUTINES %%%%%%%%%%%%%%%%%%
+
+\subsection{Goroutines}
+
+\begin{frame}
+\frametitle{Goroutines}
+
+\begin{itemize}
+\setlength{\itemsep}{24pt}
+\item Philosophie: \textit{``Kommuniziere nicht, indem du Speicher teilst, sondern teile Speicher durch Kommunikation'}
+\item Keine Einschr\"ankung beim Nutzen unsicherer Zugriffsmethode
+\item \"Ublich: Goroutines, Channels
+\begin{itemize}
+\item Keine ``Race Conditions''
+\end{itemize}
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Goroutines}
+
+\begin{itemize}
+\setlength{\itemsep}{24pt}
+\item Schl\"usselwort \textit{go}
+\item Kommunikation \"uber \textit{channels}:
+\end{itemize}
+
+\begin{lstlisting}
+messages := make(chan string)
+
+go func() { messages <- "ping" }()
+\end{lstlisting}
+
+\begin{lstlisting}
+msg := <- messages
+
+fmt.Println(msg)
+\end{lstlisting}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%% DOCKER %%%%%%%%%%%%%%%%%%
+
+\section{Docker}
+\begin{frame}
+\frametitle{Docker}
+
+\begin{itemize}
+\setlength{\itemsep}{12pt}
+\item Open-Source Apache 2.0 Lizenz
+\item Basiert auf \textit{Namespaces}
+\item Isolierung von Anwendungen mit Containervirtualisierung
+\item Ressourcentrennung (Code, Laufzeitmodul, Systemwerkzeuge, Systembibliotheken, ...)
+\item Erstellung von Containern mit virtuellen Betriebssystemen
+\end{itemize}
+
+\begin{textblock}{20}(84,0)
+\includegraphics[scale=0.22]{docker.png}
+\end{textblock}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Docker}
+
+\begin{itemize}
+\setlength{\itemsep}{20pt}
+\item Docker Hub (Online-Dienst) als Verteiler fest integriert
+\item Eingebaute Versionsverwaltung, angelehnt an
+\end{itemize}
+
+\begin{textblock}{20}(84,0)
+\includegraphics[scale=0.22]{docker.png}
+\end{textblock}
+
+\begin{textblock}{20}(92,49)
+\includegraphics[scale=0.22]{gitlogo.png}
+\end{textblock}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%% ZENTRALE FRAGESTELLUNG %%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{Zentrale Fragestellung}
+
+\centering
+\glqq flexibel wie dynamisch getyped,\\ aber mit statischer Typsicherheit?\grqq{}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%% PRO & CONTRA %%%%%%%%%%%%%%%%%%
+
+\section{Pro \& Contra}
+\begin{frame}
+\frametitle{Pro \& Contra}
+
+\begin{tabular}{p{5cm} | p{5.5cm}}
+\textbf{Pro} & \textbf{Contra} \\ \hline
+\begin{itemize}
+\setlength{\itemsep}{20pt}
+\item Minimalismus
+\item ``Eigenes'' Duck-Typing
+\item Parallelisierung
+\item Aufger\"aumte Syntax
+\item Schneller Compiler
+\end{itemize}
+&
+\begin{itemize}
+\setlength{\itemsep}{20pt}
+\item Keine generische Programmierung
+\item nil statt Option
+\item Wenig grundlegende Datenstrukturen
+\item Keine Methodenüberladung
+\end{itemize}
+\\
+\end{tabular}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Pro \& Contra}
+
+\begin{tabular}{p{5cm} | p{5.5cm}}
+\textbf{Pro} & \textbf{Contra} \\ \hline
+\begin{itemize}
+\setlength{\itemsep}{20pt}
+\item Statisch gelinkte Binärdateien
+\item Laufzeiteigenschaften
+\item Integriertes Unit-Test-Framework
+\item Paketmanager
+\end{itemize}
+&
+\begin{itemize}
+\setlength{\itemsep}{20pt}
+\item Unbefriedigende API-Dokumentation
+\item Teilweise umständliche APIs
+\item Umst\"andliches Mocking
+\end{itemize}
+\\
+\end{tabular}
+
+\end{frame}
+
+\section{Einzelnachweise}
+\begin{frame}
+\frametitle{Einzelnachweise}
+
+\begin{figure}
+\includegraphics[scale=0.3]{book.png}
+\caption{The Go Programming Language, von Alan A. A. Donovan und Brian W. Kernighan, 2016}
+\end{figure}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Einzelnachweise}
+
+\begin{itemize}
+\setlength{\itemsep}{20pt}
+\item Performance-Grafik: \href{https://benchmarksgame.alioth.debian.org/u64q/go.htmll}{benchmarksgame.alioth.debian.org/u64q/go.html}
+\item Diverse ``Gopher'' Grafiken: \href{https://golang.org/}{golang.org}
+\item Bild der Entwickler, Bild ``Go im Vergleich'': \href{https://www.quora.com/Why-should-I-learn-Go-Golang-instead-of-Scala-Kotlin-Rust-Erlang-Haskell-Clojure-OCaml-etc}{quora.com/Why-should-I-learn-Go-Golang-instead-of-Scala-Kotlin-Rust-Erlang-Haskell-Clojure-OCaml-etc}
+\item Bild ``Docker'': \href{https://www.docker.com/}{docker.com}
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Ende}
+
+\centering
+Danke f\"ur die Aufmerksamkeit!
+
+\begin{figure}
+\includegraphics[scale=0.4]{joda.png}
+\end{figure}
+
+\end{frame}
+
+\end{document}
