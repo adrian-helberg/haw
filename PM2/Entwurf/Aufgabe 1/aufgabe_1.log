@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.4.17)  6 APR 2018 15:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.4.17)  11 APR 2018 01:42
 entering extended mode
 **./aufgabe_1.tex
 (aufgabe_1.tex
@@ -1317,7 +1317,7 @@ LaTeX Info: Redefining \includegraphics on input line 23.
 (C:\Users\Main\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
-<logoHaw.png, id=16, 301.125pt x 110.4125pt>
+<logoHaw.png, id=36, 301.125pt x 110.4125pt>
 File: logoHaw.png Graphic file (type png)
  <use logoHaw.png>
 Package pdftex.def Info: logoHaw.png used on input line 34.
@@ -1335,6 +1335,36 @@ g (PNG copy)>] (aufgabe_1.toc) [2
 ] [3
 
 ]
+LaTeX Font Info:    Try loading font information for U+msa on input line 62.
+ (D:\MikTex\tex\latex\amsfonts\umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 62.
+(D:\MikTex\tex\latex\amsfonts\umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Try loading font information for OT1+mathkerncmss on input 
+line 62.
+
+(D:\MikTex\tex\latex\sansmathaccent\ot1mathkerncmss.fd
+File: ot1mathkerncmss.fd 2013/03/27 Fontinst v1.933 font definitions for OT1/ma
+thkerncmss.
+) [4
+
+] [5
+
+] [6
+
+] [7
+
+]
+[8
+
+] [9
+
+] [10
+
+]
 \tf@nav=\write6
 \openout6 = `aufgabe_1.nav'.
 
@@ -1344,13 +1374,13 @@ g (PNG copy)>] (aufgabe_1.toc) [2
 \tf@snm=\write8
 \openout8 = `aufgabe_1.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 44.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 44.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 160.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 160.
  (aufgabe_1.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 44.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 44.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 160.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 160.
 Package rerunfilecheck Info: File `aufgabe_1.out' has not changed.
-(rerunfilecheck)             Checksum: AF305FFE12DFE1BD0E8A446AA593497B;40.
+(rerunfilecheck)             Checksum: 82CAF2852EB1606CC9BA4C019AAAB33E;320.
 
 
 LaTeX Font Warning: Size substitutions with differences
@@ -1358,20 +1388,22 @@ LaTeX Font Warning: Size substitutions with differences
 
  ) 
 Here is how much of TeX's memory you used:
- 21861 strings out of 493333
- 412457 string characters out of 3146981
- 511652 words of memory out of 3000000
- 24904 multiletter control sequences out of 15000+200000
- 6399 words of font info for 23 fonts, out of 3000000 for 9000
+ 22049 strings out of 493333
+ 415937 string characters out of 3146981
+ 515251 words of memory out of 3000000
+ 25044 multiletter control sequences out of 15000+200000
+ 14686 words of font info for 53 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  56i,14n,59p,804b,559s stack positions out of 5000i,500n,10000p,200000b,50000s
 <D:/MikTex/fonts/type1/public/amsfonts/cm/cmss10.pfb><D:/MikTex/fonts/type1/p
 ublic/amsfonts/cm/cmss12.pfb><D:/MikTex/fonts/type1/public/amsfonts/cm/cmss8.pf
-b><D:/MikTex/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><D:/MikTex/fonts/type1
-/public/amsfonts/cm/cmssi12.pfb>
-Output written on aufgabe_1.pdf (3 pages, 74884 bytes).
+b><D:/MikTex/fonts/type1/public/amsfonts/cm/cmss9.pfb><D:/MikTex/fonts/type1/pu
+blic/amsfonts/cm/cmssbx10.pfb><D:/MikTex/fonts/type1/public/amsfonts/cm/cmssi10
+.pfb><D:/MikTex/fonts/type1/public/amsfonts/cm/cmssi12.pfb><D:/MikTex/fonts/typ
+e1/public/amsfonts/symbols/msam10.pfb>
+Output written on aufgabe_1.pdf (10 pages, 154794 bytes).
 PDF statistics:
- 120 PDF objects out of 1000 (max. 8388607)
- 8 named destinations out of 1000 (max. 500000)
- 56 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 337 PDF objects out of 1000 (max. 8388607)
+ 27 named destinations out of 1000 (max. 500000)
+ 96 words of extra memory for PDF output out of 10000 (max. 10000000)
 

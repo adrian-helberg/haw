@@ -15,7 +15,7 @@
 	\textbf{\\Aufgabenblatt 1 - Entwurf} \\
 	\scriptsize{B-AI2 PMP SS 2018}
 }
-\author{Adrian Helberg, Gruppe 1 \\\textbf{\\ Prüfer: Prof. Dr. Bernd Kahlbrandt}}
+\author{Adrian Helberg, Gruppe 2 \\\textbf{\\ Prüfer: Prof. Dr. Bernd Kahlbrandt}}
 \date{\today}
 
 \definecolor{mygreen}{rgb}{0,0.6,0}
@@ -35,9 +35,125 @@
 
 \frame{\tableofcontents}
 
-\section{Test}
+\section{Interface Complex}
 \begin{frame}
-\frametitle{Test}
+\frametitle{Interface Complex}
+
+Das Interface \textit{Complex} soll als Basis f\"ur die Erstellung einer \textit{``immutable''} und einer \textit{``mutable''} Repr\"asentation
+von komplexen Zahlen dienen.\\
+Da Interfaces in Java 8 Default-Implementationen bietet, wird in diesem Projekt nicht auf eine abstrakte Klasse Complex zur\"uckgegriffen,
+da so viele Zeilen Code gespart werden k\"onnen.
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Interface Complex}
+
+Das Interface wird wie folgt zusammengesetzt:
+
+\begin{itemize}
+\setlength{\itemsep}{12pt}
+\item Diverse abstrakte Funktionssignaturen, die von erbenden Klassen \"uberschrieben werden m\"ussen
+\item Default-Implementationen f\"ur \textit{``immutable''} Objekte, die nur von \textit{mutable} Objekten \"uberschrieben werden m\"ussen,
+da diese eine andere Implementation brauchen
+\item Dokumentation in Form von \textbf{Javadoc}
+\end{itemize}
+
+\end{frame}
+
+\section{Klasse ImmutableComplex}
+\begin{frame}
+\frametitle{Klasse ImmutableComplex}
+
+Die Klasse \textit{ImmutableComplex} erzeugt nicht ver\"anderbare (\textbf{final}) Objekte als komplexe Zahl.
+Die Instanzmethoden geben immer ein neuen Objekt zur\"uck, wenn bestimmte Operationen auf den Objekten ausgef\"uhrt werden.\\
+
+Die Klasse implementiert das Interface \textit{Complex} und besteht aus
+\begin{itemize}
+\setlength{\itemsep}{12pt}
+\item Diversen Konstruktoren
+\item \"Uberschriebenen Instanzmethoden
+\item Allen \"ubrigen Instanzmethoden, die eine Default-Implementation im zu erbenden Interface besitzen
+\end{itemize}
+
+\end{frame}
+
+\section{Klasse MutableComplex}
+\begin{frame}
+\frametitle{Klasse MutableComplex}
+
+Die Klasse \textit{MutableComplex} erzeugt ver\"anderbare Objekte als komplexe Zahl.
+Die Instanzmethoden ver\"andern die aktuelle Instanz (\textbf{this}) und geben, wenn bestimmte Operationen auf den Objekten ausgef\"uhrt werden,
+diese anschließend zur\"uck.\\
+
+Die Klasse implementiert das Interface \textit{Complex} und besteht aus
+\begin{itemize}
+\setlength{\itemsep}{12pt}
+\item Diversen Konstruktoren
+\item \"Uberschriebenen Instanzmethoden
+\item Allen \"ubrigen Instanzmethoden, die nicht \"uberschrieben wurden und eine Default-Implementation im zu erbenden Interface besitzen
+\end{itemize}
+
+\end{frame}
+
+\section{Klasse MathUtils}
+\begin{frame}
+\frametitle{Klasse MathUtils}
+
+Die Klasse \textit{MathUtils} stellt diverse statische Funktionen f\"ur komplexe Zahlen zur Verf\"ugung.
+Unter anderem aber auch eine \textit{round}-Funktion, um auf eine bestimmte Anzahl Nachkommastellen zu runden.
+Da es sich bei den komplexen Zahlen um ver\"anderbare und nicht ver\"anderbare Objekte handelt, wurden
+einige Funktionen mit dem \textit{Reflection-Tool} \textbf{instance of} implementiert.
+
+\end{frame}
+
+\section{JUnit Tests}
+\begin{frame}
+\frametitle{JUnit Tests}
+
+Alle implementierten Konstruktoren, Funktionen und Methoden werden mit \textit{JUnit} \textbf{assertions} in den Test-Klassen
+\begin{itemize}
+\item \textit{ImmutableComplexTest}
+\item \textit{MutableComplexTest}
+\item \textit{MathUtilsTest}
+\end{itemize}
+getestet.
+
+\end{frame}
+
+\section{Instanz-Methoden}
+\begin{frame}
+\frametitle{Instanz-Methoden}
+
+Folgende Instanz-Methoden werden implementiert \footnote{siehe https://ruby-doc.org/core-2.3.0/Complex.html}
+\begin{itemize}
+\item \textit{getRe}
+\item \textit{getIm}
+\item \textit{getR}
+\item \textit{getTheta}
+\item \textit{multiply}
+\item \textit{add}
+\item \textit{subtract}
+\item \textit{reciprocal}
+\item \textit{negate}
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Instanz-Methoden}
+
+\begin{itemize}
+\item \textit{divide}
+\item \textit{equals}
+\item \textit{abs}
+\item \textit{abs2}
+\item \textit{conjugate}
+\item \textit{hash}
+\item \textit{formatCartesian}
+\item \textit{formatTrigonometric}
+\item \textit{formatPolar}
+\end{itemize}
 
 \end{frame}
 

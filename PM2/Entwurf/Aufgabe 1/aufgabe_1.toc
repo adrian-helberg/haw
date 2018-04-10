@@ -1,2 +1,7 @@
 \select@language {german}
-\beamer@sectionintoc {1}{Test}{3}{0}{1}
+\beamer@sectionintoc {1}{Interface Complex}{3}{0}{1}
+\beamer@sectionintoc {2}{Klasse ImmutableComplex}{5}{0}{2}
+\beamer@sectionintoc {3}{Klasse MutableComplex}{6}{0}{3}
+\beamer@sectionintoc {4}{Klasse MathUtils}{7}{0}{4}
+\beamer@sectionintoc {5}{JUnit Tests}{8}{0}{5}
+\beamer@sectionintoc {6}{Instanz-Methoden}{9}{0}{6}
