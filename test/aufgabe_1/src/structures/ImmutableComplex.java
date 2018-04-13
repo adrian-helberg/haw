@@ -1,7 +1,5 @@
 package structures;
 
-import java.util.Objects;
-
 /**
  * Representation of immutable complex numbers
  * @author Adrian Helberg
@@ -48,28 +46,5 @@ public class ImmutableComplex implements Complex {
     @Override
     public double getIm() {
         return this.Im;
-    }
-    
-    /**
-     * Returns true if complex number equals complex number numerically
-     * No class check because comparison of immutable and mutable complex
-     * Overrides Objects.equals for assertEquals-method from JUnit
-     * @param o Object to compare with
-     * @return true or false (equality or inequality)
-     */
-    @Override
-    public boolean equals(Object o) {
-    	if (this == o) {
-    		return true;
-    	}
-    	
-    	if (o == null) {
-    		return false;
-    	}
-    	
-    	ImmutableComplex i = (ImmutableComplex) o;  
-    	
-    	return Objects.equals(this.Re, i.Re) && 
-    			Objects.equals(this.Im, i.Im);
     }
 }

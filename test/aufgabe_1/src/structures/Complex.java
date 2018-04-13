@@ -147,12 +147,21 @@ public interface Complex {
 
     /**
      * Performs division
-     * z = (a + b * i) / (c + d * i)
+     * (z1 / z2) = ((a + b * i) * (c - d * i)) / ((c + d * i) * (c - d * i))
      * @param c Complex number (a + b * i)
      * @return Quotient complex number
      */
     default Complex divide(Complex c) {
         return this.multiply(c.reciprocal());
+    }
+
+    /**
+     * Returns true if complex number equals complex number numerically
+     * @param c Complex number to compare with
+     * @return true or false
+     */
+    default boolean equals(Complex c) {
+        return this.getRe() == c.getRe() && this.getIm() == c.getIm();
     }
 
     /**
@@ -191,13 +200,13 @@ public interface Complex {
      */
     default int hash() {
         return Objects.hash(
-                this.getRe(),
-                this.getIm()
+                MathUtils.round(this.getRe()),
+                MathUtils.round(this.getIm())
         );
     }
 
     /**
-     * Format complex number to Cartesian form as string
+     * Format complex number to cartesian form as string
      * @return String
      */
     default String formatCartesian() {

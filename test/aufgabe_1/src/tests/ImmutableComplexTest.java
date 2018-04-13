@@ -1,34 +1,26 @@
 package tests;
 
-import org.junit.Before;
 import org.junit.Test;
 import structures.ImmutableComplex;
 
 import java.util.Objects;
-import java.util.logging.Logger;
 
 import static org.junit.Assert.*;
 
 public class ImmutableComplexTest {
     // Expectation and assertion may me equal in the threshold of 0.001
     private double DELTA = 0.001;
-    private Logger log;
-    
-    @Before
-    public void setUp() throws Exception {
-    	log = Logger.getLogger(ImmutableComplexTest.class.getName());
-    }
 
     @Test
     public void testConstructorWithPolar() {
         ImmutableComplex c1 = new ImmutableComplex(3, 0, true);
-        assertEquals(new ImmutableComplex(3, 0), c1);
+        assertEquals(new ImmutableComplex(3, 0).hash(), c1.hash());
 
         ImmutableComplex c2 = new ImmutableComplex(3, Math.PI, true);
-        assertEquals(new ImmutableComplex(-3, 3.6739403974420594E-16), c2);
+        assertEquals(new ImmutableComplex(-3, 3.6739403974420594E-16).hash(), c2.hash());
 
         ImmutableComplex c3 = new ImmutableComplex(3, Math.PI / 2, true);
-        assertEquals(new ImmutableComplex(1.8369701987210297E-16, 3.0), c3);
+        assertEquals(new ImmutableComplex(1.8369701987210297E-16, 3.0).hash(), c3.hash());
     }
 
     @Test
@@ -59,48 +51,47 @@ public class ImmutableComplexTest {
     public void testMultiplication() {
         ImmutableComplex c1 = new ImmutableComplex(2, 3);
         ImmutableComplex c2 = new ImmutableComplex(2, 3);
-        assertEquals(new ImmutableComplex(-5.0, 12.0), c1.multiply(c2));
-        assertEquals(new ImmutableComplex(10.0, 15.0), c1.multiply(5));
+        assertEquals(new ImmutableComplex(-5.0, 12.0).hash(), c1.multiply(c2).hash());
+        assertEquals(new ImmutableComplex(10.0, 15.0).hash(), c1.multiply(5).hash());
     }
 
     @Test
     public void testAddition() {
         ImmutableComplex c1 = new ImmutableComplex(2, 3);
         ImmutableComplex c2 = new ImmutableComplex(2, 3);
-        assertEquals(new ImmutableComplex(4.0, 6.0), c1.add(c2));
-        assertEquals(new ImmutableComplex(7, 8), c1.add(5));
+        assertEquals(new ImmutableComplex(4.0, 6.0).hash(), c1.add(c2).hash());
+        assertEquals(new ImmutableComplex(7, 8).hash(), c1.add(5).hash());
     }
 
     @Test
     public void testSubtract() {
         ImmutableComplex c1 = new ImmutableComplex(2, 3);
         ImmutableComplex c2 = new ImmutableComplex(2, 3);
-        assertEquals(new ImmutableComplex(0, 0), c1.subtract(c2));
-        assertEquals(new ImmutableComplex(-3, -2), c1.subtract(5));
+        assertEquals(new ImmutableComplex(0, 0).hash(), c1.subtract(c2).hash());
+        assertEquals(new ImmutableComplex(-3, -2).hash(), c1.subtract(5).hash());
     }
 
     @Test
     public void testReciprocal() {
         ImmutableComplex c = new ImmutableComplex(2, 3);
-        assertEquals(new ImmutableComplex(2d/13, -3d/13), c.reciprocal());
+        assertEquals(new ImmutableComplex(2f/13, -3f/13).hash(), c.reciprocal().hash());
     }
 
     @Test
     public void testNegate() {
         ImmutableComplex c = new ImmutableComplex(2, 3);
-        assertEquals(new ImmutableComplex(-2, -3), c.negate());
+        assertEquals(new ImmutableComplex(-2, -3).hash(), c.negate().hash());
     }
 
     @Test
     public void testDivision() {
         ImmutableComplex c1 = new ImmutableComplex(2, 3);
         ImmutableComplex c2 = new ImmutableComplex(2, 3);
-        assertEquals(new ImmutableComplex(1, 0), c1.divide(c2));
+        assertEquals(new ImmutableComplex(1, 0).hash(), c1.divide(c2).hash());
 
         ImmutableComplex c3 = new ImmutableComplex(-2, 9);
-        ImmutableComplex c4 = new ImmutableComplex(-9, 2);        
-        assertEquals(new ImmutableComplex(36d/85, -77d/85).getRe(), c3.divide(c4).getRe(), DELTA);
-        assertEquals(new ImmutableComplex(36d/85, -77d/85).getIm(), c3.divide(c4).getIm(), DELTA);
+        ImmutableComplex c4 = new ImmutableComplex(-9, 2);
+        assertEquals(new ImmutableComplex(36f/85, -77f/85).hash(), c3.divide(c4).hash());
     }
 
     @Test
@@ -127,7 +118,7 @@ public class ImmutableComplexTest {
     @Test
     public void testConjugate() {
         ImmutableComplex c = new ImmutableComplex(1, 2);
-        assertEquals(new ImmutableComplex(1, -2), c.conjugate());
+        assertEquals(new ImmutableComplex(1, -2).hash(), c.conjugate().hash());
     }
 
     @Test

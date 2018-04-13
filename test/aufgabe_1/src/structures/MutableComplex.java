@@ -1,7 +1,5 @@
 package structures;
 
-import java.util.Objects;
-
 /**
  * Representation of mutable complex numbers
  * @author Adrian Helberg
@@ -132,28 +130,5 @@ public class MutableComplex implements Complex {
         this.Im = -this.getIm();
 
         return this;
-    }
-    
-    /**
-     * Returns true if complex number equals complex number numerically
-     * No class check because comparison of immutable and mutable complex
-     * Overrides Objects.equals for assertEquals-method from JUnit
-     * @param o Object to compare with
-     * @return true or false (equality or inequality)
-     */
-    @Override
-    public boolean equals(Object o) {
-    	if (this == o) {
-    		return true;
-    	}
-    	
-    	if (o == null) {
-    		return false;
-    	}
-    	
-    	MutableComplex i = (MutableComplex) o;  
-    	
-    	return Objects.equals(this.Re, i.Re) && 
-    			Objects.equals(this.Im, i.Im);
     }
 }

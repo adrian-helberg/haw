@@ -1,5 +1,6 @@
 package tests;
 
+import org.junit.Before;
 import org.junit.Test;
 import structures.ImmutableComplex;
 import structures.MutableComplex;
@@ -7,9 +8,15 @@ import utils.MathUtils;
 
 import static org.junit.Assert.*;
 
+import java.util.logging.Logger;
+
 public class MathUtilsTest {
-    // Expectation and assertion may me equal in the threshold of 0.001
-    private double DELTA = 0.001;
+	private Logger log;
+	
+	@Before
+    public void setUp() throws Exception {
+    	log = Logger.getLogger(MathUtilsTest.class.getName());
+    }
 
     @Test
     public void testRound() {
@@ -21,8 +28,12 @@ public class MathUtilsTest {
     public void testExp() {
         ImmutableComplex c1 = new ImmutableComplex(2, 3);
         MutableComplex c2 = new MutableComplex(2, 3);
-        assertEquals(new ImmutableComplex(-7.315111, 1.042743).hash(), MathUtils.exp(c1).hash());
-        assertEquals(new MutableComplex(-7.315111, 1.042743).hash(), MathUtils.exp(c2).hash());
+        
+        double a = Math.exp(c1.getRe()) * Math.cos(c1.getIm());
+        double b = Math.exp(c1.getRe()) * Math.sin(c1.getIm());
+                
+        assertEquals(new ImmutableComplex(a, b), MathUtils.exp(c1));
+        assertEquals(new MutableComplex(a, b), MathUtils.exp(c2));
     }
 
     @Test
@@ -30,8 +41,8 @@ public class MathUtilsTest {
         ImmutableComplex c1 = new ImmutableComplex(2, 3);
         MutableComplex c2 = new MutableComplex(2, 3);
 
-        assertEquals(new ImmutableComplex(9.15449914691143, -4.168906959966565).hash(), MathUtils.sin(c1).hash());
-        assertEquals(new MutableComplex(9.15449914691143, -4.168906959966565).hash(), MathUtils.sin(c2).hash());
+        assertEquals(new ImmutableComplex(9.15449914691143, -4.168906959966565), MathUtils.sin(c1));
+        assertEquals(new MutableComplex(9.15449914691143, -4.168906959966565), MathUtils.sin(c2));
     }
 
     @Test
@@ -39,7 +50,7 @@ public class MathUtilsTest {
         ImmutableComplex c1 = new ImmutableComplex(2, 3);
         MutableComplex c2 = new MutableComplex(2, 3);
 
-        assertEquals(new ImmutableComplex(-4.189625690968807, -9.109227893755337).hash(), MathUtils.cos(c1).hash());
-        assertEquals(new MutableComplex(-4.189625690968807, -9.109227893755337).hash(), MathUtils.cos(c2).hash());
+        assertEquals(new ImmutableComplex(-4.189625690968807, -9.109227893755337), MathUtils.cos(c1));
+        assertEquals(new MutableComplex(-4.189625690968807, -9.109227893755337), MathUtils.cos(c2));
     }
 }
