@@ -12,7 +12,8 @@ import static org.junit.Assert.*;
 public class MutableComplexTest {
 	// Expectation and assertion may me equal in the threshold of 0.001
     private double DELTA = 0.001;
-    private Logger log;
+    @SuppressWarnings("unused")
+	private Logger log;
     
     @Before
     public void setUp() throws Exception {

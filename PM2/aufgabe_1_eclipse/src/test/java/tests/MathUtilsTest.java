@@ -11,6 +11,7 @@ import static org.junit.Assert.*;
 import java.util.logging.Logger;
 
 public class MathUtilsTest {
+	@SuppressWarnings("unused")
 	private Logger log;
 	
 	@Before

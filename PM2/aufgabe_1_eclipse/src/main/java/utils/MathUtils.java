@@ -5,7 +5,7 @@ import structures.ImmutableComplex;
 import structures.MutableComplex;
 
 /**
- * Helper class with static methods
+ * Helper class with static methods for mathematics
  * @author Adrian Helberg
  */
 public final class MathUtils {
@@ -17,6 +17,18 @@ public final class MathUtils {
      */
     public static double round(double number) {
         return Math.floor(number * Math.pow(10, 6)) / Math.pow(10, 6);
+    }
+    
+    /**
+     * Sorts an array of complex numbers by their absolute value (length)
+     * @param numbers Array of complex numbers
+     * @return Sorted array of complex numbers 
+     */
+    public static Complex[] sortByLength(Complex[] numbers) {
+    	
+    	// TODO: Sort
+    	
+    	return numbers;
     }
 
     /**
