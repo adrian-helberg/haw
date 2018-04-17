@@ -1,3 +1,3 @@
-\beamer@endinputifotherversion {3.36pt}
 \select@language {german}
-\beamer@sectionintoc {1}{test}{3}{0}{1}
+\beamer@sectionintoc {1}{Listen und IO}{3}{0}{1}
+\beamer@sectionintoc {2}{Operatoren}{6}{0}{2}

@@ -4,6 +4,7 @@
 \usepackage{listings} 
 \usepackage{listings-golang}
 \usepackage{tikz}
+\usepackage{hyperref}
 
 \usepackage[absolute,overlay]{textpos}
   \setlength{\TPHorizModule}{1mm}
@@ -23,7 +24,7 @@
 \begin{document}
 \lstset{
     frame=single,
-    basicstyle=\footnotesize,
+    basicstyle=\scriptsize,
     keywordstyle=\color{blue},
     showstringspaces=false, 
     stringstyle=\color{mygreen},
@@ -35,11 +36,215 @@
 
 \frame{\tableofcontents}
 
-\section{test}
+\section{Listen und IO}
 \begin{frame}
-\frametitle{test}
+\frametitle{Listen und IO}
 
-test
+Um die 1000 komplexen Zahlen nach vorgegebenen Regeln zu erstellen und in eine Textdatei zu schreiben gibt es folgende Strukturen:
+
+\begin{itemize}
+\item Einen \textit{PrintWriter}, der den Namen der Textdatei entgegennimmt
+\item Ein Array der Gr\"oße 1000, welches die komplexen Zahlen h\"alt
+\item Eine \textit{for}-Kontrollstruktur, welche das deklarierte Array iteriert und mit komplexen Zahlen initialisiert
+\item Eine Anweisung \textit{writer.println(...)}, welche die angegebene Datei zeilenweise beschreibt
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Listen und IO}
+
+Um komplexe Zahlen aus einer Textdatei zu lesen und  zu speichern, gibt es folgende Strukturen:
+
+\begin{itemize}
+\item Einen \textit{BufferedReader}, der die angegebene Textdatei liest
+\item Ein Array der Gr\"oße 1000, welches die komplexen Zahlen h\"alt
+\item Eine Liste, welche die komplexen Zahlen h\"alt
+\item Eine \textit{while}-Kontrollstruktur, welche die Textdatei zeilenweise durchl\"auft
+\item Zwei Zuweisungen, welche die resultierenden, komplexen Zahlen in das Array und die Liste schreiben
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Listen und IO}
+
+Das Sortieren des Arrays bzw. der Liste wird \"uber die Hilfsklasse \textit{MathUtils} umgesetzt:
+
+\begin{lstlisting}
+public static Complex[] sortByLength(Complex[] n);
+
+public static List<Complex> sortByLength(List<Complex> n);
+\end{lstlisting}
+
+Um sie Sortierung zu erm\"oglichen wird eine interne Klasse \textit{Tupel} verwendet, welche die Funktion \textit{compareTo(...)} des
+Interfaces \textit{Comparable$<$Tuple$>$} \"uberschreibt:
+
+\begin{lstlisting}
+public int compareTo(Tuple t) {
+	return this.length < t.length 
+		? -1 : (this.length > t.length 
+			? 1 : 0);
+}
+\end{lstlisting}
+
+\end{frame}
+
+\section{Operatoren}
+\begin{frame}[fragile]
+\frametitle{Operatoren}
+
+\begin{lstlisting}
+public static boolean isOdd(long i) {
+	return i % 2 == 1;
+}
+\end{lstlisting}
+
+\begin{itemize}
+\item Ist die Methode korrekt?
+	\begin{itemize}
+	\item \textit{ Nein}
+	\end{itemize}
+\item Wenn ja, warum, wenn nicht, warum?
+	\begin{itemize}
+	\item \textit{Sollte eine negative Zahl \"uberpr\"uft werden, liefert die Funktion ein falsches Ergebnis}\footnote{Das Ergebnis der Restoperation ist negativ, wenn die Division negativ, und positiv, wenn die Division positiv ist}
+	\end{itemize}
+\item Was liefert sie und wie macht man das richtig?
+	\begin{itemize}
+	\item Die Funktion liefert f\"ur \textit{isOdd(-1L)} den Wert \textit{false}.
+	\end{itemize}
+\end{itemize}
+
+\begin{lstlisting}
+public static boolean isOdd(long i) {
+	return (i % 2 + 2) % 2 == 1;
+}
+\end{lstlisting}
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Operatoren}
+
+\begin{lstlisting}
+System.out.println((int) (char) (byte) -1);
+\end{lstlisting}
+
+\begin{itemize}
+\item Welches Ergebnis erwarten Sie?
+	\begin{itemize}
+	\item \textit{Erwartet wird hier -1}
+	\end{itemize}
+\item Welches kommt tats\"achlich heraus?
+	\begin{itemize}
+	\item \textit{Der Ausdruck liefert 65535}
+	\end{itemize}
+\item Was passiert genau?
+	\begin{itemize}
+	\item \textit{Zuerst wird das Byte ``-1'' via widening primitive conversion (§5.1.2), und dann der resultierende int via narrowing primitive conversion (§5.1.3) konvertiert. Anschließend wird das resultierende ``?'' in int konvertiert und ergibt 65535, da ``?'' der Hexzahl ``FFFFFFFF'' entspricht und damit des Maximalwerts des 16 bit integers}
+	\item siehe \textit{Widening and Narrowing Primitive Conversion}\footnote{\href{https://docs.oracle.com/javase/specs/jls/se8/html/jls-5.html}{https://docs.oracle.com/javase/specs/jls/se8/html/jls-5.html}}
+	\end{itemize}
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Operatoren}
+
+\begin{lstlisting}
+int x = 1984;
+int y = 2001;
+x ^= y ^= x ^ y;
+System.out.println("x = " + x + "; y = " + y);
+\end{lstlisting}
+
+\begin{itemize}
+\item Was wird ausgegeben?
+	\begin{itemize}
+	\item \textit{x = 0; y = 1984}
+	\item Der Ausdruck wird von rechts nach links evaluiert
+	\end{itemize}
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Operatoren}
+
+Schritt 1:
+
+\begin{lstlisting}
+11111000000     1984
+11111010001     2001
+----------- XOR
+00000010001       17
+\end{lstlisting}
+
+Schritt 2:
+
+\begin{lstlisting}
+11111010001     2001
+00000010001       17
+----------- XOR
+11111000000     1984 (= y)
+\end{lstlisting}
+
+Schritt 3:
+
+\begin{lstlisting}
+11111000000     1984
+11111000000     1984
+----------- XOR
+00000000000        0 (= x)
+\end{lstlisting}
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Operatoren}
+
+\begin{lstlisting}
+public class Test {
+	public static void main(String[] args) {
+		System.out.print("Hell");
+		System.out.println("o world");
+	}
+}
+\end{lstlisting}
+
+\begin{itemize}
+\item Was schreibt das Programm auf die Konsole?
+	\begin{itemize}
+	\item \textit{Hello world}
+	\item \textit{System.out.print()} schreibt in die Konsole
+	\item \textit{System.out.println()} beendet nach dem Schreiben die aktuelle Zeile mit einem Zeilenumbruchzeichen (Betriebssystemabh\"angig)
+	\end{itemize}
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Operatoren}
+
+\begin{lstlisting}
+public class Increment {
+	public static void main(String[] args) {
+		int j = 0;
+		for (int i = 0; i < 100; i++)
+			j = j++;
+		System.out.println(j);
+	}
+}
+\end{lstlisting}
+
+\begin{itemize}
+\item Was gibt der folgende Code auf der Console aus?
+	\begin{itemize}
+	\item \textit{0}
+	\item Die Inkrementierung durch die ```++''-Operation wird erst nach der Zuweisungsoperation durchgef\"uhrt
+	\item Ersetzt man Zeile 5 mit \textit{j = ++j;} funktioniert die gewollte Inkrementierung und der Code schreibt \textit{100} in die Konsole
+	\end{itemize}
+\end{itemize}
 
 \end{frame}
 

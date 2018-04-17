@@ -201,15 +201,15 @@ public interface Complex {
      * @return String
      */
     default String formatCartesian() {
-        if (this.getIm() == 0) return MathUtils.round(this.getRe()) + " + 0i";
-        if (this.getRe() == 0) return  MathUtils.round(this.getIm()) + "i";
-        if (this.getIm() < 0) return  MathUtils.round(this.getRe())
-                + " - "
-                +  MathUtils.round((-this.getIm()))
+        if (this.getIm() == 0) return this.getRe() + "+0i";
+        if (this.getRe() == 0) return  this.getIm() + "i";
+        if (this.getIm() < 0) return  this.getRe()
+                + "-"
+                +  (-this.getIm())
                 + "i";
-        return  MathUtils.round(this.getRe())
-                + " + "
-                +  MathUtils.round(this.getIm())
+        return  this.getRe()
+                + "+"
+                +  this.getIm()
                 + "i";
     }
 

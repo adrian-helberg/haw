@@ -140,7 +140,7 @@ public class ImmutableComplexTest {
     @Test
     public void testFormatCartesian() {
         ImmutableComplex c = new ImmutableComplex(2, 3);
-        assertEquals("2.0 + 3.0i", c.formatCartesian());
+        assertEquals("2.0+3.0i", c.formatCartesian());
     }
 
     @Test

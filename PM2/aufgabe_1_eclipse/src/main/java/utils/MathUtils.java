@@ -1,8 +1,15 @@
 package utils;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+import java.util.stream.Collectors;
+
 import structures.Complex;
 import structures.ImmutableComplex;
 import structures.MutableComplex;
+import structures.Tuple;
 
 /**
  * Helper class with static methods for mathematics
@@ -26,10 +33,46 @@ public final class MathUtils {
      */
     public static Complex[] sortByLength(Complex[] numbers) {
     	
-    	// TODO: Sort
+    	Tuple[] tuples = new Tuple[numbers.length];
+    	Complex[] sortedNumbers = new Complex[numbers.length];
     	
-    	return numbers;
+    	for (int i = 0; i < numbers.length; i++) {
+    		tuples[i] = new Tuple(numbers[i], numbers[i].abs());
+    	}
+    	
+    	Arrays.sort(tuples);
+    	
+    	for (int i = 0; i < numbers.length; i++) {
+    		sortedNumbers[i] = tuples[i].complexNumber;
+    	}
+    	
+    	return sortedNumbers;
     }
+    
+    /**
+     * Sorts a list of complex numbers by their absolute value (length)
+     * @param numbers List of complex numbers
+     * @return Sorted List of complex numbers 
+     */
+    public static List<Complex> sortByLength(List<Complex> numbers) {
+    	
+    	List<Tuple> tuples = new ArrayList<Tuple>();
+    	List<Complex> sortedNumbers = new ArrayList<Complex>();
+    	
+    	for (Complex complex : numbers) {
+			tuples.add(
+					new Tuple(complex, complex.abs())
+			);
+		}
+    	
+    	Collections.sort(tuples);
+    	
+    	for (Tuple tuple : tuples) {
+			sortedNumbers.add(tuple.complexNumber);
+		}
+    	
+    	return sortedNumbers;
+    }    
 
     /**
      * Returns a complex number of complex exponential form

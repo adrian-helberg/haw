@@ -1,0 +1,22 @@
+\frametitle{Operatoren}
+
+\begin{lstlisting}
+public class Increment {
+	public static void main(String[] args) {
+		int j = 0;
+		for (int i = 0; i < 100; i++)
+			j = j++;
+		System.out.println(j);
+	}
+}
+\end{lstlisting}
+
+\begin{itemize}
+\item Was gibt der folgende Code auf der Console aus?
+	\begin{itemize}
+	\item \textit{0}
+	\item Die Inkrementierung durch die ```++''-Operation wird erst nach der Zuweisungsoperation durchgef\"uhrt
+	\item Ersetzt man Zeile 5 mit \textit{j = ++j;} funktioniert die gewollte Inkrementierung und der Code schreibt \textit{100} in die Konsole
+	\end{itemize}
+\end{itemize}
+

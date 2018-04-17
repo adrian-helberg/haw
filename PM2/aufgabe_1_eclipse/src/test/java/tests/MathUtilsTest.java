@@ -2,12 +2,19 @@ package tests;
 
 import org.junit.Before;
 import org.junit.Test;
+
+import structures.Complex;
 import structures.ImmutableComplex;
 import structures.MutableComplex;
+import utils.FormatUtils;
 import utils.MathUtils;
 
 import static org.junit.Assert.*;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.logging.Logger;
 
 public class MathUtilsTest {
@@ -53,5 +60,37 @@ public class MathUtilsTest {
 
         assertEquals(new ImmutableComplex(-4.189625690968807, -9.109227893755337), MathUtils.cos(c1));
         assertEquals(new MutableComplex(-4.189625690968807, -9.109227893755337), MathUtils.cos(c2));
+    }
+    
+    @Test
+    public void testSortByLengthArray() {
+    	Complex[] notSorted = new Complex[5];
+    	Complex[] sorted = new Complex[5];
+    	
+    	for (int i = 0; i < notSorted.length; i++) {
+			notSorted[i] = new ImmutableComplex(Math.random(), Math.random());
+		}
+    	
+    	sorted = MathUtils.sortByLength(notSorted);
+    	
+    	for (int i = 0; i < sorted.length - 1; i++) {
+			assertTrue(sorted[i].abs() < sorted[i+1].abs());
+		}
+    }
+    
+    @Test
+    public void testSortByLengthList() {
+    	List<Complex> notSorted = new ArrayList<Complex>();
+    	List<Complex> sorted = new ArrayList<Complex>();
+    	
+    	for (int i = 0; i < 5; i++) {
+			notSorted.add(new ImmutableComplex(Math.random(), Math.random()));
+		}
+    	
+    	sorted = MathUtils.sortByLength(notSorted);
+    	
+    	for (int i = 0; i < 5 - 1; i++) {
+			assertTrue(sorted.get(i).abs() < sorted.get(i+1).abs());
+		}
     }
 }

@@ -1,5 +1,6 @@
 package utils;
 
+import java.io.IOException;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -12,55 +13,30 @@ import structures.ImmutableComplex;
  */
 public class FormatUtils {
 
-	public static Complex parseString(String z) {
-		Pattern complexPattern = Pattern.compile(
-				"([+-]?\\d+)?" +	
-				"([+-]?i\\d*)?"
-		);
+	/**
+	 * Parse a complex number as string to intern Complex type
+	 * @param z Passed string
+	 * @return New parsed immutable complex 
+	 * @throws IOException
+	 */
+	public static Complex parseString(String z) throws IOException {
 		
-		// Remove spaces
-		z = z.replace(" ", "");
+		// RegEx pattern that matches on complex format a+bi
+		Pattern complexPattern = Pattern.compile("(.*)([+-].*)i");
 		
-		Matcher matches = complexPattern.matcher(z);
+		double Re = 0.0, Im = 0.0;
+		Matcher m = complexPattern.matcher(z);
 		
-		if (matches.find()) {
-			boolean reFound = false;
-			double re = 0;
-			if ((matches.group(1) != null) && (matches.group(1).length() > 0)) {
-				reFound = true;
-				
-				try {
-					re = Double.parseDouble(matches.group(1));
-				} catch (Exception parseException) {
-					parseException.printStackTrace();
-				}
-			}
+		// Match found
+		if (m.matches()) {
+			// String -> double
+			Re = Double.parseDouble(m.group(1));
+			Im = Double.parseDouble(m.group(2));
 			
-			boolean imFound = false;
-			double im = 0;
-			if ((matches.group(2) != null) && (matches.group(2).length() > 0)){
-				imFound = true;
-				
-				String imString = matches.group(2).replace("i", "");
-				
-				// Check if only "i" or "-i" is provided as input - add value of 1
-				if (imString.length() <= 1) {
-					imString = imString + "1";
-				}
-				
-				try {
-					im = Double.parseDouble(imString);
-				} catch (Exception parseException) {
-					parseException.printStackTrace();
-				}
-			}
-			
-			if(!reFound && !imFound) // Input is something like "asdasdi"
-				return null;
-			else
-				return new ImmutableComplex(re, im);
-		} else {
-			return null;
+			return new ImmutableComplex(Re, Im);
 		}
+		
+		// No match found
+		throw new IOException("Input file contains wrong format: " + z);
 	}
 }

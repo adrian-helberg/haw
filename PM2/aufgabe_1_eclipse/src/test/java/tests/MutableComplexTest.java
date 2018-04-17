@@ -135,7 +135,7 @@ public class MutableComplexTest {
     @Test
     public void testFormatCartesian() {
     	MutableComplex c = new MutableComplex(2, 3);
-        assertEquals("2.0 + 3.0i", c.formatCartesian());
+        assertEquals("2.0+3.0i", c.formatCartesian());
     }
 
     @Test
