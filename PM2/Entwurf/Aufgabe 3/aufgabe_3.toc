@@ -1,0 +1,4 @@
+\select@language {german}
+\beamer@sectionintoc {1}{Datum und Erzeugen von Streams}{3}{0}{1}
+\beamer@sectionintoc {2}{Funktionale Interfaces}{4}{0}{2}
+\beamer@sectionintoc {3}{Verarbeitung von Streams}{5}{0}{3}
