@@ -1,3 +1,7 @@
+/**
+ * Test class Task2
+ * @author Adrian Helberg, Rodrigo Ehlers
+ */
 import static org.junit.Assert.*;
 
 import java.io.BufferedReader;

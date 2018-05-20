@@ -3,6 +3,10 @@ import utils.FormatUtils;
 
 import java.util.ArrayList;
 import java.util.List;
+/**
+ * Test class FormatUtils
+ * @author Adrian Helberg, Rodrigo Ehlers
+ */
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 

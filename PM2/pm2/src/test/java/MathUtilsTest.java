@@ -1,3 +1,7 @@
+/**
+ * Test class MathUtils
+ * @author Adrian Helberg, Rodrigo Ehlers
+ */
 import org.junit.Before;
 import org.junit.Test;
 

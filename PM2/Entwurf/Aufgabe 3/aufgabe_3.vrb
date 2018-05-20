@@ -1,0 +1,20 @@
+\frametitle{Verarbeitung von Streams}
+
+Worte, die in beiden Dateien vorkommen:
+
+\begin{lstlisting}
+List<String> sgb = Files
+
+    .lines(Paths.get("sgb-words.txt"))
+
+    .collect(Collectors.toList());
+
+List<String> common = Files
+
+    .lines(Paths.get("scrabble.txt"))
+
+    .filter(sgb::contains)
+
+    .collect(Collectors.toList());
+\end{lstlisting}
+

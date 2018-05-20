@@ -28,7 +28,7 @@ public class Task2 {
 		// Container for storing 1000 complex numbers from file
 		// Array and List
 		Complex[] read_numbers_array = new ImmutableComplex[1000];
-		List<Complex> read_numbers_list = new ArrayList<Complex>();
+		List<Complex> read_numbers_list = new ArrayList<>();
 		
 		// Add complex z_0 = 0 + 0i
 		numbers[0] = new ImmutableComplex(0, 0);
@@ -67,9 +67,9 @@ public class Task2 {
 		
 		Complex[] sortedNumbers = new Complex[read_numbers_array.length];
 		sortedNumbers = MathUtils.sortByLength(read_numbers_array);
-		
-		for (int j = 0; j < sortedNumbers.length; j++) {
-			writer2.println(sortedNumbers[j].formatCartesian());
+
+		for (Complex sortedNumber : sortedNumbers) {
+			writer2.println(sortedNumber.formatCartesian());
 		}
 		
 		// Garbage
@@ -96,7 +96,7 @@ public class Task2 {
 		System.out.println(j);
 	}
 	
-	public static boolean isOdd(long i) {
+	private static boolean isOdd(long i) {
 		
 		//return (i % 2) == 1;
 		return (i % 2 + 2) % 2 == 1;		

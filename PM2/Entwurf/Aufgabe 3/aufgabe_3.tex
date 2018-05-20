@@ -16,7 +16,7 @@
 	\textbf{\\Aufgabenblatt 3 - Entwurf} \\
 	\scriptsize{B-AI2 PMP SS 2018}
 }
-\author{Adrian Helberg, Rodrigo TODO , Gruppe 2 \\\textbf{\\ Prüfer: Prof. Dr. Bernd Kahlbrandt}}
+\author{Adrian Helberg, Rodrigo Ehlers , Gruppe 2 \\\textbf{\\ Prüfer: Prof. Dr. Bernd Kahlbrandt}}
 \date{\today}
 
 \definecolor{mygreen}{rgb}{0,0.6,0}
@@ -24,7 +24,7 @@
 \begin{document}
 \lstset{
     frame=single,
-    basicstyle=\scriptsize,
+    basicstyle=\footnotesize,
     keywordstyle=\color{blue},
     showstringspaces=false, 
     stringstyle=\color{mygreen},
@@ -42,39 +42,304 @@
 \begin{frame}
 \frametitle{Datum und Erzeugen von Streams}
 
-test
-
+Erster Mai: Typ \textit{LocalDate}, da
 \begin{itemize}
-\item ...
+\setlength{\itemsep}{8pt}
+\item keine Zeitzoneninformation gebraucht wird
+\item Schaltjahre implementiert sind (\textit{``[...] today's rules for leap years are applied for all time''}) \footnote{Java Dokumentation LocalDate}
 \end{itemize}
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Datum und Erzeugen von Streams}
+
+Erzeugen eines Streams mittels \textit{iterate} mit Begrenzung und Filter:
+
+\begin{lstlisting}
+List<Integer> dates = Stream
+    .iterate(workers_day, d -> d.plusYears(1))
+
+    .limit(ChronoUnit.YEARS.between(workers_day, until))
+
+    .filter(d -> d.getDayOfWeek()
+        .toString().equals("TUESDAY"))
+
+    .mapToInt(LocalDate::getYear)
+
+    .boxed() // Primitive stream
+
+    .collect(Collectors.toList());
+\end{lstlisting}
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Datum und Erzeugen von Streams}
+
+Ermitteln von Abst\"anden und formatierte Ausgabe
+
+\begin{lstlisting}
+public String getFormattedDistanceString() {
+
+     return "Days between the two MAY 1st: " 
+        + DAYS.between(first, second) 
+        + "";
+
+}
+\end{lstlisting}
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Datum und Erzeugen von Streams}
+
+N\"achster Sonntag, n\"achstes Schaltjahr, Datum 42 Tage sp\"ater:
+
+\begin{lstlisting}
+final LocalDate date = LocalDate.of(2018, Month.MAY, 1);
+final LocalDate nextSunday = date
+    .with(next(DayOfWeek.SUNDAY));
+
+final int nextLeapYear = nextLeapYear(date);
+
+final LocalDate after42Days = date.plusDays(42);
+\end{lstlisting}
 
 \end{frame}
 
 %%%%%%%%%% AUFGABE 2 %%%%%%%%%%
 
 \section{Funktionale Interfaces}
-\begin{frame}
+\begin{frame}[fragile]
 \frametitle{Funktionale Interfaces}
 
-test
+Variable Anzahl von \textit{Predicates} entgegennehmen und mit logischem \textit{AND} verkn\"upfen:
 
-\begin{itemize}
-\item ...
-\end{itemize}
+\begin{lstlisting}
+public static <T> Predicate<T> andAll
+                        (Predicate<T>[] predicates) {
+
+    return Arrays
+        .stream(predicates)
+        .reduce(x -> true, Predicate::and);
+
+}
+\end{lstlisting}
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Funktionale Interfaces}
+
+Variable Anzahl von \textit{Predicates} entgegennehmen und mit logischem \textit{OR} verkn\"upfen:
+
+\begin{lstlisting}
+public static <T> Predicate<T> orAny
+                        (Predicate<T>[] predicates) {
+
+    return Arrays
+        .stream(predicates)
+        .reduce(x -> false, Predicate::or);
+
+}
+\end{lstlisting}
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Funktionale Interfaces}
+
+Test \textit{andAll}:
+
+\lstset{basicstyle=\scriptsize}
+\begin{lstlisting}
+@Test
+public void andAllTest() {
+
+    List<String> values = new ArrayList<>();
+    values.add("Automat");
+    values.add("Baum");
+    values.add("Auto");
+    values.add("Laut");
+
+    Predicate<String>[] predicates = new Predicate[3];
+    predicates[0] = c -> c.startsWith("A");
+    predicates[1] = c -> c.length() == 4;
+    predicates[2] = c -> c.contains("o");
+
+    [...]
+\end{lstlisting}
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Funktionale Interfaces}
+
+Test \textit{andAll}:
+
+\lstset{basicstyle=\scriptsize}
+\begin{lstlisting}
+    [...]
+
+    Predicate<String> p = FormatUtils.andAll(predicates);
+
+    List<String> filteredList = values
+        .stream()
+        .filter(p)
+        .collect(Collectors.toList());
+
+    List<String> expected = new ArrayList<>();
+    expected.add("Auto");
+
+    assertEquals(expected, filteredList);
+
+}
+\end{lstlisting}
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Funktionale Interfaces}
+
+Test \textit{orAny}:
+
+\lstset{basicstyle=\scriptsize}
+\begin{lstlisting}
+@Test
+public void orAnyTest() {
+
+    List<String> values = new ArrayList<>();
+    values.add("Automat");
+    values.add("Baum");
+    values.add("Auto");
+    values.add("Laut");
+
+    Predicate<String>[] predicates = new Predicate[3];
+    predicates[0] = c -> c.startsWith("A");
+    predicates[1] = c -> c.length() == 4;
+    predicates[2] = c -> c.contains("o");
+
+    [...]
+\end{lstlisting}
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Funktionale Interfaces}
+
+Test \textit{andAll}:
+
+\lstset{basicstyle=\scriptsize}
+\begin{lstlisting}
+    [...]
+
+    Predicate<String> p = FormatUtils.orAny(predicates);
+
+    List<String> filteredList = values
+        .stream()
+        .filter(p)
+        .collect(Collectors.toList());
+
+    List<String> expected = new ArrayList<>();
+    expected.add("Automat");
+    expected.add("Baum");
+    expected.add("Auto");
+    expected.add("Laut");
+
+    assertEquals(expected, filteredList);
+
+}
+\end{lstlisting}
 
 \end{frame}
 
 %%%%%%%%%% AUFGABE 3 %%%%%%%%%%
 
 \section{Verarbeitung von Streams}
-\begin{frame}
+\begin{frame}[fragile]
 \frametitle{Verarbeitung von Streams}
 
-test
+Alle Palindrome mit sechs Buchstaben:
 
-\begin{itemize}
-\item ...
-\end{itemize}
+\lstset{basicstyle=\footnotesize}
+\begin{lstlisting}
+List<String> palindromes = Files
+
+    .lines(Paths.get("scrabble.txt"))
+
+    .filter(s -> 
+        s.length() == 6 && 
+        s.equals(new StringBuilder(s)
+            .reverse().toString()))
+
+    .collect(Collectors.toList());
+\end{lstlisting}
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Verarbeitung von Streams}
+
+alle Worte, die an der 2., 4. und 6. Stelle ein ``e'' haben:
+
+\begin{lstlisting}
+List<String> eee = Files
+
+    .lines(Paths.get("scrabble.txt"))
+
+    .filter(s -> 
+        s.length() > 5 && 
+        s.charAt(1) == 'e' && 
+        s.charAt(3) == 'e' && 
+        s.charAt(5) == 'e')
+
+    .collect(Collectors.toList());
+\end{lstlisting}
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Verarbeitung von Streams}
+
+alle Worte, die Paare von Vokalen enthalten:
+
+\begin{lstlisting}
+List<String> vowels = Files
+    .lines(Paths.get("scrabble.txt"))
+
+    .filter(s -> 
+        s.contains("aa") || 
+        s.contains("ee") || 
+        s.contains("ii") || 
+        s.contains("oo") || 
+        s.contains("uu"))
+
+    .collect(Collectors.toList());
+\end{lstlisting}
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Verarbeitung von Streams}
+
+Worte, die in beiden Dateien vorkommen:
+
+\begin{lstlisting}
+List<String> sgb = Files
+
+    .lines(Paths.get("sgb-words.txt"))
+
+    .collect(Collectors.toList());
+
+List<String> common = Files
+
+    .lines(Paths.get("scrabble.txt"))
+
+    .filter(sgb::contains)
+
+    .collect(Collectors.toList());
+\end{lstlisting}
 
 \end{frame}
 

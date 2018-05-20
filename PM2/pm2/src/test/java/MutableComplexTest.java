@@ -6,7 +6,10 @@ import java.util.Objects;
 import java.util.logging.Logger;
 
 import static org.junit.Assert.*;
-
+/**
+ * Test class MutableComplex
+ * @author Adrian Helberg, Rodrigo Ehlers
+ */
 public class MutableComplexTest {
 	// Expectation and assertion may me equal in the threshold of 0.001
     private double DELTA = 0.001;
