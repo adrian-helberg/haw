@@ -18,7 +18,7 @@ public interface Deque<E> {
      * Removes the object at the top of this stack and returns that object
      * @throws EmptyStackException
      */
-    void pop();
+    void pop() throws EmptyStackException;
 
     /**
      * Looks at the object at the top of this stack without removing it from the stack
@@ -36,7 +36,7 @@ public interface Deque<E> {
 
     /**
      * Enqueue the item
-     * @param item the item to add
+     * @param item to add
      * @throws NullPointerException if the specified item is null
      */
     void enqueue(E item) throws NullPointerException;

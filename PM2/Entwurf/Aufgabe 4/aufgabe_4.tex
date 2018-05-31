@@ -1,0 +1,239 @@
+\documentclass{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[english,german]{babel} 
+\usepackage{listings} 
+\usepackage{listings-golang}
+\usepackage{tikz}
+\usepackage{hyperref}
+
+\usepackage[absolute,overlay]{textpos}
+  \setlength{\TPHorizModule}{1mm}
+  \setlength{\TPVertModule}{1mm}
+
+\titlegraphic{\includegraphics[scale=0.3]{logoHaw.png}}
+\title{
+	\textit{Praktikum Programmieren} \\
+	\textbf{\\Aufgabenblatt 4 - Entwurf} \\
+	\scriptsize{B-AI2 PMP SS 2018}
+}
+\author{Adrian Helberg, Rodrigo Ehlers , Gruppe 2 \\\textbf{\\ Prüfer: Prof. Dr. Bernd Kahlbrandt}}
+\date{\today}
+
+\definecolor{mygreen}{rgb}{0,0.6,0}
+
+\begin{document}
+\lstset{
+    frame=single,
+    basicstyle=\footnotesize,
+    keywordstyle=\color{blue},
+    showstringspaces=false, 
+    stringstyle=\color{mygreen},
+    tabsize=4,
+    language=Java
+}
+
+\maketitle
+
+\frame{\tableofcontents}
+
+%%%%%%%%%% AUFGABE 1 %%%%%%%%%%
+
+\section{Collections}
+\begin{frame}[fragile]
+\frametitle{Collections - Interface Deque}
+
+\begin{itemize}
+\setlength{\itemsep}{8pt}
+\item Stack-artig
+\end{itemize}
+
+\begin{lstlisting}
+/**
+ * Pushes an item onto the top of the stack
+ * @param item the item to be pushed onto this stack
+ */
+void push(E item);
+
+/**
+ * Removes the object at the top of this stack and
+ * returns that object
+ * @throws EmptyStackException
+ */
+void pop() throws EmptyStackException;
+\end{lstlisting}
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Collections - Interface Deque}
+
+\begin{lstlisting}
+/**
+ * Looks at the object at the bottom of this stack 
+ * without removing it from the stack
+ * @return the object at the bottom of this stack
+ * @throws NoSuchElementException if this queue is 
+ * empty
+ */
+E peekLast() throws NoSuchElementException;
+\end{lstlisting}
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Collections - Interface Deque}
+
+\begin{itemize}
+\setlength{\itemsep}{8pt}
+\item Queue-artig
+\end{itemize}
+
+\begin{lstlisting}
+/**
+ * Enqueue the item
+ * @param item to add
+ * @throws NullPointerException if the specified item 
+ * is null
+ */
+void enqueue(E item) throws NullPointerException;
+
+/**
+ * Dequeue the item
+ * @throws NoSuchElementException
+ */
+void dequeue() throws NoSuchElementException;
+\end{lstlisting}
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Collections - Interface Deque}
+
+\begin{lstlisting}
+/**
+ * Looks at the object at the top of this stack without 
+ * removing it from the stack
+ * @return the object at the top of this stack
+ * @throws NoSuchElementException if this queue is 
+ * empty
+ */
+E peekFirst() throws NoSuchElementException;
+\end{lstlisting}
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Collections - Interface Deque}
+
+\begin{itemize}
+\setlength{\itemsep}{8pt}
+\item Methode isEmpty()
+\end{itemize}
+
+\begin{lstlisting}
+/**
+ * Tests if this stack is empty
+ * @return true if and only if this stack contains 
+ * no items; false otherwise
+ */
+boolean isEmpty();
+\end{lstlisting}
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Collections - Interface Deque}
+
+\begin{itemize}
+\setlength{\itemsep}{8pt}
+\item NULL-Handling
+\end{itemize}
+
+\begin{lstlisting}
+/**
+ * Checks for NULL; does not allow NULL
+ * @param data data to check
+ * @throws NullPointerException if data is null
+ */
+default void checkNull(E data) 
+                          throws NullPointerException {
+    if (data == null) {
+        throw new NullPointerException(
+            "Null not allowed"
+        );
+    }
+}
+\end{lstlisting}
+
+\end{frame}
+
+\section{Denksportaufgaben}
+\begin{frame}[fragile]
+\frametitle{Denksportaufgaben}
+
+1. Geben Sie bitte Deklarationen für die Variablen x und i an, für die
+
+\begin{lstlisting}
+x += i;
+\end{lstlisting}
+
+lagal ist, aber
+
+\begin{lstlisting}
+x = x + i;
+\end{lstlisting}
+
+nicht. \\
+\begin{lstlisting}
+int x = 1;
+long y = 1;
+x += y;
+\end{lstlisting}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Denksportaufgaben}
+
+\begin{quote}
+Finden Sie bitte die Begründung in der JLS, warum das zweite Konstrukt nun funktioniert
+und erklären Sie dies!
+\end{quote}
+
+\textit{5.4. String Conversion}\\
+
+\textbf{
+\\
+String conversion applies only to an operand of the binary + operator which is not a String when the other operand is a String.\\
+In this single special case, the non-String operand to the + is converted to a String (§5.1.11) and evaluation of the + operator proceeds as specified in §15.18.1.
+}
+
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Denksportaufgaben}
+
+Schreiben Sie bitte eine Klasse A, so dass der Konstruktor der folgenden Klasse B
+„Win“ ausgibt!
+
+\begin{lstlisting}
+[...]
+new B(Long.MAX_VALUE);
+
+class A {
+    A Long = this;
+
+    int compare(Long a, Long b) {
+        return 1;
+    }
+
+    class B {
+        B (Long i) {}
+    }
+}
+\end{lstlisting}
+
+\end{frame}
+
+\end{document}

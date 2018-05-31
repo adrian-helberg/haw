@@ -33,7 +33,38 @@
     </projectState>
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="Task4.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/applications/Task4.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="11" column="34" lean-forward="true" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ArrayDeque.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/structures/ArrayDeque.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="35" column="5" lean-forward="true" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
+              <folding>
+                <element signature="method#push#0;class#ArrayDeque#0" />
+                <element signature="method#pop#0;class#ArrayDeque#0" />
+                <element signature="method#peekFirst#0;class#ArrayDeque#0" />
+                <element signature="method#peekLast#0;class#ArrayDeque#0" />
+                <element signature="method#enqueue#0;class#ArrayDeque#0" />
+                <element signature="method#dequeue#0;class#ArrayDeque#0" />
+                <element signature="method#toString#0;class#ArrayDeque#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -364,7 +395,6 @@
         <option value="$PROJECT_DIR$/src/main/java/structures/IDequeue.java" />
         <option value="$PROJECT_DIR$/src/main/java/structures/Dequeue.java" />
         <option value="$PROJECT_DIR$/src/main/java/structures/Element.java" />
-        <option value="$PROJECT_DIR$/src/main/java/structures/Deque.java" />
         <option value="$PROJECT_DIR$/src/test/java/ImmutableComplexTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/FormatUtilsTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/MathUtilsTest.java" />
@@ -372,9 +402,10 @@
         <option value="$PROJECT_DIR$/src/test/java/Task2Test.java" />
         <option value="$PROJECT_DIR$/src/main/java/structures/ListDeque.java" />
         <option value="$PROJECT_DIR$/src/test/java/ListDequeTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/structures/ArrayDeque.java" />
-        <option value="$PROJECT_DIR$/src/main/java/applications/Task4.java" />
         <option value="$PROJECT_DIR$/src/test/java/ArrayDequeTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/structures/ArrayDeque.java" />
+        <option value="$PROJECT_DIR$/src/main/java/structures/Deque.java" />
+        <option value="$PROJECT_DIR$/src/main/java/applications/Task4.java" />
       </list>
     </option>
   </component>
@@ -398,8 +429,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -407,11 +436,60 @@
               <item name="pm2" type="b2602c69:ProjectViewProjectNode" />
               <item name="pm2" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
             </path>
+            <path>
+              <item name="pm2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pm2" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pm2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pm2" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+            <path>
+              <item name="pm2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pm2" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pm2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pm2" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="applications" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pm2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pm2" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="structures" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pm2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pm2" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+            <path>
+              <item name="pm2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pm2" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -446,7 +524,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.ArrayDequeTest">
+  <component name="RunManager" selected="JUnit.ListDequeTest">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
     </configuration>
@@ -586,9 +664,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ListDequeTest" />
         <item itemvalue="JUnit.ArrayDequeTest" />
         <item itemvalue="Application.Task4" />
-        <item itemvalue="JUnit.ListDequeTest" />
         <item itemvalue="JUnit.FormatUtilsTest" />
         <item itemvalue="Application.Task3" />
       </list>
@@ -609,19 +687,14 @@
       <workItem from="1525426792832" duration="5185000" />
       <workItem from="1526726459258" duration="7967000" />
       <workItem from="1526811437798" duration="13872000" />
+      <workItem from="1526992559741" duration="1900000" />
+      <workItem from="1527101494920" duration="1098000" />
+      <workItem from="1527164875818" duration="1605000" />
+      <workItem from="1527799032020" duration="77000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ListDequeTest - 2018.05.20 at 15h 44m 43s.xml">
-      <configuration name="ListDequeTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ListDequeTest - 2018.05.20 at 15h 44m 48s.xml">
-      <configuration name="ListDequeTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ListDequeTest - 2018.05.20 at 15h 46m 25s.xml">
-      <configuration name="ListDequeTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="ListDequeTest - 2018.05.20 at 15h 46m 41s.xml">
       <configuration name="ListDequeTest" configurationId="JUnit" />
     </history-entry>
@@ -643,9 +716,18 @@
     <history-entry file="ArrayDequeTest - 2018.05.20 at 16h 59m 18s.xml">
       <configuration name="ArrayDequeTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="ArrayDequeTest - 2018.05.24 at 14h 29m 47s.xml">
+      <configuration name="ArrayDequeTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ArrayDequeTest - 2018.05.31 at 22h 38m 13s.xml">
+      <configuration name="ArrayDequeTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ListDequeTest - 2018.05.31 at 22h 38m 25s.xml">
+      <configuration name="ListDequeTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44542000" />
+    <option name="totallyTimeSpent" value="49222000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -664,7 +746,7 @@
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17083333" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.34739584" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="right" id="Gradle" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -691,7 +773,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="19" />
+      <option name="time" value="20" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="JUnit">
@@ -702,22 +784,47 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/java/applications/Task4.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="41" selection-start-line="8" selection-start-column="40" selection-end-line="8" selection-end-column="41" />
+        <state relative-caret-position="238">
+          <caret line="14" column="1" lean-forward="true" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
-            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/structures/Deque.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="935">
+          <caret line="55" selection-start-line="55" selection-end-line="64" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/structures/ListDeque.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="23" lean-forward="true" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/structures/Deque.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="952">
+          <caret line="56" column="43" lean-forward="true" selection-start-line="56" selection-start-column="43" selection-end-line="56" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/structures/ListDeque.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="714">
+          <caret line="81" column="5" lean-forward="true" selection-start-line="81" selection-start-column="5" selection-end-line="81" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/applications/Task4" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/structures/Deque.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
           <caret line="25" column="51" lean-forward="true" selection-start-line="25" selection-start-column="51" selection-end-line="25" selection-end-column="51" />
-          <folding>
-            <element signature="method#checkNull#0;class#Deque#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -725,10 +832,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="25" lean-forward="true" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
-          <folding>
-            <element signature="method#Element#0;class#Element#0" />
-            <element signature="e#425#426#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -736,15 +839,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
           <caret line="24" column="23" lean-forward="true" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="23" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="method#ListDeque#0;class#ListDeque#0" />
-            <element signature="method#pop#0;class#ListDeque#0" />
-            <element signature="method#peekFirst#0;class#ListDeque#0" />
-            <element signature="method#peekLast#0;class#ListDeque#0" />
-            <element signature="method#dequeue#0;class#ListDeque#0" />
-            <element signature="method#toStringBottomUp#0;class#ListDeque#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -766,9 +860,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="14" column="3" lean-forward="true" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="3" />
-          <folding>
-            <element signature="method#parseString#0;class#FormatUtils#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -872,13 +963,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/applications/Task2.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="613">
-          <caret line="85" column="21" lean-forward="true" selection-start-line="85" selection-start-column="21" selection-end-line="85" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/src.zip!/java/nio/file/Files.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="426">
@@ -904,9 +988,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
           <caret line="50" selection-start-line="50" selection-end-line="54" selection-end-column="5" />
-          <folding>
-            <element signature="method#parseString#0;class#FormatUtils#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -936,25 +1017,8 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="21" selection-start-line="21" selection-end-line="21" />
-          <folding>
-            <element signature="method#Element#0;class#Element#0" />
-            <element signature="e#425#426#0" expanded="true" />
-          </folding>
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/structures/Deque.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="47" column="49" lean-forward="true" selection-start-line="47" selection-start-column="49" selection-end-line="47" selection-end-column="49" />
-          <folding>
-            <element signature="method#checkNull#0;class#Deque#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/ImmutableComplexTest.java">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/FormatUtilsTest.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -981,43 +1045,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="3" column="3" lean-forward="true" selection-start-line="3" selection-start-column="3" selection-end-line="3" selection-end-column="3" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/structures/ListDeque.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="316">
-          <caret line="84" column="36" lean-forward="true" selection-start-line="84" selection-start-column="36" selection-end-line="84" selection-end-column="36" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="method#ListDeque#0;class#ListDeque#0" />
-            <element signature="method#pop#0;class#ListDeque#0" />
-            <element signature="method#peekFirst#0;class#ListDeque#0" />
-            <element signature="method#peekLast#0;class#ListDeque#0" />
-            <element signature="method#dequeue#0;class#ListDeque#0" />
-            <element signature="method#toStringBottomUp#0;class#ListDeque#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/structures/ArrayDeque.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="309">
-          <caret line="73" lean-forward="true" selection-start-line="73" selection-end-line="73" />
-          <folding>
-            <element signature="e#303#304#0" expanded="true" />
-            <element signature="e#333#334#0" expanded="true" />
-            <element signature="method#push#0;class#ArrayDeque#0" />
-            <element signature="method#pop#0;class#ArrayDeque#0" />
-            <element signature="method#peekFirst#0;class#ArrayDeque#0" />
-            <element signature="method#peekLast#0;class#ArrayDeque#0" />
-            <element signature="method#enqueue#0;class#ArrayDeque#0" />
-            <element signature="method#dequeue#0;class#ArrayDeque#0" />
-            <element signature="method#toString#0;class#ArrayDeque#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1025,9 +1052,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="14" column="27" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1038,13 +1062,50 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/structures/ListDeque.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="10" column="23" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/applications/Task4" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/structures/Deque.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="282">
+          <caret line="36" column="7" selection-start-line="36" selection-start-column="7" selection-end-line="36" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/applications/Task2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="61" column="31" selection-start-line="61" selection-start-column="31" selection-end-line="61" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/applications/Task4.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="26" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
+        <state relative-caret-position="187">
+          <caret line="11" column="34" lean-forward="true" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
-            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/structures/ArrayDeque.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="35" column="5" lean-forward="true" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
+          <folding>
+            <element signature="method#push#0;class#ArrayDeque#0" />
+            <element signature="method#pop#0;class#ArrayDeque#0" />
+            <element signature="method#peekFirst#0;class#ArrayDeque#0" />
+            <element signature="method#peekLast#0;class#ArrayDeque#0" />
+            <element signature="method#enqueue#0;class#ArrayDeque#0" />
+            <element signature="method#dequeue#0;class#ArrayDeque#0" />
+            <element signature="method#toString#0;class#ArrayDeque#0" />
           </folding>
         </state>
       </provider>

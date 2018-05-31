@@ -1,0 +1,22 @@
+\frametitle{Denksportaufgaben}
+
+Schreiben Sie bitte eine Klasse A, so dass der Konstruktor der folgenden Klasse B
+„Win“ ausgibt!
+
+\begin{lstlisting}
+[...]
+new B(Long.MAX_VALUE);
+
+class A {
+    A Long = this;
+
+    int compare(Long a, Long b) {
+        return 1;
+    }
+
+    class B {
+        B (Long i) {}
+    }
+}
+\end{lstlisting}
+
