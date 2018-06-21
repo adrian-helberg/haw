@@ -6,6 +6,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import javafx.scene.shape.Line;
 import structures.Complex;
 import structures.ImmutableComplex;
 import structures.MutableComplex;
@@ -150,5 +151,14 @@ public final class MathUtils {
                 cosh(c.getIm()) * Math.cos(c.getRe()),
                 -sinh(c.getIm()) * Math.sin(c.getRe())
         );
+    }
+
+
+    public static double distance(Line line) {
+        return distance(line.getStartX(), line.getStartY(), line.getEndX(), line.getEndY());
+    }
+
+    private static double distance(double x1, double y1, double x2, double y2) {
+        return Math.sqrt((x1 - x2) * (x1 - x2) + (y1 - y2) * (y1 - y2));
     }
 }

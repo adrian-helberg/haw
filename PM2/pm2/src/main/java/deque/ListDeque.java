@@ -2,7 +2,7 @@
  * Implementation of double linked list as deque
  * @author Adrian Helberg, Rodrigo Ehlers
  */
-package structures;
+package deque;
 
 import java.io.IOException;
 import java.io.ObjectInputStream;
@@ -11,9 +11,17 @@ import java.io.Serializable;
 import java.util.NoSuchElementException;
 
 public class ListDeque<E> implements Deque<E>, Serializable {
-    private static final long serialVersionUID = -2518143671167959230L;
 
+    /**
+     * The first element
+     * @serial
+     */
     private Element<E> first;
+
+    /**
+     * The last element
+     * @serial
+     */
     private Element<E> last;
 
     public ListDeque() {
@@ -107,32 +115,55 @@ public class ListDeque<E> implements Deque<E>, Serializable {
     @Override
     public String toString() {
         if (isEmpty()) {
-            return "empty";
+            return "[]";
         } else {
-            StringBuilder result = new StringBuilder();
+            StringBuilder result = new StringBuilder("[");
             Element<E> tmp = first;
 
             result.append(tmp.getContent());
             tmp = tmp.getNext();
 
             while (tmp != null) {
-                result.append("\n");
-                result.append("||");
-                result.append("\n");
+                result.append(" > ");
                 result.append(tmp.getContent());
                 tmp = tmp.getNext();
             }
+
+            result.append("]");
 
             return result.toString();
         }
     }
 
-    /* Serialization */
-    private void writeObject(ObjectOutputStream o) throws IOException {
-        o.writeObject(this);
+    public String toStringBottomUp() {
+        if (isEmpty()) {
+            return "[]";
+        } else {
+            StringBuilder result = new StringBuilder("[");
+            Element<E> tmp = last;
+
+            result.append(tmp.getContent());
+            tmp = tmp.getPrev();
+
+            while (tmp != null) {
+                result.append(" < ");
+                result.append(tmp.getContent());
+                tmp = tmp.getPrev();
+            }
+
+            result.append("]");
+
+            return result.toString();
+        }
     }
 
-    private void readObject(ObjectInputStream o) throws IOException, ClassNotFoundException {
+    private void writeObject(ObjectOutputStream s) throws IOException {
+        s.writeObject(first);
+        s.writeObject(last);
+    }
 
+    private void readObject(ObjectInputStream s) throws IOException, ClassNotFoundException {
+        first = (Element<E>) s.readObject();
+        last = (Element<E>) s.readObject();
     }
 }
