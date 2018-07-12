@@ -6,6 +6,7 @@ import static org.junit.Assert.*;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
+import java.lang.reflect.Method;
 
 import org.junit.Test;
 
@@ -38,5 +39,13 @@ public class Task2Test {
 		}
     	
     }
+
+    public static void main(String[] args) {
+
+		Method[] methods = ArrayDequeTest.class.getMethods();
+		for (Method m : methods) {
+			System.out.println(m);
+		}
+	}
 
 }
